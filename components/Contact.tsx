@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 
 const ContactForm = () => {
-  const [showThanks, setShowThanks] = useState(false);
+  const [showThanks, setShowThanks] = useState<boolean>(false);
   const {
     register,
     handleSubmit,
