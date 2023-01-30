@@ -18,7 +18,7 @@ export default function Home() {
             <h1 className="text-2xl md:text-4xl font-bold font-sans mt-2 text-brand-textTerciary">
               Facundo Perez Montalvo
             </h1>
-            <span className="font-newsreader">
+            <span className="font-newsreader italic">
               Frontend developer based in Argentina {countryCodeEmoji("AR")}
             </span>
           </div>

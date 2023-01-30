@@ -9,14 +9,17 @@ const Main = ({ children }: Props) => {
   return (
     <>
       <Head>
-        <title>Facundo Perez Montalvo | Frontend Developer</title>
+        <title>Facundo Perez Montalvo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Hey there! I'm Facundo and I'm currently looking for a new role as a developer. Hire me?"
+          content="I'm currently looking for a new role as a developer. Hire me?"
+        />
+        <meta
+          name="keywords"
+          content="Facundo Perez Montalvo, developer, react, next.js, tailwind css, frontend developer, frontend, software development, vercel"
         />
         <meta name="author" content="Facundo Perez Montalvo" />
-        <meta name="author" content="Facundo" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@facuperezm" />
@@ -24,6 +27,12 @@ const Main = ({ children }: Props) => {
         <meta name="twitter:image" content="https://i.imgur.com/fjL49nC.jpg" />
         <meta property="og:site_name" content="Facundo Perez Montalvo" />
         <meta property="og:type" content="personal website" />
+        <meta property="og:title" content="Facundo Perez Montalvo" />
+        <meta
+          property="og:description"
+          content="I'm currently looking for a new role as a developer. Hire me?"
+        />
+        <meta property="og:url" content="https://facuperezm.vercel.app" />
         <meta property="og:image" content="https://i.imgur.com/fjL49nC.jpg" />
       </Head>
       {children}
