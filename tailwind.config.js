@@ -10,7 +10,16 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-inter)"],
         serif: ["var(--font-hind-siliguri)"],
-        mono: ["var(--font-newsreader)"],
+        newsreader: ["var(--font-newsreader)"],
+      },
+      colors: {
+        brand: {
+          textPrimary: "#E0E0E0",
+          textSecondary: "#A0A0A0",
+          textTerciary: "#FFF",
+          buttonback: "#171717",
+          background: "#1c1c1c",
+        },
       },
     },
   },

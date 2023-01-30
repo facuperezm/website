@@ -6,6 +6,8 @@ type Props = {
 
 export const Subtitle = ({ children }: Props) => {
   return (
-    <h3 className="text-xl mt-6 mb-2 font-semibold font-sans">{children}</h3>
+    <h3 className="text-xl mt-6 mb-2 font-semibold font-sans text-brand-textTerciary">
+      {children}
+    </h3>
   );
 };

@@ -10,7 +10,7 @@ const Section = ({ children, delay = 0 }: Props) => (
     initial={{ opacity: 0, y: 10 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 1, delay }}
-    className="mb-6"
+    className="mb-2"
   >
     {children}
   </motion.div>

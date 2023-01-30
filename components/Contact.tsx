@@ -32,27 +32,25 @@ const ContactForm = () => {
 
   return (
     <form
-      className="flex flex-start flex-col w-full text-sm "
+      className="pt-3 w-full"
       ref={formRef}
       onSubmit={handleSubmit(sendEmail)}
     >
-      <label className="mt-4 w-full " htmlFor="user_name">
-        Name
-      </label>
+      <label htmlFor="user_name">Name</label>
       <input
-        className="w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500"
+        className="w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500 bg-[#2b2b2b] mb-2"
         {...register("user_name", { required: true, minLength: 3 })}
         type="text"
         name="user_name"
       />
       {errors.user_name?.type === "required" && (
-        <p className="text-md text-gray-50" role="alert">
+        <p className="text-sm text-brand-textSecondary" role="alert">
           Name is required
         </p>
       )}
       <label htmlFor="user_email">Email</label>
       <input
-        className="w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500"
+        className="w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500  bg-[#2b2b2b] mb-2"
         {...register("user_email", {
           required: true,
           pattern: {
@@ -64,21 +62,23 @@ const ContactForm = () => {
         name="user_email"
       />
       {errors.user_email?.type === "required" && (
-        <p className="text-md text-gray-50" role="alert">
+        <p className="text-sm text-brand-textSecondary" role="alert">
           Email is required
         </p>
       )}
       <label htmlFor="message">Message</label>
       <textarea
-        className="w-full h-20 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500"
+        className="w-full h-20 p-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500 bg-[#2b2b2b]"
         {...register("message", { required: true, minLength: 3 })}
         name="message"
       />
       {errors.message?.type === "required" && (
-        <p role="alert">Message is required</p>
+        <p className="text-sm text-brand-textSecondary mb-2" role="alert">
+          Message is required
+        </p>
       )}
       <button
-        className="w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500"
+        className="text-sm px-4 py-2 mt-1 text-white font-medium rounded-md border transition-all hover:text-white hover:bg-neutral-700 hover:border-transparent focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1"
         type="submit"
         value="Send"
       >
@@ -88,52 +88,3 @@ const ContactForm = () => {
   );
 };
 export default ContactForm;
-
-// const StyledContactForm = styled.div`
-//   width: 100%;
-//   form {
-//     display: flex;
-//     align-items: flex-start;
-//     flex-direction: column;
-//     width: 100%;
-//     font-size: 16px;
-//     input {
-//       width: 100%;
-//       height: 35px;
-//       padding: 7px;
-//       outline: none;
-//       border-radius: 5px;
-//       transition: all 0.1s ease-in-out;
-//       &:focus {
-//         border: 2px solid rgba(0, 206, 158, 1);
-//       }
-//     }
-//     textarea,
-//     input {
-//       background-color: #2b2b2b;
-//       width: 100%;
-//     }
-//     textarea {
-//       max-width: 100%;
-//       min-width: 100%;
-//       width: 100%;
-//       max-height: 200px;
-//       min-height: 100px;
-//       padding: 7px;
-//       outline: none;
-//       border-radius: 5px;
-//       transition: all 0.1s ease-in-out;
-//       &:focus {
-//         border: 2px solid rgba(0, 206, 158, 1);
-//       }
-//     }
-//     label {
-//       margin-top: 1rem;
-//       width: 100%;
-//     }
-//     p {
-//       font-size: 0.8rem;
-//       color: gray;
-//     }
-//   }
-// `;

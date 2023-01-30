@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { Inter, Hind_Siliguri, Newsreader } from "@next/font/google";
 import { AnimatePresence } from "framer-motion";
 import TopBlur from "@/components/TopBlur";
+import Layout from "@/components/layouts/main";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,11 +29,13 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <TopBlur />
       <main
-        className={`${inter.variable} ${newsreader.variable} font-sans ${hindSiliguri.variable} text-[#fff] bg-[#1b1b1b]`}
+        className={`${inter.variable} ${newsreader.variable} ${hindSiliguri.variable} bg-brand-background text-brand-textPrimary`}
       >
-        <AnimatePresence>
-          <Component {...pageProps} />
-        </AnimatePresence>
+        <Layout>
+          <AnimatePresence>
+            <Component {...pageProps} />
+          </AnimatePresence>
+        </Layout>
       </main>
     </>
   );

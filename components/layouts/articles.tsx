@@ -6,7 +6,11 @@ const variants = {
   exit: { opacity: 0, x: 0, y: 20 },
 };
 
-const Layout = ({ children }) => (
+type Props = {
+  children: React.ReactNode;
+};
+
+const Layout = ({ children }: Props) => (
   <motion.article
     initial="hidden"
     animate="enter"
@@ -14,7 +18,7 @@ const Layout = ({ children }) => (
     variants={variants}
     transition={{ duration: 0.4, type: "easeInOut" }}
   >
-    <>{children}</>
+    {children}
   </motion.article>
 );
 
