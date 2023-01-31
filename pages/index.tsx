@@ -12,15 +12,16 @@ import { Subtitle } from "@/components/Subtitle";
 export default function Home() {
   return (
     <main className="flex flex-col justify-center m-auto align-center max-w-3xl font-serif px-4">
-      <Section delay={0.1}>
+      <Section delay={0.2}>
         <div className="flex flex-col-reverse md:flex-row justify-center md:justify-right mt-16">
           <div className="md:self-center flex-grow">
             <h1 className="text-2xl md:text-4xl font-bold font-sans mt-2 text-brand-textTerciary">
               Facundo Perez Montalvo
             </h1>
             <span className="font-newsreader italic">
-              Frontend developer based in Argentina {countryCodeEmoji("AR")}
+              Frontend developer based in Argentina {"  "}
             </span>
+            {countryCodeEmoji("AR")}
           </div>
           <div className="relative flex-shrink-1 mb-2 text-left max-w-sm rounded-lg md:max-w-sm">
             <Image
@@ -67,7 +68,7 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section delay={0.3}>
+      <Section delay={0.2}>
         <Layout>
           <Subtitle>Projects</Subtitle>
           <p className="mb-4 font-serif">
@@ -144,7 +145,7 @@ export default function Home() {
           </div>
         </Layout>
       </Section>
-      <Section delay={0.4}>
+      <Section delay={0.3}>
         <Subtitle>Contact me</Subtitle>
         <p>
           Do you have a job opportunity or idea you&apos;d like to discuss? Feel
