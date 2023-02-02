@@ -134,6 +134,22 @@ export default function Home() {
               </Section>
               <Section>
                 <Project
+                  title="Todo App"
+                  link="https://todotypes-backend.up.railway.app"
+                  tech={[
+                    "Next.js",
+                    "Tailwind CSS",
+                    "TypeScript",
+                    "Railway",
+                    "MongoDB",
+                    "Express.js",
+                  ]}
+                >
+                  📝 Small fullstack to-do app.
+                </Project>
+              </Section>
+              <Section>
+                <Project
                   title="Bloggy"
                   link="https://bloggy-facundo.vercel.app/"
                   tech={["Next.js", "Tailwind CSS", "Firebase"]}
