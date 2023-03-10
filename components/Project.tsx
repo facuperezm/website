@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
 
 type ProjectGridProps = {
-  children: React.ReactNode;
+  children: string;
   title: string;
   link: string;
   tech: string[];

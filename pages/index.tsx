@@ -9,6 +9,71 @@ import Image from "next/image";
 import personalImg from "../public/images/facundo.jpg";
 import { Subtitle } from "@/components/Subtitle";
 
+interface Project {
+  title: string;
+  link: string;
+  tech: string[];
+  description: string;
+}
+
+const LINKEDIN_URL = "https://www.linkedin.com/in/facundoperezm/";
+const GITHUB_URL = "https://github.com/facuperezm";
+
+const PROJECTS = [
+  {
+    title: "Loco Heraldo's Menu",
+    link: "https://locoheraldo.vercel.app/",
+    tech: ["Next.js", "Tailwind CSS", "Vercel", "i18n", "Google Sheets"],
+    description: "🍕 Freelance work for a local restaurant.",
+  },
+  {
+    title: "Dictionary",
+    link: "https://dictionary-facundo.vercel.app/",
+    tech: ["Vite.js", "Tailwind CSS", "Vercel", "React-Query"],
+    description:
+      "📖 Dictionary is a simple app that allows you to search for words and their definitions.",
+  },
+  {
+    title: "Adviency 2022",
+    link: "https://adviency-facundo.vercel.app/",
+    tech: ["Next.js", "Tailwind CSS"],
+    description:
+      "🎄 Adviency is a gift list app that features a budget tracker and uses LocalStorage to store data.",
+  },
+  {
+    title: "e-Store",
+    link: "https://ecommerce-store-facundo.vercel.app/",
+    tech: ["Vite", "Tailwind CSS", "React-Router-v6", "Fake Store API"],
+    description: "🛒 E-commerce store that uses the Fake Store API.",
+  },
+  {
+    title: "Advice App",
+    link: "https://advice-generator-facundo.vercel.app/",
+    tech: ["Next.js", "Tailwind CSS", "Advice Slip API"],
+    description:
+      "🏃‍♂️ Advice Generator is a simple app that generates random advice.",
+  },
+  {
+    title: "Blogr Landing Page",
+    link: "https://blogr-facundo.netlify.app/",
+    tech: ["React", "Tailwind CSS"],
+    description: "🖥 Landing page for a fictional blog.",
+  },
+  {
+    title: "Todo App",
+    link: "https://todotypes-backend.up.railway.app",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "Railway",
+      "MongoDB",
+      "Express.js",
+    ],
+    description: "📝 Small fullstack to-do app.",
+  },
+];
+
 export default function Home() {
   return (
     <Layout>
@@ -51,15 +116,12 @@ export default function Home() {
           </div>
           <div className="align-center pt-1">
             <div className="flex gap-2 justify-left">
-              <Link
-                href="https://www.linkedin.com/in/facundoperezm/"
-                target="_blank"
-              >
+              <Link href={LINKEDIN_URL} target="_blank">
                 <button className="flex text-sm gap-2 items-center align-center px-4 py-2 text-white font-medium rounded-md border transition-all hover:text-white hover:bg-neutral-700 hover:border-transparent focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1">
                   <IoLogoLinkedin /> View Linkedin
                 </button>
               </Link>
-              <Link href="https://github.com/facuperezm" target="_blank">
+              <Link href={GITHUB_URL} target="_blank">
                 <button className="flex text-sm gap-2 items-center align-center px-4 py-2 text-white font-medium bg-neutral-600 rounded-md transition-all border border-transparent hover:bg-gray-300 hover:text-black hover:border-transparent focus:outline-none focus:ring-1 focus:ring-purple-600 focus:ring-offset-2">
                   <IoLogoGithub /> View GitHub
                 </button>
@@ -74,89 +136,21 @@ export default function Home() {
               Some of the projects that I am currently working on:
             </p>
             <div className="grid grid-cols-1 gap-2">
-              <Section>
-                <Project
-                  title="Loco Heraldo's Menu"
-                  link="https://locoheraldo.vercel.app/"
-                  tech={[
-                    "Next.js",
-                    "Tailwind CSS",
-                    "Vercel",
-                    "i18n",
-                    "Google Sheets",
-                  ]}
-                >
-                  🍕 Freelance work for a local restaurant.
-                </Project>
-              </Section>
-              <Section>
-                <Project
-                  title="Adviency 2022"
-                  link="https://adviency-facundo.vercel.app/"
-                  tech={["Next.js", "Tailwind CSS"]}
-                >
-                  🎄 Adviency is a gift list app that features a budget tracker
-                  and uses LocalStorage to store data.
-                </Project>
-              </Section>
-              <Section>
-                <Project
-                  title="e-Store"
-                  link="https://ecommerce-store-facundo.vercel.app/"
-                  tech={[
-                    "Vite",
-                    "Tailwind CSS",
-                    "React-Router-v6",
-                    "Fake Store API",
-                  ]}
-                >
-                  🛒 E-commerce store that uses the Fake Store API.
-                </Project>
-              </Section>
-              <Section>
-                <Project
-                  title="Advice App"
-                  link="https://advice-generator-facundo.vercel.app/"
-                  tech={["Next.js", "Tailwind CSS", "Advice Slip API"]}
-                >
-                  🏃‍♂️ Advice Generator is a simple app that generates random
-                  advice.
-                </Project>
-              </Section>
-              <Section>
-                <Project
-                  title="Blogr Landing Page"
-                  link="https://blogr-facundo.netlify.app/"
-                  tech={["React", "Tailwind CSS"]}
-                >
-                  🖥 Landing page for a fictional blog.
-                </Project>
-              </Section>
-              <Section>
-                <Project
-                  title="Todo App"
-                  link="https://todotypes-backend.up.railway.app"
-                  tech={[
-                    "Next.js",
-                    "Tailwind CSS",
-                    "TypeScript",
-                    "Railway",
-                    "MongoDB",
-                    "Express.js",
-                  ]}
-                >
-                  📝 Small fullstack to-do app.
-                </Project>
-              </Section>
-              <Section>
-                <Project
-                  title="Bloggy"
-                  link="https://bloggy-facundo.vercel.app/"
-                  tech={["Next.js", "Tailwind CSS", "Firebase"]}
-                >
-                  📖 Blog app featuring posts and comments.
-                </Project>
-              </Section>
+              {PROJECTS.map(
+                (project: Project, index: number): React.ReactNode => {
+                  return (
+                    <Section key={index}>
+                      <Project
+                        title={project.title}
+                        link={project.link}
+                        tech={project.tech}
+                      >
+                        {project.description}
+                      </Project>
+                    </Section>
+                  );
+                }
+              )}
             </div>
           </Layout>
         </Section>
