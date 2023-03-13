@@ -1,18 +1,18 @@
 import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
 
-type ProjectGridProps = {
+type ProjectProps = {
   children: string;
   title: string;
   link: string;
   tech: string[];
 };
 
-const Project = ({ children, title, link, tech }: ProjectGridProps) => {
+const Project = ({ children, title, link, tech }: ProjectProps) => {
   return (
-    <div className="flex flex-col w-full space-y-2 border rounded-md p-4 border-neutral-600">
+    <div className="flex flex-col w-full space-y-2 border rounded-md p-4 border-neutral-600 transition duration-300 ease-out hover:ease-in transform hover:shadow-lg">
       <Link href={link}>
-        <h2 className="flex items-center gap-1 text-lg font-sans font-bold hover:underline transition duration-150 ease-out hover:ease-in">
+        <h2 className="flex items-center gap-1 text-lg font-sans font-bold hover:underline">
           {title} <FiArrowUpRight />
         </h2>
       </Link>

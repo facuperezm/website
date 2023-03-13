@@ -117,12 +117,12 @@ export default function Home() {
           <div className="align-center pt-1">
             <div className="flex gap-2 justify-left">
               <Link href={LINKEDIN_URL} target="_blank">
-                <button className="flex text-sm gap-2 items-center align-center px-4 py-2 text-white font-medium rounded-md border transition-all hover:text-white hover:bg-neutral-700 hover:border-transparent focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1">
+                <button className="flex text-sm gap-2 items-center align-center px-4 py-2 text-white font-medium rounded-md border transition-all hover:text-white hover:bg-neutral-700 hover:border-transparent focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1  duration-300 ease-out hover:ease-in transform hover:shadow-lg">
                   <IoLogoLinkedin /> View Linkedin
                 </button>
               </Link>
               <Link href={GITHUB_URL} target="_blank">
-                <button className="flex text-sm gap-2 items-center align-center px-4 py-2 text-white font-medium bg-neutral-600 rounded-md transition-all border border-transparent hover:bg-gray-300 hover:text-black hover:border-transparent focus:outline-none focus:ring-1 focus:ring-purple-600 focus:ring-offset-2">
+                <button className="flex text-sm gap-2 items-center align-center px-4 py-2 text-white font-medium bg-neutral-600 rounded-md transition-all border border-transparent hover:bg-gray-300 hover:text-black hover:border-transparent focus:outline-none focus:ring-1 focus:ring-purple-600 focus:ring-offset-2  duration-300 ease-out hover:ease-in transform hover:shadow-lg">
                   <IoLogoGithub /> View GitHub
                 </button>
               </Link>
