@@ -93,6 +93,7 @@ export default function Home() {
               alt="profile picture"
               src={personalImg}
               className="rounded-2xl w-28 md:w-56"
+              priority
             />
           </div>
         </div>
