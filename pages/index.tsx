@@ -8,6 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import personalImg from "../public/images/facundo.jpg";
 import { Subtitle } from "@/components/Subtitle";
+import { m } from "framer-motion";
 
 interface Project {
   title: string;
@@ -20,6 +21,13 @@ const LINKEDIN_URL = "https://www.linkedin.com/in/facundoperezm/";
 const GITHUB_URL = "https://github.com/facuperezm";
 
 const PROJECTS = [
+  {
+    title: "URL Shorting",
+    link: "https://url-facundo.vercel.app/",
+    tech: ["Vite.js", "Tailwind CSS", "Vercel"],
+    description:
+      "🔗 URL Shorting is a simple app that allows you to shorten URLs.",
+  },
   {
     title: "Loco Heraldo's Menu",
     link: "https://locoheraldo.vercel.app/",
