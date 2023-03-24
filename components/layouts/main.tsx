@@ -25,6 +25,7 @@ const Main = ({ children }: Props) => {
         <meta name="twitter:site" content="@facuperezm" />
         <meta name="twitter:creator" content="@facuperezm" />
         <meta name="twitter:image" content="https://i.imgur.com/fjL49nC.jpg" />
+        <meta name="og:image" content="https://i.imgur.com/fjL49nC.jpg" />
         <meta property="og:site_name" content="Facundo Perez Montalvo" />
         <meta property="og:type" content="personal website" />
         <meta property="og:title" content="Facundo Perez Montalvo" />
@@ -34,6 +35,14 @@ const Main = ({ children }: Props) => {
         />
         <meta property="og:url" content="https://facuperezm.vercel.app" />
         <meta property="og:image" content="https://i.imgur.com/fjL49nC.jpg" />
+        <meta
+          property="og:image:secure_url"
+          content="https://i.imgur.com/fjL49nC.jpg"
+        />
+        <meta property="og:image:alt" content="Facundo Perez Montalvo" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
       </Head>
       {children}
       <hr className="h-px mt-6 border-0 bg-neutral-600" />
