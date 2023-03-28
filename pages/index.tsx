@@ -22,7 +22,7 @@ const GITHUB_URL = "https://github.com/facuperezm";
 
 const PROJECTS = [
   {
-    title: "URL Shorting",
+    title: "URL Shortening",
     link: "https://url-facundo.vercel.app/",
     tech: ["Vite.js", "Tailwind CSS", "Vercel"],
     description:
