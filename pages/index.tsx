@@ -29,12 +29,6 @@ const PROJECTS = [
       "🔗 URL Shorting is a simple app that allows you to shorten URLs.",
   },
   {
-    title: "Loco Heraldo's Menu",
-    link: "https://locoheraldo.vercel.app/",
-    tech: ["Next.js", "Tailwind CSS", "Vercel", "i18n", "Google Sheets"],
-    description: "🍕 Freelance work for a local restaurant.",
-  },
-  {
     title: "Dictionary",
     link: "https://dictionary-facundo.vercel.app/",
     tech: ["Vite.js", "Tailwind CSS", "Vercel", "React-Query"],
@@ -42,17 +36,23 @@ const PROJECTS = [
       "📖 Dictionary is a simple app that allows you to search for words and their definitions.",
   },
   {
-    title: "Adviency 2022",
-    link: "https://adviency-facundo.vercel.app/",
-    tech: ["Next.js", "Tailwind CSS"],
-    description:
-      "🎄 Adviency is a gift list app that features a budget tracker and uses LocalStorage to store data.",
+    title: "Loco Heraldo's Menu",
+    link: "https://locoheraldo.vercel.app/",
+    tech: ["Next.js", "Tailwind CSS", "Vercel", "i18n", "Google Sheets"],
+    description: "🍕 Freelance work for a local restaurant.",
   },
   {
     title: "e-Store",
     link: "https://ecommerce-store-facundo.vercel.app/",
     tech: ["Vite", "Tailwind CSS", "React-Router-v6", "Fake Store API"],
     description: "🛒 E-commerce store that uses the Fake Store API.",
+  },
+  {
+    title: "Adviency 2022",
+    link: "https://adviency-facundo.vercel.app/",
+    tech: ["Next.js", "Tailwind CSS"],
+    description:
+      "🎄 Adviency is a gift list app that features a budget tracker and uses LocalStorage to store data.",
   },
   {
     title: "Advice App",
@@ -67,36 +67,23 @@ const PROJECTS = [
     tech: ["React", "Tailwind CSS"],
     description: "🖥 Landing page for a fictional blog.",
   },
-  {
-    title: "Todo App",
-    link: "https://todotypes-backend.up.railway.app",
-    tech: [
-      "Next.js",
-      "Tailwind CSS",
-      "TypeScript",
-      "Railway",
-      "MongoDB",
-      "Express.js",
-    ],
-    description: "📝 Small fullstack to-do app.",
-  },
 ];
 
 export default function Home() {
   return (
     <Layout>
-      <main className="flex flex-col justify-center m-auto align-center max-w-3xl font-serif px-4">
-        <div className="flex flex-col-reverse md:flex-row justify-center md:justify-right mt-16">
-          <div className="md:self-center flex-grow">
-            <h1 className="text-2xl md:text-4xl font-bold font-sans mt-2 text-brand-textTerciary">
+      <main className="flex flex-col justify-center max-w-3xl px-4 m-auto font-serif align-center">
+        <div className="flex flex-col-reverse justify-center mt-16 md:flex-row md:justify-right">
+          <div className="flex-grow md:self-center">
+            <h1 className="mt-2 font-sans text-2xl font-bold md:text-4xl text-brand-textTerciary">
               Facundo Perez Montalvo
             </h1>
-            <span className="font-newsreader italic">
+            <span className="italic font-newsreader">
               Frontend developer based in Argentina {"  "}
             </span>
             {countryCodeEmoji("AR")}
           </div>
-          <div className="relative flex-shrink-1 mb-2 text-left max-w-sm rounded-lg md:max-w-sm">
+          <div className="relative max-w-sm mb-2 text-left rounded-lg flex-shrink-1 md:max-w-sm">
             <Image
               alt="profile picture"
               src={personalImg}
@@ -123,15 +110,15 @@ export default function Home() {
               to create something amazing!
             </p>
           </div>
-          <div className="align-center pt-1">
+          <div className="pt-1 align-center">
             <div className="flex gap-2 justify-left">
               <Link href={LINKEDIN_URL} target="_blank">
-                <button className="flex text-sm gap-2 items-center align-center px-4 py-2 text-white font-medium rounded-md border transition-all hover:text-white hover:bg-neutral-700 hover:border-transparent focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1  duration-300 ease-out hover:ease-in transform hover:shadow-lg">
+                <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white transition-all duration-300 ease-out transform border rounded-md align-center hover:text-white hover:bg-neutral-700 hover:border-transparent focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 hover:ease-in hover:shadow-lg">
                   <IoLogoLinkedin /> View Linkedin
                 </button>
               </Link>
               <Link href={GITHUB_URL} target="_blank">
-                <button className="flex text-sm gap-2 items-center align-center px-4 py-2 text-white font-medium bg-neutral-600 rounded-md transition-all border border-transparent hover:bg-gray-300 hover:text-black hover:border-transparent focus:outline-none focus:ring-1 focus:ring-purple-600 focus:ring-offset-2  duration-300 ease-out hover:ease-in transform hover:shadow-lg">
+                <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white transition-all duration-300 ease-out transform border border-transparent rounded-md align-center bg-neutral-600 hover:bg-gray-300 hover:text-black hover:border-transparent focus:outline-none focus:ring-1 focus:ring-purple-600 focus:ring-offset-2 hover:ease-in hover:shadow-lg">
                   <IoLogoGithub /> View GitHub
                 </button>
               </Link>
