@@ -41,12 +41,16 @@ const Main = ({ children }: Props) => {
           property="og:title"
           content="Facundo Perez Montalvo - Frontend Developer"
         />
+        <meta property="og:whatsapp" content="true" />
         <meta
           property="og:description"
           content="I'm a frontend developer with experience in React, Next.js, and Tailwind CSS. Currently seeking new opportunities."
         />
-        <meta property="og:url" content="https://facuperezm.vercel.app" />
-        <meta property="og:image" content="https://i.imgur.com/fjL49nC.jpg" />
+        <meta property="og:url" content="https://facuperezm.com" />
+        <meta
+          property="og:image:secure_url"
+          content="https://i.imgur.com/fjL49nC.jpg"
+        />
         <meta
           property="og:image:secure_url"
           content="https://i.imgur.com/fjL49nC.jpg"
