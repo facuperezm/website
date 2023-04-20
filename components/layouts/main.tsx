@@ -33,7 +33,7 @@ const Main = ({ children }: Props) => {
           name="twitter:description"
           content="I'm a frontend developer with experience in React, Next.js, and Tailwind CSS. Currently seeking new opportunities."
         />
-        <meta name="twitter:image" content="https://i.imgur.com/AEz4v6w.jpg" />
+        <meta name="twitter:image" content="https://i.imgur.com/kuQHDfm.jpg" />
         {/* <!-- Open Graph --> */}
         <meta property="og:site_name" content="Facundo Perez Montalvo" />
         <meta property="og:type" content="website" />
