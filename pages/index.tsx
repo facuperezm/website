@@ -22,6 +22,13 @@ const GITHUB_URL = "https://github.com/facuperezm";
 
 const PROJECTS = [
   {
+    title: "Password Generator",
+    link: "https://password-generator-facuperezm.vercel.app/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    description:
+      "🔐 Password Generator is a simple app that generates a random password based on the user's input.",
+  },
+  {
     title: "URL Shortening",
     link: "https://url-facundo.vercel.app/",
     tech: ["Vite.js", "Tailwind CSS", "Vercel"],
@@ -100,10 +107,10 @@ export default function Home() {
               background in the React stack. I specialize in creating
               user-friendly, visually appealing interfaces.
             </p>
-            <p className="mb-2">
+            {/* <p className="mb-2">
               I&apos;m driven to make a positive impact on the world through my
               work and I&apos;m always seeking to learn and improve my skills.
-            </p>
+            </p> */}
             <p className="mb-2">
               If you&apos;re looking for a dedicated frontend developer to join
               your team, I would love to hear from you. Let&apos;s work together
