@@ -17,7 +17,7 @@ interface Project {
   description: string;
 }
 
-const LINKEDIN_URL = "https://www.linkedin.com/in/facundoperezm/";
+const LINKEDIN_URL = "https://www.linkedin.com/in/facuperezm/";
 const GITHUB_URL = "https://github.com/facuperezm";
 
 const PROJECTS = [
