@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils'
 import { siteConfig } from '@/config/site'
 
 import TopBlur from '@/components/top-blur'
-import Footer from '@/components/Footer'
+import Footer from '@/components/footer-component'
 
 const inter = Inter({
 	subsets: ['latin'],
