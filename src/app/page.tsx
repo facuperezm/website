@@ -13,7 +13,6 @@ import Section from '@/components/section-animate'
 import Layout from '@/components/layout-animate'
 import Project from '@/components/project-component'
 import ContactForm from '@/components/contact-form'
-import Subtitle from '@/components/Subtitle'
 import Button from '@/components/ui/button'
 
 import { PROJECTS } from '@/config/projects'
