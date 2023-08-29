@@ -48,9 +48,9 @@ export default function HomePage() {
 				</div>
 			</section>
 			<Section delay={0.2}>
-				<h3 className='text-xl mt-6 mb-2 font-semibold text-brand-textTerciary'>
+				<h2 className='text-xl mt-6 mb-2 font-semibold text-brand-textTerciary'>
 					About me
-				</h3>
+				</h2>
 				<div>
 					<p className='mb-2'>
 						Hey! I&apos;m Facundo, a frontend developer with a self-taught
@@ -104,9 +104,9 @@ export default function HomePage() {
 				</Layout>
 			</Section>
 			<Section delay={0.3}>
-				<h3 className='text-xl mt-6 mb-2 font-semibold text-brand-textTerciary'>
+				<h4 className='text-xl mt-6 mb-2 font-semibold text-brand-textTerciary'>
 					Contact me
-				</h3>
+				</h4>
 				<p>
 					Do you have a job opportunity or idea you&apos;d like to discuss? Feel
 					free to send me an email:

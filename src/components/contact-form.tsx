@@ -26,7 +26,7 @@ function ContactForm() {
 					setShowThanks(true)
 				},
 				error => {
-					console.log(error.text)
+					throw new Error(error.text)
 				}
 			)
 		reset()
@@ -47,42 +47,51 @@ function ContactForm() {
 					ref={formRef}
 					onSubmit={handleSubmit(sendEmail)}
 				>
-					<label htmlFor='user_name'>Name</label>
-					<input
-						className='w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500  bg-[#151515] mb-2'
-						{...register('user_name', { required: true, minLength: 3 })}
-						type='text'
-						name='user_name'
-					/>
+					<label htmlFor='user_name'>
+						Name
+						<input
+							className='w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500  bg-[#151515] mb-2'
+							{...register('user_name', { required: true, minLength: 3 })}
+							type='text'
+							name='user_name'
+							id='user_name'
+						/>
+					</label>
 					{errors.user_name?.type === 'required' && (
 						<p className='text-sm text-brand-textSecondary' role='alert'>
 							Name is required
 						</p>
 					)}
-					<label htmlFor='user_email'>Email</label>
-					<input
-						className='w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500  bg-[#151515] mb-2'
-						{...register('user_email', {
-							required: true,
-							pattern: {
-								value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-								message: 'invalid email address'
-							}
-						})}
-						type='email'
-						name='user_email'
-					/>
+					<label htmlFor='user_email'>
+						Email
+						<input
+							className='w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500  bg-[#151515] mb-2'
+							{...register('user_email', {
+								required: true,
+								pattern: {
+									value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+									message: 'invalid email address'
+								}
+							})}
+							type='email'
+							name='user_email'
+							id='user_email'
+						/>
+					</label>
 					{errors.user_email?.type === 'required' && (
 						<p className='text-sm text-brand-textSecondary' role='alert'>
 							Email is required
 						</p>
 					)}
-					<label htmlFor='message'>Message</label>
-					<textarea
-						className='w-full h-20 p-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500  bg-[#151515]'
-						{...register('message', { required: true, minLength: 3 })}
-						name='message'
-					/>
+					<label htmlFor='message'>
+						Message
+						<textarea
+							className='w-full h-20 p-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500  bg-[#151515]'
+							{...register('message', { required: true, minLength: 3 })}
+							name='message'
+							id='message'
+						/>
+					</label>
 					{errors.message?.type === 'required' && (
 						<p className='mb-2 text-sm text-brand-textSecondary' role='alert'>
 							Message is required
