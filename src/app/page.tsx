@@ -10,13 +10,13 @@ import { cn } from '@/lib/utils'
 import personalImg from '../../public/images/facundo.jpg'
 
 import Section from '@/components/section-animate'
-import Layout from '@/components/layout-animate'
+import Layout from '@/components/article-animate'
 import Project from '@/components/project-component'
 import ContactForm from '@/components/contact-form'
-import Button from '@/components/ui/button'
+import Button from '@/components/ui/action-button'
 
 import { PROJECTS } from '@/config/projects'
-import { LINKS } from '@/config/site'
+import { siteConfig } from '@/config/site'
 
 interface Project {
 	title: string
@@ -33,7 +33,7 @@ const newsreader = Newsreader({
 export default function HomePage() {
 	return (
 		<main className='flex flex-col justify-center max-w-3xl px-4 m-auto align-center'>
-			<div className='flex flex-col-reverse justify-center mt-16 md:flex-row md:justify-right'>
+			<section className='flex flex-col-reverse justify-center mt-16 md:flex-row md:justify-right'>
 				<div className='flex-grow md:self-center'>
 					<h1 className='mb-1 text-2xl font-bold md:text-4xl text-brand-textTerciary'>
 						Facundo Perez Montalvo
@@ -53,7 +53,7 @@ export default function HomePage() {
 						priority
 					/>
 				</div>
-			</div>
+			</section>
 			<Section delay={0.2}>
 				<h3 className='text-xl mt-6 mb-2 font-semibold text-brand-textTerciary'>
 					About me
@@ -72,12 +72,12 @@ export default function HomePage() {
 				</div>
 				<div className='pt-1 align-center'>
 					<div className='flex gap-2 justify-left'>
-						<Link href={LINKS.LINKEDIN_URL}>
+						<Link href={siteConfig.links.linkedin}>
 							<Button variant='linkedin'>
 								<IoLogoLinkedin /> View Linkedin
 							</Button>
 						</Link>
-						<Link href={LINKS.GITHUB_URL}>
+						<Link href={siteConfig.links.github}>
 							<Button variant='github'>
 								<IoLogoGithub /> View GitHub
 							</Button>

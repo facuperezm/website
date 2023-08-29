@@ -6,5 +6,8 @@ export type SiteConfig = {
 	links: {
 		twitter: string
 		github: string
+		linkedin: string
 	}
 }
+
+declare module 'next/font/google'

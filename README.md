@@ -10,7 +10,7 @@ This is my portfolio website made with Next.js and styled with Tailwind CSS
 
 ## Tech Stack
 
-**Client:** React, Next.js, Tailwind CSS, Framer Motion, Emailjs, React-hook-form
+**Client:** React, Next.js 13, Tailwind CSS, Framer Motion, Emailjs, React-hook-form
 
 **Deploy:** Vercel
 

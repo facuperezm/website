@@ -49,7 +49,7 @@ function ContactForm() {
 				>
 					<label htmlFor='user_name'>Name</label>
 					<input
-						className='w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500 bg-[#2b2b2b] mb-2'
+						className='w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500  bg-[#151515] mb-2'
 						{...register('user_name', { required: true, minLength: 3 })}
 						type='text'
 						name='user_name'
@@ -61,7 +61,7 @@ function ContactForm() {
 					)}
 					<label htmlFor='user_email'>Email</label>
 					<input
-						className='w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500  bg-[#2b2b2b] mb-2'
+						className='w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500  bg-[#151515] mb-2'
 						{...register('user_email', {
 							required: true,
 							pattern: {
@@ -79,7 +79,7 @@ function ContactForm() {
 					)}
 					<label htmlFor='message'>Message</label>
 					<textarea
-						className='w-full h-20 p-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500 bg-[#2b2b2b]'
+						className='w-full h-20 p-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500  bg-[#151515]'
 						{...register('message', { required: true, minLength: 3 })}
 						name='message'
 					/>

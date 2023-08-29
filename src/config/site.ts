@@ -8,11 +8,7 @@ export const siteConfig: SiteConfig = {
 	ogImage: 'https://i.imgur.com/fjL49nC.jpg',
 	links: {
 		twitter: 'https://twitter.com/facuperezm',
-		github: 'https://github.com/facuperezm'
+		github: 'https://github.com/facuperezm',
+		linkedin: 'https://www.linkedin.com/in/facuperezm/'
 	}
-}
-
-export const LINKS = {
-	LINKEDIN_URL: 'https://www.linkedin.com/in/facuperezm/',
-	GITHUB_URL: 'https://www.github.com/facuperezm'
 }

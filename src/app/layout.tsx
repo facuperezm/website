@@ -7,9 +7,10 @@ import { siteConfig } from '@/config/site'
 import TopBlur from '@/components/top-blur'
 import Footer from '@/components/footer-component'
 
+// If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
 	subsets: ['latin'],
-	weight: ['400', '700', '900']
+	display: 'swap'
 })
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 	authors: [
 		{
 			name: 'Facundo Perez Montalvo',
-			url: 'https://facuperezm.com'
+			url: siteConfig.url
 		}
 	],
 	creator: 'facuperezm',

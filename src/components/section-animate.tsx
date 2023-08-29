@@ -8,14 +8,14 @@ type Props = {
 
 function Section({ children, delay = 0 }: Props) {
 	return (
-		<motion.div
+		<motion.section
 			initial={{ opacity: 0, y: 10 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 1, delay }}
 			className='mb-2'
 		>
 			{children}
-		</motion.div>
+		</motion.section>
 	)
 }
 

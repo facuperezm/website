@@ -14,7 +14,7 @@ const config: Config = {
 					textSecondary: '#A0A0A0',
 					textTerciary: '#FFF',
 					buttonback: '#171717',
-					background: '#1c1c1c'
+					background: '#0f0f0f'
 				}
 			}
 		}
