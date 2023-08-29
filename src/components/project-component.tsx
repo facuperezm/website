@@ -5,7 +5,7 @@ type ProjectProps = {
 	children: string
 	title: string
 	link: string
-	tech: string[]
+	tech?: string[]
 }
 
 function Project({ children, title, link, tech }: ProjectProps) {

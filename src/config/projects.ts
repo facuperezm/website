@@ -1,3 +1,10 @@
+export type Project = {
+	title: string
+	link: string
+	tech: string[]
+	description: string
+}
+
 export const PROJECTS = [
 	{
 		title: 'Password Generator',
@@ -52,4 +59,4 @@ export const PROJECTS = [
 		tech: ['React', 'Tailwind CSS'],
 		description: '🖥 Landing page for a fictional blog.'
 	}
-]
+] as Project[]

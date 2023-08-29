@@ -18,13 +18,6 @@ import Button from '@/components/ui/action-button'
 import { PROJECTS } from '@/config/projects'
 import { siteConfig } from '@/config/site'
 
-interface Project {
-	title: string
-	link: string
-	tech: string[]
-	description: string
-}
-
 const newsreader = Newsreader({
 	subsets: ['latin'],
 	style: ['italic']

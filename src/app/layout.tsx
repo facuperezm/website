@@ -7,7 +7,6 @@ import { siteConfig } from '@/config/site'
 import TopBlur from '@/components/top-blur'
 import Footer from '@/components/footer-component'
 
-// If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
 	subsets: ['latin'],
 	display: 'swap'
