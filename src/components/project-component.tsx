@@ -19,7 +19,7 @@ function Project({ children, title, link, tech }: ProjectProps) {
 					</span>
 				</h2>
 			</Link>
-			<p className='text-brand-textSecondary'>{children}</p>
+			<p className='text-brand-textSecondary leading-relaxed'>{children}</p>
 			<div className='flex gap-1'>
 				{tech?.map(tech => (
 					<span
