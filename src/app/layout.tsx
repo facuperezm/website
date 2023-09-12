@@ -13,7 +13,11 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-	title: siteConfig.name,
+	title: {
+		default: siteConfig.name,
+		template: `%s | ${siteConfig.name}`
+	},
+	metadataBase: new URL(siteConfig.url),
 	description: siteConfig.description,
 	keywords: [
 		'Frontend Developer',
@@ -25,32 +29,37 @@ export const metadata: Metadata = {
 	],
 	authors: [
 		{
-			name: 'Facundo Perez Montalvo',
+			name: siteConfig.name,
 			url: siteConfig.url
 		}
 	],
 	creator: 'facuperezm',
 	themeColor: { media: '(prefers-color-scheme: dark)', color: 'black' },
 	twitter: {
-		card: 'summary_large_image',
 		title: siteConfig.name,
+		card: 'summary_large_image',
 		images: ['https://i.imgur.com/kuQHDfm.jpg'],
 		description: siteConfig.description,
 		creator: '@facuperezm'
 	},
 	openGraph: {
-		type: 'website',
-		locale: 'es_AR',
-		url: siteConfig.url,
-		title: `${siteConfig.name} - Frontend Developer`,
+		title: siteConfig.name,
 		description: siteConfig.description,
-		siteName: siteConfig.name
+		url: siteConfig.url,
+		siteName: siteConfig.name,
+		locale: 'es_AR',
+		type: 'website'
 	},
 	icons: {
 		icon: '/favicon.ico',
-		shortcut: '/favicon.ico',
-		apple: '/favicon.ico'
-	}
+		shortcut: '/favicon-16x16.png',
+		apple: '/apple-touch-icon.png',
+		other: {
+			rel: 'android-chrome-192x192',
+			url: '/android-chrome-192x192.png'
+		}
+	},
+	manifest: '/site.webmanifest'
 }
 
 export default function RootLayout({
