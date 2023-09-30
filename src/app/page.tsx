@@ -80,9 +80,9 @@ export default function HomePage() {
 			</Section>
 			<Section delay={0.2}>
 				<Layout>
-					<h3 className='text-xl mt-6 mb-2 font-semibold text-brand-textTerciary'>
+					<h2 className='text-xl mt-6 mb-2 font-semibold text-brand-textTerciary'>
 						Projects
-					</h3>
+					</h2>
 					<p className='mb-4'>
 						Some of the projects that I am currently working on:
 					</p>
@@ -104,9 +104,9 @@ export default function HomePage() {
 				</Layout>
 			</Section>
 			<Section delay={0.3}>
-				<h4 className='text-xl mt-6 mb-2 font-semibold text-brand-textTerciary'>
+				<h2 className='text-xl mt-6 mb-2 font-semibold text-brand-textTerciary'>
 					Contact me
-				</h4>
+				</h2>
 				<p className='leading-7'>
 					Do you have a job opportunity or idea you&apos;d like to discuss? Feel
 					free to send me an email:
