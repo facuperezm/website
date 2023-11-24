@@ -1,17 +1,9 @@
 "use client";
-import Link from "next/link";
-import Image from "next/image";
-import { Newsreader } from "next/font/google";
 
-import { countryCodeEmoji } from "country-code-emoji";
-import { cn } from "@/lib/utils";
-
-import personalImg from "../../public/images/facundo.jpg";
-
-import Section from "@/components/section-animate";
+import ContactForm from "@/components/contact-form";
 import Layout from "@/components/main-animate";
 import Project from "@/components/project-component";
-import ContactForm from "@/components/contact-form";
+import Section from "@/components/section-animate";
 import { Button } from "@/components/ui/button";
 import {
   Tooltip,
@@ -19,30 +11,23 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-
 import { PROJECTS } from "@/config/projects";
 import { siteConfig } from "@/config/site";
+import { countryCodeEmoji } from "country-code-emoji";
 import { Github, Linkedin } from "lucide-react";
-
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  style: ["italic"],
-});
+import Image from "next/image";
+import Link from "next/link";
+import personalImg from "../../public/images/facundo.jpg";
 
 export default function HomePage() {
   return (
-    <Layout className="flex flex-col justify-center max-w-3xl px-4 m-auto align-center">
-      <Section className="flex flex-col-reverse justify-center mt-16 md:flex-row md:justify-right">
-        <div className="flex-grow md:self-center">
-          <h1 className="mb-1 text-2xl font-extrabold md:text-4xl scroll-m-20 tracking-tight">
+    <Layout className="align-center m-auto flex max-w-3xl flex-col justify-center px-4">
+      <Section className="md:justify-right mt-16 flex flex-col-reverse justify-center md:flex-row">
+        <div className="grow md:self-center">
+          <h1 className="mb-1 scroll-m-20 text-2xl font-extrabold tracking-tight md:text-4xl">
             Facundo Perez Montalvo
           </h1>
-          <span
-            className={cn(
-              newsreader.className,
-              "italic tracking-wide text-muted-foreground"
-            )}
-          >
+          <span className="font-serif italic tracking-wide text-muted-foreground">
             Frontend developer based in Argentina {"  "}
           </span>
           {countryCodeEmoji("AR")}
@@ -53,11 +38,11 @@ export default function HomePage() {
             <TooltipContent side="bottom">
               <p>🔎 Looking for my first developer role</p>
             </TooltipContent>
-            <TooltipTrigger className="cursor-default relative max-w-sm mb-2 rounded-2xl text-left flex-shrink-1 md:max-w-sm shadow-2xl">
+            <TooltipTrigger className="shrink-1 relative mb-2 max-w-sm cursor-default rounded-2xl text-left md:max-w-sm md:shadow-2xl">
               <Image
                 alt="Personal profile picture of Facundo Perez Montalvo"
                 src={personalImg}
-                className="rounded-2xl w-28 md:w-56"
+                className="w-28 rounded-2xl md:w-56"
                 width={250}
                 height={250}
                 quality={70}
@@ -69,7 +54,7 @@ export default function HomePage() {
         </TooltipProvider>
       </Section>
       <Section delay={0.3}>
-        <h2 className="scroll-m-20 text-xl font-semibold tracking-tight mt-4 mb-2">
+        <h2 className="mb-2 mt-4 scroll-m-20 text-xl font-semibold tracking-tight">
           About me
         </h2>
         <div className="mb-2">
@@ -84,8 +69,8 @@ export default function HomePage() {
             to create something amazing!
           </p>
         </div>
-        <div className="pt-1 align-center">
-          <div className="flex gap-2 justify-left">
+        <div className="align-center pt-1">
+          <div className="justify-left flex gap-2">
             <Button variant="default" asChild>
               <Link href={siteConfig.links.linkedin}>
                 <Linkedin className="mr-2 h-4 w-4" /> View Linkedin
@@ -101,13 +86,13 @@ export default function HomePage() {
         </div>
       </Section>
       <Section delay={0.4}>
-        <h2 className="scroll-m-20 text-xl font-semibold tracking-tight mt-4 mb-2">
+        <h2 className="mb-2 mt-4 scroll-m-20 text-xl font-semibold tracking-tight">
           Projects
         </h2>
         <p className="mb-4">
           Some of the projects that I am currently working on:
         </p>
-        <div className="flex flex-col w-full gap-2">
+        <div className="flex w-full flex-col gap-2">
           {PROJECTS.map((project, index) => {
             return (
               <Section key={index}>
@@ -124,7 +109,7 @@ export default function HomePage() {
         </div>
       </Section>
       <Section delay={0.5}>
-        <h2 className="scroll-m-20 text-xl font-semibold tracking-tight mt-4 mb-2">
+        <h2 className="mb-2 mt-4 scroll-m-20 text-xl font-semibold tracking-tight">
           Contact me
         </h2>
         <p className="mb-4">

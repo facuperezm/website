@@ -1,15 +1,12 @@
 import "@/styles/globals.css";
-import type { Metadata } from "next";
-import { Lato } from "next/font/google";
-import { cn } from "@/lib/utils";
-import { siteConfig } from "@/config/site";
-
-import TopBlur from "@/components/top-blur";
 import Footer from "@/components/footer-component";
-import { Separator } from "@/components/ui/separator";
 import { ThemeProvider } from "@/components/theme-provider";
-
-const lato = Lato({ weight: ["400", "700"], subsets: ["latin-ext"] });
+import TopBlur from "@/components/top-blur";
+import { Separator } from "@/components/ui/separator";
+import { siteConfig } from "@/config/site";
+import { fontSans, fontSerif } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
+import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   title: {
@@ -33,7 +30,6 @@ export const metadata: Metadata = {
     },
   ],
   creator: "facuperezm",
-  themeColor: { media: "(prefers-color-scheme: dark)", color: "black" },
   twitter: {
     title: siteConfig.name,
     card: "summary_large_image",
@@ -61,6 +57,14 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 };
 
+export const viewport: Viewport = {
+  colorScheme: "dark light",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -69,7 +73,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn("min-h-screen antialiased scroll-smooth", lato.className)}
+        className={cn(
+          "min-h-screen scroll-smooth font-sans antialiased",
+          fontSerif.variable,
+          fontSans.variable,
+        )}
       >
         <ThemeProvider
           attribute="class"
@@ -79,7 +87,7 @@ export default function RootLayout({
         >
           <TopBlur />
           {children}
-          <Separator className="bg-muted/40 mt-6" />
+          <Separator className="mt-6 bg-muted/40" />
           <Footer />
         </ThemeProvider>
       </body>

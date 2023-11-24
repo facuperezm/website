@@ -1,10 +1,4 @@
 "use client";
-import React from "react";
-import * as z from "zod";
-import emailjs from "@emailjs/browser";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { useToast } from "./ui/use-toast";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -15,9 +9,15 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Toaster } from "@/components/ui/toaster";
+import emailjs from "@emailjs/browser";
+import { zodResolver } from "@hookform/resolvers/zod";
+import React from "react";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+import { useToast } from "./ui/use-toast";
 
 const contactFormSchema = z.object({
   user_name: z
@@ -61,7 +61,7 @@ function ContactForm() {
         process.env.NEXT_PUBLIC_YOUR_SERVICE_ID!,
         process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID!,
         formRef.current!,
-        "3Kfp25amvpJXfbaFZ"
+        "3Kfp25amvpJXfbaFZ",
       )
       .then(
         () => {
@@ -73,7 +73,7 @@ function ContactForm() {
         },
         (error) => {
           throw new Error(error.text);
-        }
+        },
       );
   }
 
