@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import * as React from "react";
 
-export function ModeToggle() {
+export function ModeToggle({ className }: { className?: string }) {
   const { setTheme, theme } = useTheme();
 
   return (
@@ -12,6 +12,7 @@ export function ModeToggle() {
       variant="theme"
       size="tiny"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      className={className}
     >
       <span
         className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
