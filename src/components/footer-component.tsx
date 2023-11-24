@@ -1,15 +1,16 @@
-import { siteConfig } from '@/config/site'
-import Link from 'next/link'
+import { siteConfig } from "@/config/site";
+import Link from "next/link";
+import { ModeToggle } from "./ui/heart-theme";
 
 function Footer() {
-	return (
-		<footer className='py-3 text-sm text-center text-brand-textSecondary'>
-			&copy; {new Date().getFullYear()} | Built with 🖤 by{' '}
-			<Link href={siteConfig.links.linkedin} className='hover:underline'>
-				Facundo
-			</Link>
-		</footer>
-	)
+  return (
+    <footer className="py-3 text-sm text-center text-muted-foreground/80">
+      Built with <ModeToggle /> by{" "}
+      <Link href={siteConfig.links.linkedin} className="hover:underline">
+        {siteConfig.nickname}
+      </Link>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

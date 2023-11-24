@@ -10,7 +10,7 @@ This is my portfolio website made with Next.js and styled with Tailwind CSS
 
 ## Tech Stack
 
-**Client:** React, Next.js 13, Tailwind CSS, Framer Motion, Emailjs, React-hook-form
+**Client:** React, Next.js 14, Tailwind CSS, Framer Motion, Emailjs, React-hook-form & Zod
 
 **Deploy:** Vercel
 
@@ -21,12 +21,11 @@ This is my portfolio website made with Next.js and styled with Tailwind CSS
 
 ## Optimizations
 
-- [ ] Improve colors variables in Tailwind config file to use better conventions
-- [ ] Add dark mode
-- [ ] Dark/Light theme
-- [ ] Improve contact form validation and error handling to show error messages and success message
-- [ ] Add a loading spinner when sending the email
-- [ ] Add a toast message when sending the email
+- [x] Improve colors variables in Tailwind config file to use better conventions
+- [x] Add dark mode
+- [x] Dark/Light theme
+- [x] Improve contact form validation and error handling
+- [x] Add a toast message when sending the email
 - [ ] Separate works in new page
 - [ ] Add a new page for the blog
 

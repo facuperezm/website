@@ -1,5 +1,5 @@
 function TopBlur() {
-	return <div aria-disabled className='topBlur'></div>
+  return <div aria-hidden className="topBlur"></div>;
 }
 
-export default TopBlur
+export default TopBlur;

@@ -1,112 +1,142 @@
-'use client'
-import React, { useRef, useState } from 'react'
-import emailjs from '@emailjs/browser'
-import { useForm } from 'react-hook-form'
+"use client";
+import React from "react";
+import * as z from "zod";
+import emailjs from "@emailjs/browser";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { useToast } from "./ui/use-toast";
+
+import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
+import { Toaster } from "@/components/ui/toaster";
+
+const contactFormSchema = z.object({
+  user_name: z
+    .string()
+    .min(2, {
+      message: "Name must be at least 2 characters.",
+    })
+    .max(30, {
+      message: "Name must not be longer than 30 characters.",
+    }),
+  user_email: z
+    .string({
+      required_error: "Email is required",
+    })
+    .email(),
+  message: z.string().min(5).max(500),
+});
+
+type contactFormType = z.infer<typeof contactFormSchema>;
+
+const defaultValues = {
+  user_name: "",
+  user_email: "",
+  message: "",
+};
 
 function ContactForm() {
-	const [showThanks, setShowThanks] = useState<boolean>(false)
-	const {
-		register,
-		handleSubmit,
-		formState: { errors },
-		reset
-	} = useForm()
-	const formRef = useRef<HTMLFormElement>(null)
+  const { toast } = useToast();
 
-	const sendEmail = () => {
-		emailjs
-			.sendForm(
-				process.env.NEXT_PUBLIC_YOUR_SERVICE_ID!,
-				process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID!,
-				formRef.current!,
-				'3Kfp25amvpJXfbaFZ'
-			)
-			.then(
-				result => {
-					setShowThanks(true)
-				},
-				error => {
-					throw new Error(error.text)
-				}
-			)
-		reset()
-	}
+  const form = useForm<contactFormType>({
+    // TODO: review why this is throwing error for ZodObject
+    // @ts-ignore
+    resolver: zodResolver(contactFormSchema),
+    defaultValues,
+    mode: "onChange",
+  });
 
-	return (
-		<>
-			{showThanks ? (
-				<div className='text-left'>
-					<h1 className='mt-3 text-sm text-brand-textSecondary'>
-						Thank you for contacting me, I will get back to you as soon as
-						possible.
-					</h1>
-				</div>
-			) : (
-				<form
-					className='w-full pt-3'
-					ref={formRef}
-					onSubmit={handleSubmit(sendEmail)}
-				>
-					<label htmlFor='user_name'>
-						Name
-						<input
-							className='w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500  bg-[#151515] mb-2'
-							{...register('user_name', { required: true, minLength: 3 })}
-							type='text'
-							name='user_name'
-							id='user_name'
-						/>
-					</label>
-					{errors.user_name?.type === 'required' && (
-						<p className='text-sm text-brand-textSecondary' role='alert'>
-							Name is required
-						</p>
-					)}
-					<label htmlFor='user_email'>
-						Email
-						<input
-							className='w-full h-8 px-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500  bg-[#151515] mb-2'
-							{...register('user_email', {
-								required: true,
-								pattern: {
-									value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-									message: 'invalid email address'
-								}
-							})}
-							type='email'
-							name='user_email'
-							id='user_email'
-						/>
-					</label>
-					{errors.user_email?.type === 'required' && (
-						<p className='text-sm text-brand-textSecondary' role='alert'>
-							Email is required
-						</p>
-					)}
-					<label htmlFor='message'>
-						Message
-						<textarea
-							className='w-full h-20 p-2 outline-none rounded-md transition-all duration-100 ease-in-out focus:border-2 focus:border-teal-500  bg-[#151515]'
-							{...register('message', { required: true, minLength: 3 })}
-							name='message'
-							id='message'
-						/>
-					</label>
-					{errors.message?.type === 'required' && (
-						<p className='mb-2 text-sm text-brand-textSecondary' role='alert'>
-							Message is required
-						</p>
-					)}
-					<button
-						className='px-4 py-2 mt-1 text-sm font-medium text-white transition-all border rounded-md hover:text-white hover:bg-neutral-700 hover:border-transparent focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1'
-						type='submit'
-						value='Send'
-					>
-						Send
-					</button>
-				</form>
-			)}
-		</>
-	)
+  function onSubmit() {
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_YOUR_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID!,
+        formRef.current!,
+        "3Kfp25amvpJXfbaFZ"
+      )
+      .then(
+        () => {
+          toast({
+            title: "Thanks for contacting me!",
+            description:
+              "I really appreciate you taking the time to reach out. I will get back to you as soon as possible.",
+          });
+        },
+        (error) => {
+          throw new Error(error.text);
+        }
+      );
+  }
+
+  const formRef = React.useRef<HTMLFormElement>(null);
+
+  return (
+    <>
+      <Form {...form}>
+        <form
+          ref={formRef}
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-3"
+        >
+          <FormField
+            control={form.control}
+            name="user_name"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Name</FormLabel>
+                <FormControl>
+                  <Input placeholder="John Doe" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="user_email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input placeholder="johndoe@email.com" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="message"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Message</FormLabel>
+                <FormControl>
+                  <Textarea
+                    placeholder="Interested in collaborating with us? We'd love to hear from you!"
+                    className="resize-none"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button type="submit">Send</Button>
+        </form>
+      </Form>
+      <Toaster />
+    </>
+  );
 }
-export default ContactForm
+export default ContactForm;
