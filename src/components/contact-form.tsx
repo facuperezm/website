@@ -30,10 +30,13 @@ const contactFormSchema = z.object({
     }),
   user_email: z
     .string({
-      required_error: "Email is required",
+      required_error: "A valid email is required.",
     })
-    .email(),
-  message: z.string().min(5).max(500),
+    .email({ message: "Please enter a valid email." }),
+  message: z
+    .string()
+    .min(5, { message: "Message has to be more than 5 characters." })
+    .max(400, { message: "Message has to be less than 500 characters." }),
 });
 
 type contactFormType = z.infer<typeof contactFormSchema>;
