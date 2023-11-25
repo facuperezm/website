@@ -17,7 +17,7 @@ import { countryCodeEmoji } from "country-code-emoji";
 import { Github, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import personalImg from "../../public/images/facundo.jpg";
+import personalImg from "../../public/images/facundo.webp";
 
 export default function HomePage() {
   return (
@@ -27,7 +27,7 @@ export default function HomePage() {
           <h1 className="mb-1 scroll-m-20 text-2xl font-extrabold tracking-tight md:text-4xl">
             Facundo Perez Montalvo
           </h1>
-          <span className="font-serif italic tracking-wide text-muted-foreground">
+          <span className="font-serif italic tracking-[0.020em] text-muted-foreground">
             Frontend developer based in Argentina {"  "}
           </span>
           {countryCodeEmoji("AR")}

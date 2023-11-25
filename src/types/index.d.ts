@@ -8,5 +8,6 @@ export type SiteConfig = {
     twitter: string;
     github: string;
     linkedin: string;
+    repo: string;
   };
 };

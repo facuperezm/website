@@ -11,5 +11,6 @@ export const siteConfig: SiteConfig = {
     twitter: "https://twitter.com/facuperezm",
     github: "https://github.com/facuperezm",
     linkedin: "https://linkedin.com/in/facuperezm/",
+    repo: "https://github.com/facuperezm/website",
   },
 };
