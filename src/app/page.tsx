@@ -40,12 +40,12 @@ export default function HomePage() {
             </TooltipContent>
             <TooltipTrigger className="shrink-1 relative mb-2 max-w-sm cursor-default rounded-2xl text-left md:max-w-sm md:shadow-2xl">
               <Image
-                alt="Personal profile picture of Facundo Perez Montalvo"
+                alt="Profile picture of Facundo Perez Montalvo"
                 src={personalImg}
                 className="w-28 rounded-2xl md:w-56"
-                width={250}
-                height={250}
-                quality={70}
+                width={224}
+                height={224}
+                quality={65}
                 priority
                 placeholder="blur"
               />
