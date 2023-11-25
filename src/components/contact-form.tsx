@@ -48,6 +48,7 @@ const defaultValues = {
 };
 
 function ContactForm() {
+  const [isSubmitted, setIsSubmitted] = React.useState<boolean>(false);
   const { toast } = useToast();
 
   const form = useForm<contactFormType>({
@@ -68,10 +69,18 @@ function ContactForm() {
       )
       .then(
         () => {
+          form.reset(defaultValues);
+          setIsSubmitted(true);
           toast({
             title: "Thanks for contacting me!",
-            description:
-              "I really appreciate you taking the time to reach out. I will get back to you as soon as possible.",
+            description: (
+              <>
+                <p>
+                  I really appreciate you taking the time to reach out. I will
+                  get back to you as soon as possible.
+                </p>
+              </>
+            ),
           });
         },
         (error) => {
@@ -135,7 +144,9 @@ function ContactForm() {
               </FormItem>
             )}
           />
-          <Button type="submit">Send</Button>
+          <Button disabled={isSubmitted} type="submit">
+            Send
+          </Button>
         </form>
       </Form>
       <Toaster />
