@@ -1,10 +1,10 @@
-import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { TrafficCone } from "lucide-react";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="grid h-full grid-cols-1 place-content-center place-items-center">
+    <div className="grid h-screen grid-cols-1 place-content-center place-items-center">
       <div className="h-full text-center">
         <TrafficCone className="mx-auto mb-4 h-16 w-16 text-red-500" />
         <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
