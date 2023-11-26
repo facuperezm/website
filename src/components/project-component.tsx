@@ -15,7 +15,7 @@ function Project({ children, title, link, tech }: ProjectProps) {
       <Link href={link}>
         <h3 className="group flex items-center gap-1 text-lg font-bold transition duration-500 hover:underline">
           {title}{" "}
-          <span className="text-foreground/80 transition-transform duration-200 group-hover:translate-x-[1px] group-hover:translate-y-[1px]">
+          <span className="text-foreground/80 transition-transform duration-200 group-hover:translate-x-[1px] group-hover:translate-y-[-1px]">
             <ArrowUpRight className="h-4 w-4" />
           </span>
         </h3>

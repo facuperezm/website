@@ -28,6 +28,13 @@ export const PROJECTS = [
       "📖 Dictionary is a simple app that allows you to search for words and their definitions.",
   },
   {
+    title: "Cartaonline [Work in progress...]",
+    link: "https://github.com/facuperezm/frontend-cartaonline-next",
+    tech: ["Next.js", "Tailwind CSS", "Vercel", "Radix UI", "Clerk"],
+    description:
+      "🍕 Cartaonline is a web app that allows you to create your own online menu.",
+  },
+  {
     title: "Loco Heraldo's Menu",
     link: "https://locoheraldo.vercel.app/",
     tech: ["Next.js", "Tailwind CSS", "Vercel", "i18n", "Google Sheets"],
@@ -36,15 +43,8 @@ export const PROJECTS = [
   {
     title: "e-Store",
     link: "https://ecommerce-store-facundo.vercel.app/",
-    tech: ["Vite", "Tailwind CSS", "React-Router-v6", "Fake Store API"],
+    tech: ["Vite.js", "Tailwind CSS", "React-Router-v6", "Fake Store API"],
     description: "🛒 E-commerce store that uses the Fake Store API.",
-  },
-  {
-    title: "Adviency 2022",
-    link: "https://adviency-facundo.vercel.app/",
-    tech: ["Next.js", "Tailwind CSS"],
-    description:
-      "🎄 Adviency is a gift list app that features a budget tracker and uses LocalStorage to store data.",
   },
   {
     title: "Advice App",
@@ -54,9 +54,36 @@ export const PROJECTS = [
       "🏃‍♂️ Advice Generator is a simple app that generates random advice.",
   },
   {
+    title: "Basement. Challenge",
+    description: "🏴‍☠️ This is my solution to the Basement Frontend Challenge.",
+    link: "https://basement-challenge-facundo.vercel.app/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Radix UI"],
+  },
+  {
+    title: "Uizard Challenge",
+    link: "https://uizard-challenge-facuperezm.vercel.app/",
+    tech: ["Next.js", "Tailwind CSS", "Vercel"],
+    description:
+      "📚 The application is a HackerNews clone that highlights the top 10 stories using an <iframe/> component.",
+  },
+  {
+    title: "Adviency 2022",
+    link: "https://adviency-facundo.vercel.app/",
+    tech: ["Next.js", "Tailwind CSS"],
+    description:
+      "🎄 Adviency is a gift list app that features a budget tracker and uses LocalStorage to store data.",
+  },
+
+  {
     title: "Blogr Landing Page",
     link: "https://blogr-facundo.netlify.app/",
     tech: ["React", "Tailwind CSS"],
     description: "🖥 Landing page for a fictional blog.",
+  },
+  {
+    title: "Image Uploader [Work in progress]",
+    link: "https://github.com/facuperezm/image-uploader",
+    tech: ["React", "Tailwind CSS", "Firebase"],
+    description: "📷 Image uploader app with drag & drop area",
   },
 ] as Project[];
