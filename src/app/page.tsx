@@ -38,7 +38,7 @@ export default function HomePage() {
             <TooltipContent side="bottom">
               <p>🔎 Looking for my first developer role</p>
             </TooltipContent>
-            <TooltipTrigger className="shrink-1 relative mb-2 max-w-sm cursor-default rounded-2xl text-left md:max-w-sm md:shadow-2xl">
+            <TooltipTrigger className="shrink-1 relative max-w-sm cursor-default rounded-2xl text-left md:max-w-sm md:shadow-2xl">
               <Image
                 alt="Profile picture of Facundo Perez Montalvo"
                 src={personalImg}
@@ -54,7 +54,7 @@ export default function HomePage() {
         </TooltipProvider>
       </Section>
       <Section delay={0.3}>
-        <h2 className="mb-2 mt-4 scroll-m-20 text-xl font-semibold tracking-tight">
+        <h2 className="mb-3 scroll-m-20 text-xl font-semibold tracking-tight">
           About me
         </h2>
         <div className="mb-2">
@@ -86,7 +86,7 @@ export default function HomePage() {
         </div>
       </Section>
       <Section delay={0.4}>
-        <h2 className="mb-2 mt-4 scroll-m-20 text-xl font-semibold tracking-tight">
+        <h2 className="mb-3 scroll-m-20 text-xl font-semibold tracking-tight">
           Projects
         </h2>
         <p className="mb-4">
@@ -95,21 +95,20 @@ export default function HomePage() {
         <div className="flex w-full flex-col gap-2">
           {PROJECTS.map((project, index) => {
             return (
-              <Section key={index}>
-                <Project
-                  title={project.title}
-                  link={project.link}
-                  tech={project.tech}
-                >
-                  {project.description}
-                </Project>
-              </Section>
+              <Project
+                key={index}
+                title={project.title}
+                link={project.link}
+                tech={project.tech}
+              >
+                {project.description}
+              </Project>
             );
           })}
         </div>
       </Section>
       <Section delay={0.5}>
-        <h2 className="mb-2 mt-4 scroll-m-20 text-xl font-semibold tracking-tight">
+        <h2 className="mb-3 scroll-m-20 text-xl font-semibold tracking-tight">
           Contact me
         </h2>
         <p className="mb-4">
