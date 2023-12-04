@@ -1,6 +1,7 @@
-import { buttonVariants } from "@/components/ui/button";
-import { TrafficCone } from "lucide-react";
 import Link from "next/link";
+import { TrafficCone } from "lucide-react";
+
+import { buttonVariants } from "@/components/ui/button";
 
 export default function NotFound() {
   return (

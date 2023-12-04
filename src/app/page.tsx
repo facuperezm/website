@@ -1,9 +1,12 @@
 "use client";
 
-import ContactForm from "@/components/contact-form";
-import Layout from "@/components/main-animate";
-import Project from "@/components/project-component";
-import Section from "@/components/section-animate";
+import Image from "next/image";
+import Link from "next/link";
+import { countryCodeEmoji } from "country-code-emoji";
+import { Github, Linkedin } from "lucide-react";
+
+import { PROJECTS } from "@/config/projects";
+import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
 import {
   Tooltip,
@@ -11,20 +14,19 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { PROJECTS } from "@/config/projects";
-import { siteConfig } from "@/config/site";
-import { countryCodeEmoji } from "country-code-emoji";
-import { Github, Linkedin } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import ContactForm from "@/components/contact-form";
+import Layout from "@/components/main-animate";
+import Project from "@/components/project-component";
+import Section from "@/components/section-animate";
+
 import personalImg from "../../public/images/facundo.webp";
 
 export default function HomePage() {
   return (
-    <Layout className="align-center m-auto flex max-w-3xl flex-col justify-center px-4">
-      <Section className="md:justify-right mt-16 flex flex-col-reverse justify-center md:flex-row">
+    <Layout className="m-auto flex max-w-3xl flex-col justify-center px-4">
+      <Section className="mt-16 flex flex-col-reverse justify-center md:flex-row md:justify-end">
         <div className="grow md:self-center">
-          <h1 className="mb-1 scroll-m-20 text-2xl font-extrabold tracking-tight md:text-4xl">
+          <h1 className="mb-1 mt-2 scroll-m-20 text-2xl font-extrabold tracking-tight md:mt-0 md:text-4xl">
             Facundo Perez Montalvo
           </h1>
           <span className="font-serif italic tracking-[0.020em] text-muted-foreground">
@@ -38,7 +40,7 @@ export default function HomePage() {
             <TooltipContent side="bottom">
               <p>🔎 Looking for my first developer role</p>
             </TooltipContent>
-            <TooltipTrigger className="shrink-1 relative max-w-sm cursor-default rounded-2xl text-left md:max-w-sm md:shadow-2xl">
+            <TooltipTrigger className="relative max-w-sm shrink cursor-default rounded-2xl text-left md:max-w-sm md:shadow-2xl">
               <Image
                 alt="Profile picture of Facundo Perez Montalvo"
                 src={personalImg}
@@ -69,8 +71,8 @@ export default function HomePage() {
             to create something amazing!
           </p>
         </div>
-        <div className="align-center pt-1">
-          <div className="justify-left flex gap-2">
+        <div className="items-center pt-1">
+          <div className="flex justify-start gap-2">
             <Button variant="default" asChild>
               <Link href={siteConfig.links.linkedin}>
                 <Linkedin className="mr-2 h-4 w-4" /> View Linkedin

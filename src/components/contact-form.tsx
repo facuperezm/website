@@ -1,5 +1,11 @@
 "use client";
 
+import React from "react";
+import emailjs from "@emailjs/browser";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -12,11 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Toaster } from "@/components/ui/toaster";
-import emailjs from "@emailjs/browser";
-import { zodResolver } from "@hookform/resolvers/zod";
-import React from "react";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
+
 import { useToast } from "./ui/use-toast";
 
 const contactFormSchema = z.object({
@@ -52,8 +54,6 @@ function ContactForm() {
   const { toast } = useToast();
 
   const form = useForm<contactFormType>({
-    // TODO: review why this is throwing error for ZodObject
-    // @ts-ignore
     resolver: zodResolver(contactFormSchema),
     defaultValues,
     mode: "onChange",

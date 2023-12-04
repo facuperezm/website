@@ -1,12 +1,14 @@
 import "@/styles/globals.css";
-import Footer from "@/components/footer-component";
-import { ThemeProvider } from "@/components/theme-provider";
-import TopBlur from "@/components/top-blur";
-import { Separator } from "@/components/ui/separator";
+
+import type { Metadata, Viewport } from "next";
+
 import { siteConfig } from "@/config/site";
 import { fontSans, fontSerif } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import type { Metadata, Viewport } from "next";
+import { Separator } from "@/components/ui/separator";
+import Footer from "@/components/footer-component";
+import { ThemeProvider } from "@/components/theme-provider";
+import TopBlur from "@/components/top-blur";
 
 export const metadata: Metadata = {
   title: {

@@ -1,8 +1,9 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { useTheme } from "next-themes";
 import * as React from "react";
+import { useTheme } from "next-themes";
+
+import { Button } from "@/components/ui/button";
 
 export function ModeToggle({ className }: { className?: string }) {
   const { setTheme, theme } = useTheme();
