@@ -59,7 +59,7 @@ export default function HomePage() {
         <h2 className="mb-3 scroll-m-20 text-xl font-semibold tracking-tight">
           About me
         </h2>
-        <div className="mb-2">
+        <div className="mb-2 space-y-2">
           <p className="leading-7 [&:not(:first-child)]:mt-6">
             Hey! I&apos;m Facundo, a frontend developer with a self-taught
             background in the React stack. I specialize in creating
