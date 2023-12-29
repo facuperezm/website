@@ -8,21 +8,21 @@ export type Project = {
 export const PROJECTS = [
   {
     title: "Password Generator",
-    link: "https://password-generator-facuperezm.vercel.app/",
+    link: "https://password.facupm.dev/",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     description:
       "🔐 Password Generator is a simple app that generates a random password based on the user's input.",
   },
   {
     title: "URL Shortening",
-    link: "https://url-facundo.vercel.app/",
+    link: "https://url.facupm.dev",
     tech: ["Vite.js", "Tailwind CSS", "Vercel"],
     description:
       "🔗 URL Shorting is a simple app that allows you to shorten URLs.",
   },
   {
     title: "Dictionary",
-    link: "https://dictionary-facundo.vercel.app/",
+    link: "https://dictionary.facupm.dev",
     tech: ["Vite.js", "Tailwind CSS", "Vercel", "React-Query"],
     description:
       "📖 Dictionary is a simple app that allows you to search for words and their definitions.",
@@ -42,13 +42,13 @@ export const PROJECTS = [
   },
   {
     title: "e-Store",
-    link: "https://ecommerce-store-facundo.vercel.app/",
+    link: "https://store.facupm.dev",
     tech: ["Vite.js", "Tailwind CSS", "React-Router-v6", "Fake Store API"],
     description: "🛒 E-commerce store that uses the Fake Store API.",
   },
   {
     title: "Advice App",
-    link: "https://advice-generator-facundo.vercel.app/",
+    link: "https://advice.facupm.dev",
     tech: ["Next.js", "Tailwind CSS", "Advice Slip API"],
     description:
       "🏃‍♂️ Advice Generator is a simple app that generates random advice.",
@@ -56,19 +56,19 @@ export const PROJECTS = [
   {
     title: "Basement. Challenge",
     description: "🏴‍☠️ This is my solution to the Basement Frontend Challenge.",
-    link: "https://basement-challenge-facundo.vercel.app/",
+    link: "https://basement.facupm.dev",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Radix UI"],
   },
   {
     title: "Uizard Challenge",
-    link: "https://uizard-challenge-facuperezm.vercel.app/",
+    link: "https://uizard.facupm.dev",
     tech: ["Next.js", "Tailwind CSS", "Vercel"],
     description:
       "📚 The application is a HackerNews clone that highlights the top 10 stories using an <iframe/> component.",
   },
   {
     title: "Adviency 2022",
-    link: "https://adviency-facundo.vercel.app/",
+    link: "https://adviency2022.facupm.dev",
     tech: ["Next.js", "Tailwind CSS"],
     description:
       "🎄 Adviency is a gift list app that features a budget tracker and uses LocalStorage to store data.",
@@ -81,8 +81,8 @@ export const PROJECTS = [
     description: "🖥 Landing page for a fictional blog.",
   },
   {
-    title: "Image Uploader [Work in progress]",
-    link: "https://github.com/facuperezm/image-uploader",
+    title: "Image Uploader",
+    link: "https://uploader.facupm.dev",
     tech: ["React", "Tailwind CSS", "Firebase"],
     description: "📷 Image uploader app with drag & drop area",
   },
