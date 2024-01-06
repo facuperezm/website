@@ -7,6 +7,19 @@ export type Project = {
 
 export const PROJECTS = [
   {
+    title: "Basement. Challenge",
+    description: "🏴‍☠️ This is my solution to the Basement Frontend Challenge.",
+    link: "https://basement.facupm.dev",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Radix UI"],
+  },
+  {
+    title: "Uizard Challenge",
+    link: "https://uizard.facupm.dev",
+    tech: ["Next.js", "Tailwind CSS", "Vercel"],
+    description:
+      "📚 The application is a HackerNews clone that highlights the top 10 stories using an <iframe/> component.",
+  },
+  {
     title: "Password Generator",
     link: "https://password.facupm.dev/",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
@@ -19,20 +32,6 @@ export const PROJECTS = [
     tech: ["Vite.js", "Tailwind CSS", "Vercel"],
     description:
       "🔗 URL Shorting is a simple app that allows you to shorten URLs.",
-  },
-  {
-    title: "Dictionary",
-    link: "https://dictionary.facupm.dev",
-    tech: ["Vite.js", "Tailwind CSS", "Vercel", "React-Query"],
-    description:
-      "📖 Dictionary is a simple app that allows you to search for words and their definitions.",
-  },
-  {
-    title: "Cartaonline [Work in progress...]",
-    link: "https://github.com/facuperezm/frontend-cartaonline-next",
-    tech: ["Next.js", "Tailwind CSS", "Vercel", "Radix UI", "Clerk"],
-    description:
-      "🍕 Cartaonline is a web app that allows you to create your own online menu.",
   },
   {
     title: "Loco Heraldo's Menu",
@@ -54,36 +53,16 @@ export const PROJECTS = [
       "🏃‍♂️ Advice Generator is a simple app that generates random advice.",
   },
   {
-    title: "Basement. Challenge",
-    description: "🏴‍☠️ This is my solution to the Basement Frontend Challenge.",
-    link: "https://basement.facupm.dev",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Radix UI"],
-  },
-  {
-    title: "Uizard Challenge",
-    link: "https://uizard.facupm.dev",
-    tech: ["Next.js", "Tailwind CSS", "Vercel"],
-    description:
-      "📚 The application is a HackerNews clone that highlights the top 10 stories using an <iframe/> component.",
-  },
-  {
-    title: "Adviency 2022",
-    link: "https://adviency2022.facupm.dev",
-    tech: ["Next.js", "Tailwind CSS"],
-    description:
-      "🎄 Adviency is a gift list app that features a budget tracker and uses LocalStorage to store data.",
-  },
-
-  {
-    title: "Blogr Landing Page",
-    link: "https://blogr-facundo.netlify.app/",
-    tech: ["React", "Tailwind CSS"],
-    description: "🖥 Landing page for a fictional blog.",
-  },
-  {
     title: "Image Uploader",
     link: "https://uploader.facupm.dev",
     tech: ["React", "Tailwind CSS", "Firebase"],
     description: "📷 Image uploader app with drag & drop area",
+  },
+  {
+    title: "Cartaonline [Work in progress...]",
+    link: "https://github.com/facuperezm/frontend-cartaonline-next",
+    tech: ["Next.js", "Tailwind CSS", "Vercel", "Radix UI", "Clerk"],
+    description:
+      "🍕 Cartaonline is a web app that allows you to create your own online menu.",
   },
 ] as Project[];
