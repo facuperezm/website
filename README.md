@@ -1,23 +1,31 @@
-# My portfolio
+<div align="center">
+<img src="public/favicon.svg" height="50px" width="auto" /> 
+<h3>
+ My portfolio
+</h3>
+<p>This is my portfolio website made with Next.js and styled with Tailwind CSS</p>
 
-This is my portfolio website made with Next.js and styled with Tailwind CSS
+
+
+</div>
 
 [Live site](http://facuperezm.vercel.app)
 
-## Screenshots
+## 📸 Screenshots
 
 ![App Screenshot](./public/screenshot.png)
 
-## Tech Stack
+## 🛠️ Stack
 
-**Client:** React, Next.js 14, Tailwind CSS, Framer Motion, Emailjs, React-hook-form & Zod
+- [**React**](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [**Next.js 14**](https://nextjs.org/) - The React framework for building production-ready websites.
+- [**Tailwind CSS**](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
+- [**Framer Motion**](https://www.framer.com/motion/) - A production-ready motion library for React.
+- [**Emailjs**](https://www.emailjs.com/) - A cloud-based email service for sending emails directly from the frontend.
+- [**React-hook-form**](https://react-hook-form.com/) - Performant, flexible, and extensible forms with easy-to-use React hooks.
+- [**Zod**](https://github.com/colinhacks/zod) - A TypeScript-first schema declaration and validation library.
 
 **Deploy:** Vercel
-
-## Acknowledgements
-
-- [Next.js Docs](https://nextjs.org/docs/getting-started)
-- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Optimizations
 
