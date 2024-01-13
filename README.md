@@ -4,12 +4,11 @@
  My portfolio
 </h3>
 <p>This is my portfolio website made with Next.js and styled with Tailwind CSS</p>
-
-
+<span>&nbsp;✦&nbsp;</span>
+<a href="http://facuperezm.com">Live website</a>
+<span>&nbsp;✦&nbsp;</span>
 
 </div>
-
-[Live site](http://facuperezm.vercel.app)
 
 ## 📸 Screenshots
 
