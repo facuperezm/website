@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 import Footer from "@/components/footer-component";
 import { ThemeProvider } from "@/components/theme-provider";
-import TopBlur from "@/components/top-blur";
 
 export const metadata: Metadata = {
   title: {
