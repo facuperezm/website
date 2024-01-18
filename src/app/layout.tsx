@@ -86,7 +86,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <TopBlur />
+          <div
+            aria-hidden
+            className="pointer-events-none fixed left-0 top-0 z-50 h-12 w-full bg-background to-transparent backdrop-blur-xl [-webkit-mask-image:linear-gradient(to_bottom,black,transparent)]"
+          ></div>
           {children}
           <Separator className="mt-6 bg-muted/40" />
           <Footer />
