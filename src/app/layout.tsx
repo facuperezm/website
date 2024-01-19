@@ -10,19 +10,17 @@ import Footer from "@/components/footer-component";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`,
-  },
+  title: `${siteConfig.name} - ${siteConfig.title}`,
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
   keywords: [
-    "Frontend Developer",
+    "Frontend",
+    "Web Developer",
     "React",
     "Next.js",
     "Tailwind CSS",
     "Vercel",
-    "Next.js 13",
+    "Next.js 14",
   ],
   authors: [
     {
