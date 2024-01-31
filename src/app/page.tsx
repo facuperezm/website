@@ -73,15 +73,23 @@ export default function HomePage() {
         </div>
         <div className="items-center pt-1">
           <div className="flex justify-start gap-2">
-            <Button variant="default" asChild>
+            <Button
+              variant="default"
+              className="relative overflow-hidden rounded px-5 py-2.5 transition-all duration-300 hover:ring-2 hover:ring-primary/90 hover:ring-offset-2"
+              asChild
+            >
               <Link href={siteConfig.links.linkedin}>
-                <Linkedin className="mr-2 h-4 w-4" /> View Linkedin
+                <Linkedin className="relative mr-2 h-4 w-4" /> View Linkedin
               </Link>
             </Button>
 
-            <Button variant="secondary" asChild>
+            <Button
+              variant="secondary"
+              className="relative overflow-hidden rounded px-5 py-2.5 transition-all duration-300 hover:ring-2 hover:ring-primary/90 hover:ring-offset-2"
+              asChild
+            >
               <Link href={siteConfig.links.github}>
-                <Github className="mr-2 h-4 w-4" /> View GitHub
+                <Github className="relative mr-2 h-4 w-4" /> View GitHub
               </Link>
             </Button>
           </div>

@@ -144,7 +144,11 @@ function ContactForm() {
               </FormItem>
             )}
           />
-          <Button disabled={isSubmitted} type="submit">
+          <Button
+            className="relative overflow-hidden rounded px-5 py-2.5 transition-all duration-300 hover:ring-2 hover:ring-primary/90 hover:ring-offset-2"
+            disabled={isSubmitted}
+            type="submit"
+          >
             Send
           </Button>
         </form>
