@@ -106,7 +106,11 @@ function ContactForm() {
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="John Doe" {...field} />
+                  <Input
+                    className="transition duration-200"
+                    placeholder="John Doe"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -120,7 +124,11 @@ function ContactForm() {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="johndoe@email.com" {...field} />
+                  <Input
+                    className="transition duration-200"
+                    placeholder="johndoe@email.com"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -136,7 +144,7 @@ function ContactForm() {
                 <FormControl>
                   <Textarea
                     placeholder="Interested in collaborating with us? We'd love to hear from you!"
-                    className="resize-none"
+                    className="resize-none transition duration-200"
                     {...field}
                   />
                 </FormControl>
