@@ -8,11 +8,9 @@
 <a href="http://facuperezm.com">Live website</a>
 <span>&nbsp;✦&nbsp;</span>
 
-</div>
-
-## 📸 Screenshots
-
 ![App Screenshot](./public/screenshot.png)
+
+</div>
 
 ## 🛠️ Stack
 
