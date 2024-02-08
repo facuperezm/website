@@ -7,10 +7,11 @@
 <span>&nbsp;✦&nbsp;</span>
 <a href="http://facuperezm.com">Live website</a>
 <span>&nbsp;✦&nbsp;</span>
+</div>
+
+<br>
 
 ![App Screenshot](./public/screenshot.png)
-
-</div>
 
 ## 🛠️ Stack
 
