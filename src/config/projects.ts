@@ -44,13 +44,6 @@ export const PROJECTS = [
       "🔗 URL Shorting is a simple app that allows you to shorten URLs.",
   },
   {
-    title: "Password Generator",
-    link: "https://password.facupm.dev/",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    description:
-      "🔐 Password Generator is a simple app that generates a random password based on the user's input.",
-  },
-  {
     title: "e-Store",
     link: "https://store.facupm.dev",
     tech: ["Vite.js", "Tailwind CSS", "React-Router-v6", "Fake Store API"],
