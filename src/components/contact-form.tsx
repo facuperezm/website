@@ -163,7 +163,7 @@ function ContactForm() {
             {isPending && (
               <Loader className="mr-2 size-4 animate-spin" aria-hidden="true" />
             )}
-            Send
+            {isPending ? "Sending" : isSubmitted ? "Sent" : "Send"}
             <span className="sr-only">Send</span>
           </Button>
         </form>
