@@ -3,6 +3,7 @@
 import React from "react";
 import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Loader } from "lucide-react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
@@ -51,6 +52,7 @@ const defaultValues = {
 
 function ContactForm() {
   const [isSubmitted, setIsSubmitted] = React.useState<boolean>(false);
+  const [isPending, startTransition] = React.useTransition();
   const { toast } = useToast();
 
   const form = useForm<contactFormType>({
@@ -60,35 +62,36 @@ function ContactForm() {
   });
 
   function onSubmit() {
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_YOUR_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID!,
-        formRef.current!,
-        "3Kfp25amvpJXfbaFZ",
-      )
-      .then(
-        () => {
-          form.reset(defaultValues);
-          setIsSubmitted(true);
-          toast({
-            title: "Thanks for contacting me!",
-            description: (
-              <>
-                <p>
-                  I really appreciate you taking the time to reach out. I will
-                  get back to you as soon as possible.
-                </p>
-              </>
-            ),
-          });
-        },
-        (error) => {
-          throw new Error(error.text);
-        },
-      );
-  }
+    startTransition(async () => {
+      try {
+        await emailjs.sendForm(
+          process.env.NEXT_PUBLIC_YOUR_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID!,
+          formRef.current!,
+          "3Kfp25amvpJXfbaFZ",
+        );
 
+        setIsSubmitted(true);
+        form.reset(defaultValues);
+
+        toast({
+          title: "Thanks for contacting me!",
+          description: (
+            <>
+              <p className="text-pretty">
+                I really appreciate you taking the time to reach out.
+              </p>
+              <p className="text-pretty">
+                I will get back to you as soon as possible.
+              </p>
+            </>
+          ),
+        });
+      } catch (error) {
+        throw new Error((error as any).text);
+      }
+    });
+  }
   const formRef = React.useRef<HTMLFormElement>(null);
 
   return (
@@ -143,7 +146,7 @@ function ContactForm() {
                 <FormLabel>Message</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Interested in collaborating with us? We'd love to hear from you!"
+                    placeholder="Hey Facundo! I would like to talk about..."
                     className="resize-none transition duration-200"
                     {...field}
                   />
@@ -154,10 +157,14 @@ function ContactForm() {
           />
           <Button
             className="relative overflow-hidden rounded px-5 py-2.5 transition-all duration-300 hover:ring-2 hover:ring-primary/90 hover:ring-offset-2"
-            disabled={isSubmitted}
+            disabled={isPending || isSubmitted}
             type="submit"
           >
+            {isPending && (
+              <Loader className="mr-2 size-4 animate-spin" aria-hidden="true" />
+            )}
             Send
+            <span className="sr-only">Send</span>
           </Button>
         </form>
       </Form>

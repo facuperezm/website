@@ -19,8 +19,6 @@ import Layout from "@/components/main-animate";
 import Project from "@/components/project-component";
 import Section from "@/components/section-animate";
 
-import personalImg from "../../public/images/facundo.webp";
-
 export default function HomePage() {
   return (
     <Layout className="m-auto flex max-w-3xl flex-col justify-center px-4">
@@ -43,13 +41,12 @@ export default function HomePage() {
             <TooltipTrigger className="relative max-w-sm shrink cursor-default rounded-2xl text-left md:max-w-sm md:shadow-2xl">
               <Image
                 alt="Profile picture of Facundo Perez Montalvo"
-                src={personalImg}
+                src="/images/facundo.webp"
                 className="w-28 rounded-2xl md:w-56"
                 width={224}
                 height={224}
-                quality={65}
+                quality={60}
                 priority
-                placeholder="blur"
               />
             </TooltipTrigger>
           </Tooltip>
@@ -59,7 +56,7 @@ export default function HomePage() {
         <h2 className="mb-3 scroll-m-20 text-xl font-semibold tracking-tight">
           About me
         </h2>
-        <div className="mb-2 space-y-2">
+        <div className="mb-2 space-y-2 text-muted-foreground">
           <p className="leading-7 [&:not(:first-child)]:mt-6">
             Hey! I&apos;m Facundo, a frontend developer with a self-taught
             background in the React stack. I specialize in creating
@@ -99,7 +96,7 @@ export default function HomePage() {
         <h2 className="mb-3 scroll-m-20 text-xl font-semibold tracking-tight">
           Projects
         </h2>
-        <p className="mb-4">
+        <p className="mb-4 text-muted-foreground">
           Some of the projects that I am currently working on:
         </p>
         <div className="flex w-full flex-col gap-2">
@@ -121,7 +118,7 @@ export default function HomePage() {
         <h2 className="mb-3 scroll-m-20 text-xl font-semibold tracking-tight">
           Contact me
         </h2>
-        <p className="mb-4">
+        <p className="mb-4 text-muted-foreground">
           Do you have a job opportunity or idea you&apos;d like to discuss? Feel
           free to send me an email:
         </p>
