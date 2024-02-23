@@ -107,6 +107,7 @@ export default function HomePage() {
                 title={project.title}
                 link={project.link}
                 tech={project.tech}
+                repo={project.repo}
               >
                 {project.description}
               </Project>
