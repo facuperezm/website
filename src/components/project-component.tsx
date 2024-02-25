@@ -25,7 +25,7 @@ function Project({ children, title, link, tech, repo }: ProjectProps) {
         </Link>
         <Link href={repo}>
           <span>
-            <Github className="size-5 stroke-[1.5] text-gray-400 transition-colors hover:text-white" />
+            <Github className="size-5 stroke-[1.5] text-gray-400 transition-colors hover:text-foreground" />
           </span>
         </Link>
       </div>
