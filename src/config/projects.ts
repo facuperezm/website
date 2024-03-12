@@ -62,4 +62,11 @@ export const PROJECTS = [
     description: "📷 Image uploader app with drag & drop area",
     repo: "https://github.com/facuperezm/image-uploader",
   },
+  {
+    title: "Inmobiliaria App",
+    link: "https://inmobiliaria.facupm.dev",
+    tech: ["Astro", "Tailwind CSS", "ShadcnUI", "Contenful CMS"],
+    description: "🏠 Real estate app with a CMS",
+    repo: "https://github.com/facuperezm/inmobiliaria",
+  },
 ] as Project[];
