@@ -33,12 +33,11 @@ export const PROJECTS = [
     repo: "https://github.com/facuperezm/basement-challenge",
   },
   {
-    title: "Uizard Challenge",
-    link: "https://uizard.facupm.dev",
-    tech: ["Next.js", "Tailwind CSS", "Vercel"],
-    description:
-      "📚 The application is a HackerNews clone that highlights the top 10 stories using an <iframe/> component.",
-    repo: "https://github.com/facuperezm/uizard-challenge",
+    title: "Inmobiliaria App",
+    link: "https://inmobiliaria.facupm.dev",
+    tech: ["Astro", "Tailwind CSS", "ShadcnUI", "Contenful CMS"],
+    description: "🏠 Real estate app with a CMS",
+    repo: "https://github.com/facuperezm/inmobiliaria",
   },
   {
     title: "URL Shortening",
@@ -47,6 +46,14 @@ export const PROJECTS = [
     description:
       "🔗 URL Shorting is a simple app that allows you to shorten URLs.",
     repo: "https://github.com/facuperezm/url-shortening",
+  },
+  {
+    title: "Uizard Challenge",
+    link: "https://uizard.facupm.dev",
+    tech: ["Next.js", "Tailwind CSS", "Vercel"],
+    description:
+      "📚 The application is a HackerNews clone that highlights the top 10 stories using an <iframe/> component.",
+    repo: "https://github.com/facuperezm/uizard-challenge",
   },
   {
     title: "e-Store",
@@ -61,12 +68,5 @@ export const PROJECTS = [
     tech: ["React", "Tailwind CSS", "Firebase"],
     description: "📷 Image uploader app with drag & drop area",
     repo: "https://github.com/facuperezm/image-uploader",
-  },
-  {
-    title: "Inmobiliaria App",
-    link: "https://inmobiliaria.facupm.dev",
-    tech: ["Astro", "Tailwind CSS", "ShadcnUI", "Contenful CMS"],
-    description: "🏠 Real estate app with a CMS",
-    repo: "https://github.com/facuperezm/inmobiliaria",
   },
 ] as Project[];
