@@ -72,7 +72,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen scroll-smooth font-sans antialiased",
+          "min-h-dvh scroll-smooth font-sans antialiased",
           fontSerif.variable,
           fontSans.variable,
         )}
