@@ -24,7 +24,7 @@ export default function HomePage() {
     <Layout className="m-auto flex max-w-3xl flex-col justify-center px-4">
       <Section className="mt-16 flex flex-col-reverse justify-center md:flex-row md:justify-end">
         <div className="grow md:self-center">
-          <h1 className="mb-1 mt-2 scroll-m-20 text-2xl font-extrabold tracking-tight md:mt-0 md:text-4xl">
+          <h1 className="relative mb-1 mt-2 scroll-m-20 text-2xl font-extrabold tracking-tight md:mt-0 md:text-4xl">
             Facundo Perez Montalvo
           </h1>
           <span className="font-serif italic tracking-[0.020em] text-muted-foreground">
@@ -39,15 +39,26 @@ export default function HomePage() {
               <p>🔎 Looking for my first developer role</p>
             </TooltipContent>
             <TooltipTrigger className="relative max-w-sm shrink cursor-default rounded-2xl text-left md:max-w-sm md:shadow-2xl">
-              <Image
-                alt="Profile picture of Facundo Perez Montalvo"
-                src="/images/facundo.webp"
-                className="w-28 rounded-2xl md:w-56"
-                width={224}
-                height={224}
-                quality={60}
-                priority
-              />
+              <div className="relative">
+                <Image
+                  alt="Profile picture of Facundo Perez Montalvo"
+                  src="/images/facundo.webp"
+                  className="absolute w-28 scale-150 rounded-2xl blur-3xl brightness-75 md:w-56"
+                  width={224}
+                  height={224}
+                  quality={60}
+                  priority
+                />
+                <Image
+                  alt="Profile picture of Facundo Perez Montalvo"
+                  src="/images/facundo.webp"
+                  className="relative w-28 rounded-2xl drop-shadow-2xl md:w-56"
+                  width={224}
+                  height={224}
+                  quality={60}
+                  priority
+                />
+              </div>
             </TooltipTrigger>
           </Tooltip>
         </TooltipProvider>
