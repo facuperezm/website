@@ -24,7 +24,7 @@ export default function HomePage() {
     <Layout className="m-auto flex max-w-3xl flex-col justify-center px-4">
       <Section className="mt-16 flex flex-col-reverse justify-center md:flex-row md:justify-end">
         <div className="grow md:self-center">
-          <h1 className="relative mb-1 mt-2 scroll-m-20 text-2xl font-extrabold tracking-tight md:mt-0 md:text-4xl">
+          <h1 className="relative z-10 mb-1 mt-2 scroll-m-20 text-2xl font-extrabold tracking-tight md:mt-0 md:text-4xl">
             Facundo Perez Montalvo
           </h1>
           <span className="font-serif italic tracking-[0.020em] text-muted-foreground">
