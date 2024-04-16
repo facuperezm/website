@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 
 import type { Metadata, Viewport } from "next";
+import PlausibleProvider from "next-plausible";
 
 import { siteConfig } from "@/config/site";
 import { fontSans, fontSerif } from "@/lib/fonts";
@@ -69,29 +70,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="bg-background">
-      <body
-        className={cn(
-          "min-h-dvh scroll-smooth font-sans antialiased",
-          fontSerif.variable,
-          fontSans.variable,
-        )}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+    <PlausibleProvider domain="facuperezm.com">
+      <html lang="en" suppressHydrationWarning className="bg-background">
+        <body
+          className={cn(
+            "min-h-dvh scroll-smooth font-sans antialiased",
+            fontSerif.variable,
+            fontSans.variable,
+          )}
         >
-          <div
-            aria-hidden
-            className="pointer-events-none fixed left-0 top-0 z-50 h-12 w-full bg-background to-transparent backdrop-blur-xl [-webkit-mask-image:linear-gradient(to_bottom,black,transparent)]"
-          ></div>
-          {children}
-          <Separator className="mt-6 bg-muted/40" />
-          <Footer />
-        </ThemeProvider>
-      </body>
-    </html>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div
+              aria-hidden
+              className="pointer-events-none fixed left-0 top-0 z-50 h-12 w-full bg-background to-transparent backdrop-blur-xl [-webkit-mask-image:linear-gradient(to_bottom,black,transparent)]"
+            ></div>
+            {children}
+            <Separator className="mt-6 bg-muted/40" />
+            <Footer />
+          </ThemeProvider>
+        </body>
+      </html>
+    </PlausibleProvider>
   );
 }
