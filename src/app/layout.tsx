@@ -76,7 +76,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "min-h-dvh scroll-smooth font-sans antialiased",
+          "min-h-dvh scroll-smooth font-sans antialiased selection:bg-pink-400 selection:text-black",
           fontSerif.variable,
           fontSans.variable,
         )}
