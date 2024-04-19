@@ -47,6 +47,24 @@
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
   }
+  .nice-gradient {
+    opacity: 0.99;
+    backdrop-filter: blur(5px);
+    mask-image: linear-gradient(to bottom, hsl(var(--background)), transparent);
+  }
+
+  .nice-gradient:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--background)) 25%,
+      transparent
+    );
+    opacity: 0.95;
+    backdrop-filter: blur(5px);
+  }
 }
 
 @layer base {

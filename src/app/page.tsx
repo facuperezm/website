@@ -21,7 +21,7 @@ import Section from "@/components/section-animate";
 
 export default function HomePage() {
   return (
-    <Layout className="m-auto flex max-w-3xl flex-col justify-center px-4">
+    <Layout className="m-auto flex max-w-3xl flex-col justify-center px-4 pt-6">
       <Section className="mt-16 flex flex-col-reverse justify-center md:flex-row md:justify-end">
         <div className="grow md:self-center">
           <h1 className="relative z-10 mb-1 mt-2 scroll-m-20 text-2xl font-extrabold tracking-tight md:mt-0 md:text-4xl">
@@ -43,11 +43,12 @@ export default function HomePage() {
                 <Image
                   alt="Profile picture of Facundo Perez Montalvo"
                   src="/images/facundo.webp"
-                  className="absolute w-28 scale-150 rounded-2xl blur-3xl brightness-75 md:w-56"
+                  className="absolute w-28 scale-150 rounded-2xl blur-3xl brightness-200 dark:brightness-75 md:w-56"
                   width={224}
                   height={224}
                   quality={60}
                   priority
+                  aria-hidden
                 />
                 <Image
                   alt="Profile picture of Facundo Perez Montalvo"
@@ -69,9 +70,9 @@ export default function HomePage() {
         </h2>
         <div className="mb-2 space-y-2 text-muted-foreground">
           <p className="leading-7 [&:not(:first-child)]:mt-6">
-            Hey! I&apos;m Facundo, a frontend developer with a self-taught
-            background in the React stack. I specialize in creating
-            user-friendly, visually appealing interfaces.
+            Hey! I&apos;m Facundo, a frontend developer specializing in creating
+            user-friendly, visually appealing interfaces with great attention to
+            detail.
           </p>
           <p className="leading-7">
             If you&apos;re looking for a dedicated frontend developer to join

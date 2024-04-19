@@ -71,9 +71,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className="bg-background">
-      <head>
-        <PlausibleProvider domain="facuperezm.com" />
-      </head>
       <body
         className={cn(
           "min-h-dvh scroll-smooth font-sans antialiased selection:bg-pink-400 selection:text-black",
@@ -89,7 +86,7 @@ export default function RootLayout({
         >
           <div
             aria-hidden
-            className="pointer-events-none fixed left-0 top-0 z-50 h-12 w-full bg-background to-transparent backdrop-blur-xl [-webkit-mask-image:linear-gradient(to_bottom,black,transparent)]"
+            className="nice-gradient pointer-events-none fixed left-0 top-0 z-50 h-24 w-full"
           ></div>
           {children}
           <Separator className="mt-6 bg-muted/40" />
