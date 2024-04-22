@@ -36,7 +36,7 @@ export default function HomePage() {
         <TooltipProvider>
           <Tooltip>
             <TooltipContent side="bottom">
-              <p>🔎 Looking for my first developer role</p>
+              <p>🔎 Looking for a frontend developer role</p>
             </TooltipContent>
             <TooltipTrigger className="relative max-w-sm shrink cursor-default rounded-2xl text-left md:max-w-sm md:shadow-2xl">
               <div className="relative">
@@ -70,7 +70,7 @@ export default function HomePage() {
         </h2>
         <div className="mb-2 space-y-2 text-muted-foreground">
           <p className="leading-7 [&:not(:first-child)]:mt-6">
-            Hey! I&apos;m Facundo, a frontend developer specializing in creating
+            Hey! I&apos;m Facundo, a frontend developer specialized in creating
             user-friendly, visually appealing interfaces with great attention to
             detail.
           </p>
