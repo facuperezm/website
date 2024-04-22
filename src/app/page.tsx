@@ -69,7 +69,7 @@ export default function HomePage() {
           About me
         </h2>
         <div className="mb-2 space-y-2 text-muted-foreground">
-          <p className="leading-7 [&:not(:first-child)]:mt-6">
+          <p className="relative leading-7 [&:not(:first-child)]:mt-6">
             Hey! I&apos;m Facundo, a frontend developer specialized in creating
             user-friendly, visually appealing interfaces with great attention to
             detail.
