@@ -42,7 +42,7 @@ export default function HomePage() {
               <div className="relative">
                 <Image
                   alt="Profile picture of Facundo Perez Montalvo"
-                  src="/images/facundo.webp"
+                  src="https://pub-729f545d27554bb096839c4c4aeb9f51.r2.dev/profile-pic.jpeg"
                   className="absolute w-28 scale-150 rounded-2xl blur-3xl brightness-200 dark:brightness-75 md:w-56"
                   width={224}
                   height={224}
@@ -52,11 +52,10 @@ export default function HomePage() {
                 />
                 <Image
                   alt="Profile picture of Facundo Perez Montalvo"
-                  src="/images/facundo.webp"
+                  src="https://pub-729f545d27554bb096839c4c4aeb9f51.r2.dev/profile-pic.jpeg"
                   className="relative w-28 rounded-2xl drop-shadow-2xl md:w-56"
-                  width={224}
-                  height={224}
-                  quality={60}
+                  width={225}
+                  height={225}
                   priority
                 />
               </div>
