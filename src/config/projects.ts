@@ -19,7 +19,7 @@ export const PROJECTS = [
       "UploadThing",
       "Zod",
       "Prisma",
-      "MySQL",
+      "Postgres",
     ],
     description:
       "🍕 Cartaonline is an app that allows you to create and manage your own online menu.",
@@ -61,12 +61,5 @@ export const PROJECTS = [
     tech: ["Vite.js", "Tailwind CSS", "React-Router-v6", "Fake Store API"],
     description: "🛒 E-commerce store that uses the Fake Store API.",
     repo: "https://github.com/facuperezm/ecommerce-platform",
-  },
-  {
-    title: "Image Uploader",
-    link: "https://uploader.facupm.dev",
-    tech: ["React", "Tailwind CSS", "Firebase"],
-    description: "📷 Image uploader app with drag & drop area",
-    repo: "https://github.com/facuperezm/image-uploader",
   },
 ] as Project[];
