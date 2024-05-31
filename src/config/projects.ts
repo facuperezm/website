@@ -33,6 +33,14 @@ export const PROJECTS = [
     repo: "https://github.com/facuperezm/basement-challenge",
   },
   {
+    title: "PollyGlot Translator",
+    link: "https://github.com/facuperezm/pollyglot",
+    tech: ["HTML", "CSS", "JavaScript", "OpenAI API", "Astro"],
+    description:
+      "🦜 PollyGlot is a simple web app that uses the OpenAI API to translate text into different languages.",
+    repo: "https://github.com/facuperezm/pollyglot",
+  },
+  {
     title: "Inmobiliaria App",
     link: "https://inmobiliaria.facupm.dev",
     tech: ["Astro", "Tailwind CSS", "ShadcnUI", "Contenful CMS"],
