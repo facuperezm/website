@@ -13,7 +13,7 @@ type ProjectProps = {
 
 function Project({ children, title, link, tech, repo }: ProjectProps) {
   return (
-    <div className="flex w-full flex-col space-y-2 rounded-md border p-4 transition duration-300 ease-out hover:shadow-lg hover:ease-in">
+    <div className="flex w-full flex-col gap-2 rounded-md border p-4 transition duration-300 ease-out hover:shadow-lg hover:ease-in">
       <div className="flex flex-row justify-between">
         <Link href={link}>
           <h3 className="group flex items-center gap-1 text-lg font-bold transition duration-500 hover:underline">
@@ -29,8 +29,10 @@ function Project({ children, title, link, tech, repo }: ProjectProps) {
           </span>
         </Link>
       </div>
-      <p className="leading-relaxed text-muted-foreground">{children}</p>
-      <div className="flex flex-wrap gap-1">
+      <p className="text-pretty leading-relaxed text-muted-foreground">
+        {children}
+      </p>
+      <div className="mt-auto flex flex-wrap gap-1">
         {tech?.map((tech) => (
           <Badge variant="outline" key={tech} className="truncate">
             {tech}

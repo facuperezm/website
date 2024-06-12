@@ -21,39 +21,19 @@ import Section from "@/components/section-animate";
 
 export default function HomePage() {
   return (
-    <Layout className="m-auto flex max-w-3xl flex-col justify-center px-4 pt-6">
-      <Section className="mt-16 flex flex-col-reverse justify-center md:flex-row md:justify-end">
-        <div className="grow md:self-center">
-          <h1 className="relative z-10 mb-1 mt-2 scroll-m-20 text-2xl font-extrabold tracking-tight md:mt-0 md:text-4xl">
-            Facundo Perez Montalvo
-          </h1>
-          <span className="font-serif italic tracking-[0.020em] text-muted-foreground">
-            Frontend developer based in Argentina {"  "}
-          </span>
-          {countryCodeEmoji("AR")}
-        </div>
-
+    <Layout className="mx-auto flex max-w-3xl flex-col justify-center px-4 pt-6">
+      <Section className="mt-16 justify-center md:flex-row md:justify-end">
         <TooltipProvider>
           <Tooltip>
-            <TooltipContent side="bottom">
-              <p>🔎 Looking for a frontend developer role</p>
+            <TooltipContent side="right" className="ml-2">
+              <p>🧑‍💻 Open to work!</p>
             </TooltipContent>
-            <TooltipTrigger className="relative max-w-sm shrink cursor-default rounded-2xl text-left md:max-w-sm md:shadow-2xl">
+            <TooltipTrigger className="relative max-w-sm shrink cursor-default rounded-full text-left md:max-w-sm md:shadow-2xl">
               <div className="relative">
                 <Image
                   alt="Profile picture of Facundo Perez Montalvo"
                   src="https://pub-729f545d27554bb096839c4c4aeb9f51.r2.dev/profile-pic.jpeg"
-                  className="absolute w-28 scale-150 rounded-2xl blur-3xl brightness-[5] dark:brightness-75 md:w-56"
-                  width={224}
-                  height={224}
-                  quality={60}
-                  priority
-                  aria-hidden
-                />
-                <Image
-                  alt="Profile picture of Facundo Perez Montalvo"
-                  src="https://pub-729f545d27554bb096839c4c4aeb9f51.r2.dev/profile-pic.jpeg"
-                  className="relative w-28 rounded-2xl drop-shadow-2xl md:w-56"
+                  className="relative z-10 w-20 rounded-full drop-shadow-2xl md:w-24"
                   width={225}
                   height={225}
                   priority
@@ -62,12 +42,31 @@ export default function HomePage() {
             </TooltipTrigger>
           </Tooltip>
         </TooltipProvider>
+        <Image
+          alt="Profile picture of Facundo Perez Montalvo"
+          src="https://pub-729f545d27554bb096839c4c4aeb9f51.r2.dev/profile-pic.jpeg"
+          className="absolute top-10 w-36 scale-150 rounded-full blur-3xl brightness-[5] dark:brightness-75"
+          width={224}
+          height={224}
+          quality={60}
+          priority
+          aria-hidden
+        />
+        <div className="relative">
+          <h1 className="relative z-10 mb-1 mt-2 scroll-m-20 text-2xl font-extrabold tracking-tight md:mt-0 md:text-4xl">
+            Facundo Perez Montalvo
+          </h1>
+          <span className="font-serif italic tracking-[0.022em] text-muted-foreground">
+            Frontend developer based in Argentina {"  "}
+          </span>
+          {countryCodeEmoji("AR")}
+        </div>
       </Section>
       <Section delay={0.3}>
-        <h2 className="mb-3 scroll-m-20 text-xl font-semibold tracking-tight">
+        <h2 className="relative mb-3 scroll-m-20 text-2xl font-semibold tracking-tight">
           About me
         </h2>
-        <div className="mb-2 space-y-2 text-muted-foreground">
+        <div className="mb-2 max-w-prose space-y-2 text-pretty text-muted-foreground">
           <p className="relative leading-7 [&:not(:first-child)]:mt-6">
             Hey! I&apos;m Facundo, a frontend developer specialized in creating
             user-friendly, visually appealing interfaces with great attention to
@@ -79,7 +78,7 @@ export default function HomePage() {
             to create something amazing!
           </p>
         </div>
-        <div className="items-center pt-1">
+        <div className="items-center pt-2">
           <div className="flex justify-start gap-2">
             <Button
               variant="default"
@@ -104,13 +103,13 @@ export default function HomePage() {
         </div>
       </Section>
       <Section delay={0.4}>
-        <h2 className="mb-3 scroll-m-20 text-xl font-semibold tracking-tight">
+        <h2 className="mb-3 scroll-m-20 text-2xl font-semibold tracking-tight">
           Projects
         </h2>
         <p className="mb-4 text-muted-foreground">
           Some of the projects that I am currently working on:
         </p>
-        <div className="flex w-full flex-col gap-2">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
           {PROJECTS.map((project, index) => {
             return (
               <Project
@@ -127,7 +126,7 @@ export default function HomePage() {
         </div>
       </Section>
       <Section delay={0.5}>
-        <h2 className="mb-3 scroll-m-20 text-xl font-semibold tracking-tight">
+        <h2 className="mb-3 scroll-m-20 text-2xl font-semibold tracking-tight">
           Contact me
         </h2>
         <p className="mb-4 text-muted-foreground">

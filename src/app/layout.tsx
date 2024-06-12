@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 
 import type { Metadata, Viewport } from "next";
-import PlausibleProvider from "next-plausible";
 
 import { siteConfig } from "@/config/site";
 import { fontSans, fontSerif } from "@/lib/fonts";

@@ -102,41 +102,43 @@ function ContactForm() {
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-3"
         >
-          <FormField
-            control={form.control}
-            name="user_name"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Name</FormLabel>
-                <FormControl>
-                  <Input
-                    className="transition duration-200"
-                    placeholder="John Doe"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          <div className="flex flex-col justify-between gap-3 md:flex-row">
+            <FormField
+              control={form.control}
+              name="user_name"
+              render={({ field }) => (
+                <FormItem className="w-full">
+                  <FormLabel>Name</FormLabel>
+                  <FormControl>
+                    <Input
+                      className="w-full transition duration-200"
+                      placeholder="John Doe"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="user_email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email</FormLabel>
-                <FormControl>
-                  <Input
-                    className="transition duration-200"
-                    placeholder="johndoe@email.com"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+            <FormField
+              control={form.control}
+              name="user_email"
+              render={({ field }) => (
+                <FormItem className="w-full">
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input
+                      className="transition duration-200"
+                      placeholder="johndoe@email.com"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
 
           <FormField
             control={form.control}
