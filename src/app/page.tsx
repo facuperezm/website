@@ -23,35 +23,36 @@ export default function HomePage() {
   return (
     <Layout className="mx-auto flex max-w-3xl flex-col justify-center px-4 pt-6">
       <Section className="mt-16 justify-center md:flex-row md:justify-end">
+        <Image
+          alt="Profile picture of Facundo Perez Montalvo"
+          src="https://pub-729f545d27554bb096839c4c4aeb9f51.r2.dev/profile-pic.jpeg"
+          className="absolute w-36 scale-150 rounded-full blur-3xl brightness-[5] dark:brightness-75"
+          width={144}
+          height={144}
+          quality={30}
+          priority
+          aria-hidden
+        />
         <TooltipProvider>
           <Tooltip>
             <TooltipContent side="right" className="ml-2">
               <p>🧑‍💻 Open to work!</p>
             </TooltipContent>
-            <TooltipTrigger className="relative max-w-sm shrink cursor-default rounded-full text-left md:max-w-sm md:shadow-2xl">
-              <div className="relative">
+            <TooltipTrigger className=" max-w-sm shrink cursor-default rounded-full text-left md:max-w-sm md:shadow-2xl">
+              <div className="">
                 <Image
                   alt="Profile picture of Facundo Perez Montalvo"
                   src="https://pub-729f545d27554bb096839c4c4aeb9f51.r2.dev/profile-pic.jpeg"
                   className="relative z-10 w-20 rounded-full drop-shadow-2xl md:w-24"
-                  width={225}
-                  height={225}
+                  width={96}
+                  height={96}
                   priority
                 />
               </div>
             </TooltipTrigger>
           </Tooltip>
         </TooltipProvider>
-        <Image
-          alt="Profile picture of Facundo Perez Montalvo"
-          src="https://pub-729f545d27554bb096839c4c4aeb9f51.r2.dev/profile-pic.jpeg"
-          className="absolute top-10 w-36 scale-150 rounded-full blur-3xl brightness-[5] dark:brightness-75"
-          width={224}
-          height={224}
-          quality={60}
-          priority
-          aria-hidden
-        />
+
         <div className="relative">
           <h1 className="relative z-10 mb-1 mt-2 scroll-m-20 text-2xl font-extrabold tracking-tight md:mt-0 md:text-4xl">
             Facundo Perez Montalvo
