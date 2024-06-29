@@ -9,35 +9,45 @@ type ProjectProps = {
   link: string;
   tech?: string[];
   repo: string;
+  img: string;
 };
 
-function Project({ children, title, link, tech, repo }: ProjectProps) {
+function Project({ children, title, link, tech, repo, img }: ProjectProps) {
   return (
-    <div className="flex w-full flex-col gap-2 rounded-md border p-4 transition duration-300 ease-out hover:shadow-lg hover:ease-in">
-      <div className="flex flex-row justify-between">
-        <Link href={link}>
-          <h3 className="group flex items-center gap-1 text-lg font-bold transition duration-500 hover:underline">
-            {title}{" "}
-            <span className="text-foreground/80 transition-transform duration-200 group-hover:translate-x-[1px] group-hover:translate-y-[-1px]">
-              <ArrowUpRight className="size-4" />
-            </span>
-          </h3>
-        </Link>
-        <Link href={repo}>
-          <span>
-            <Github className="size-5 stroke-[1.5] text-gray-400 transition-colors hover:text-foreground" />
-          </span>
-        </Link>
+    <div className="group flex flex-col space-x-0 space-y-4 md:flex-row md:space-x-8 md:space-y-0">
+      <div className="w-full md:w-1/2">
+        <div className="relative col-span-6 row-span-5 flex transform flex-col items-center gap-8 overflow-clip rounded-xl border border-gray-800 shadow-xl transition duration-500 ease-in-out sm:rounded-xl md:group-hover:shadow-2xl lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+          <img
+            src={img}
+            alt={title}
+            className="h-56 w-full rounded-xl object-cover object-top transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+          />
+        </div>
       </div>
-      <p className="text-pretty leading-relaxed text-muted-foreground">
-        {children}
-      </p>
-      <div className="mt-auto flex flex-wrap gap-1">
-        {tech?.map((tech) => (
-          <Badge variant="outline" key={tech} className="truncate">
-            {tech}
-          </Badge>
-        ))}
+      <div className="flex w-full flex-col gap-1 md:w-1/2 md:max-w-lg md:gap-2">
+        <div className="flex items-center justify-between">
+          <Link href={link}>
+            <h3 className="group flex items-center gap-1 text-2xl font-bold transition duration-500 hover:underline">
+              {title}{" "}
+              <span className="text-foreground/80 transition-transform duration-200 group-hover:translate-x-[1px] group-hover:translate-y-[-1px]">
+                <ArrowUpRight className="size-4" />
+              </span>
+            </h3>
+          </Link>
+          <Link href={repo}>
+            <Github className="size-5 stroke-[1.5] text-gray-400 transition-colors hover:text-foreground" />
+          </Link>
+        </div>
+        <p className="text-pretty text-lg leading-relaxed text-muted-foreground">
+          {children}
+        </p>
+        <div className="mt-auto flex flex-wrap gap-2">
+          {tech?.map((tech) => (
+            <Badge variant="outline" key={tech} className="truncate">
+              {tech}
+            </Badge>
+          ))}
+        </div>
       </div>
     </div>
   );
