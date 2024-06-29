@@ -36,7 +36,7 @@ export default function HomePage() {
         <TooltipProvider>
           <Tooltip>
             <TooltipContent side="right" className="ml-2">
-              <p>🧑‍💻 Open to work!</p>
+              <p className="text-lg">🧑‍💻 Open to work!</p>
             </TooltipContent>
             <TooltipTrigger className=" max-w-sm shrink cursor-default rounded-full text-left md:max-w-sm md:shadow-2xl">
               <div className="">
@@ -57,17 +57,17 @@ export default function HomePage() {
           <h1 className="relative z-10 mb-1 mt-2 scroll-m-20 text-2xl font-extrabold tracking-tight md:mt-0 md:text-4xl">
             Facundo Perez Montalvo
           </h1>
-          <span className="font-serif italic tracking-[0.022em] text-muted-foreground">
+          <span className="font-serif text-lg italic tracking-[0.022em] text-muted-foreground">
             Frontend developer based in Argentina {"  "}
           </span>
           {countryCodeEmoji("AR")}
         </div>
       </Section>
       <Section delay={0.3}>
-        <h2 className="relative mb-3 scroll-m-20 text-2xl font-semibold tracking-tight">
+        <h2 className="relative mb-2 scroll-m-20 text-2xl font-semibold tracking-tight">
           About me
         </h2>
-        <div className="mb-2 max-w-prose space-y-2 text-pretty text-muted-foreground">
+        <div className="mb-2 max-w-prose space-y-2 text-pretty text-lg text-muted-foreground">
           <p className="relative leading-7 [&:not(:first-child)]:mt-6">
             Hey! I&apos;m Facundo, a frontend developer specialized in creating
             user-friendly, visually appealing interfaces with great attention to
@@ -87,7 +87,8 @@ export default function HomePage() {
               asChild
             >
               <Link href={siteConfig.links.linkedin}>
-                <Linkedin className="relative mr-2 h-4 w-4" /> View Linkedin
+                <Linkedin className="relative mr-2 h-4 w-4 text-lg" /> View
+                Linkedin
               </Link>
             </Button>
 
@@ -97,20 +98,22 @@ export default function HomePage() {
               asChild
             >
               <Link href={siteConfig.links.github}>
-                <Github className="relative mr-2 h-4 w-4" /> View GitHub
+                <Github className="relative mr-2 h-4 w-4 text-lg" /> View GitHub
               </Link>
             </Button>
           </div>
         </div>
       </Section>
       <Section delay={0.4}>
-        <h2 className="mb-3 scroll-m-20 text-2xl font-semibold tracking-tight">
-          Projects
-        </h2>
-        <p className="mb-4 text-muted-foreground">
-          Some of the projects that I am currently working on:
-        </p>
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+        <div className="mb-8">
+          <h2 className="mb-2 scroll-m-20 text-2xl font-semibold tracking-tight">
+            Projects
+          </h2>
+          <p className="mb-4 text-lg text-muted-foreground">
+            Some of the projects that I am currently working on:
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-1">
           {PROJECTS.map((project, index) => {
             return (
               <Project
@@ -119,6 +122,7 @@ export default function HomePage() {
                 link={project.link}
                 tech={project.tech}
                 repo={project.repo}
+                img={project.img}
               >
                 {project.description}
               </Project>
@@ -127,13 +131,15 @@ export default function HomePage() {
         </div>
       </Section>
       <Section delay={0.5}>
-        <h2 className="mb-3 scroll-m-20 text-2xl font-semibold tracking-tight">
-          Contact me
-        </h2>
-        <p className="mb-4 text-muted-foreground">
-          Do you have a job opportunity or idea you&apos;d like to discuss? Feel
-          free to send me an email:
-        </p>
+        <div className="mb-8">
+          <h2 className="mb-2 scroll-m-20 text-2xl font-semibold tracking-tight">
+            Contact me
+          </h2>
+          <p className="mb-4 text-lg text-muted-foreground">
+            Do you have a job opportunity or idea you&apos;d like to discuss?
+            Feel free to send me an email:
+          </p>
+        </div>
         <ContactForm />
       </Section>
     </Layout>
