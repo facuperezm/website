@@ -16,6 +16,7 @@ const config = {
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/array-type": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
+    "tailwindcss/migration-from-tailwind-2": "off",
     "@typescript-eslint/consistent-type-imports": [
       "warn",
       {
