@@ -56,7 +56,7 @@ export default function HomePage() {
           </Button>
         </div>
       </Section>
-      <Section delay={0.5}>
+      <Section id="contact" delay={0.5}>
         <div className="mb-8">
           <h2 className="mb-2 scroll-m-20 text-2xl font-semibold tracking-tight">
             Contact me
