@@ -45,7 +45,7 @@ export default function ProfilePage() {
       </TooltipProvider>
 
       <header className="relative">
-        <h1 className="relative z-10 mb-1 mt-2 scroll-m-20 text-2xl font-extrabold tracking-tight md:mt-0 md:text-4xl">
+        <h1 className="relative z-10 my-2 scroll-m-20 text-2xl font-extrabold tracking-tight md:text-4xl">
           Facundo Perez Montalvo
         </h1>
         <span className="w-full gap-2 text-pretty font-serif text-lg italic tracking-[0.022em] text-muted-foreground">
