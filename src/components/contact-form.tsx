@@ -108,10 +108,10 @@ function ContactForm() {
               name="user_name"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel className="text-base">Name</FormLabel>
                   <FormControl>
                     <Input
-                      className="w-full transition duration-200"
+                      className="w-full text-base transition duration-200"
                       placeholder="John Doe"
                       {...field}
                     />
@@ -126,10 +126,10 @@ function ContactForm() {
               name="user_email"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel className="text-base">Email</FormLabel>
                   <FormControl>
                     <Input
-                      className="transition duration-200"
+                      className="text-base transition duration-200"
                       placeholder="johndoe@email.com"
                       {...field}
                     />
@@ -145,11 +145,12 @@ function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message</FormLabel>
+                <FormLabel className="text-base">Message</FormLabel>
                 <FormControl>
                   <Textarea
                     placeholder="Hey Facundo! I would like to talk about..."
-                    className="resize-none transition duration-200"
+                    rows={4}
+                    className="resize-none text-base transition duration-200"
                     {...field}
                   />
                 </FormControl>
