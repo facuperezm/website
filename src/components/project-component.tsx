@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Github } from "lucide-react";
 
@@ -16,11 +17,13 @@ function Project({ children, title, link, tech, repo, img }: ProjectProps) {
   return (
     <div className="group flex flex-col space-x-0 space-y-4 md:flex-row md:space-x-8 md:space-y-0">
       <div className="w-full md:w-1/2">
-        <div className="relative col-span-6 row-span-5 flex transform flex-col items-center gap-8 overflow-clip rounded-xl border border-gray-800 shadow-xl transition duration-500 ease-in-out sm:rounded-xl md:group-hover:shadow-2xl lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-          <img
+        <div className="relative col-span-6 row-span-5 flex w-full flex-col items-center gap-8 overflow-clip rounded-3xl border border-gray-700 shadow-xl transition duration-500 ease-in-out sm:rounded-xl md:group-hover:shadow-2xl">
+          <Image
+            width={385}
+            height={256}
             src={img}
             alt={title}
-            className="h-56 w-full rounded-xl object-cover object-top transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+            className="h-56 w-full object-cover object-top transition duration-500 sm:h-full sm:border md:scale-110 md:group-hover:scale-105"
           />
         </div>
       </div>
