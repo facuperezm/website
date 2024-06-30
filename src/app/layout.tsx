@@ -7,10 +7,16 @@ import { fontSans, fontSerif } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 import Footer from "@/components/footer-component";
+import Header from "@/components/header";
+import Layout from "@/components/main-animate";
+import ProfilePage from "@/components/profile-component";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} - ${siteConfig.title}`,
+  title: {
+    default: siteConfig.name + " | " + siteConfig.title,
+    template: `${siteConfig.name} | %s `,
+  },
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
   keywords: [
@@ -69,10 +75,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="bg-background">
+    <html
+      id="top"
+      lang="en"
+      suppressHydrationWarning
+      className="scroll-smooth bg-background"
+    >
       <body
         className={cn(
-          "min-h-dvh scroll-smooth font-sans antialiased selection:bg-pink-400 selection:text-black",
+          "min-h-dvh font-sans antialiased selection:bg-pink-400 selection:text-black",
           fontSerif.variable,
           fontSans.variable,
         )}
@@ -83,13 +94,17 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div
-            aria-hidden
-            className="nice-gradient pointer-events-none fixed left-0 top-0 z-50 h-24 w-full"
-          ></div>
-          {children}
+          <Header />
+          <Layout className="mx-auto flex max-w-4xl flex-col justify-center px-4 pt-6">
+            <ProfilePage />
+            {children}
+          </Layout>
           <Separator className="mt-6 bg-muted/40" />
           <Footer />
+          <div
+            aria-hidden
+            className="nice-gradient pointer-events-none fixed left-0 top-0 z-50 h-28 w-full"
+          ></div>
         </ThemeProvider>
       </body>
     </html>
