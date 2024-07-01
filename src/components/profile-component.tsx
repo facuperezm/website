@@ -16,7 +16,7 @@ export default function ProfilePage() {
     <Section className="mt-16 justify-center md:flex-row md:justify-end">
       <Image
         alt="Profile picture of Facundo Perez Montalvo"
-        src="https://pub-729f545d27554bb096839c4c4aeb9f51.r2.dev/profile-pic.jpeg"
+        src="/profile.avif"
         className="absolute w-36 scale-150 rounded-full blur-3xl brightness-[5] dark:brightness-75"
         width={144}
         height={144}
@@ -33,10 +33,10 @@ export default function ProfilePage() {
             <div className="rounded-full border border-foreground transition-all hover:border-foreground">
               <Image
                 alt="Profile picture of Facundo Perez Montalvo"
-                src="https://pub-729f545d27554bb096839c4c4aeb9f51.r2.dev/profile-pic.jpeg"
+                src="/profile.avif"
                 className="relative z-10 w-20 rounded-full drop-shadow-2xl md:w-24"
-                width={150}
-                height={150}
+                width={192}
+                height={192}
                 priority
               />
             </div>
