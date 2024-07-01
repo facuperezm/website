@@ -25,7 +25,7 @@ export const PROJECTS = [
     description:
       "🍕 Cartaonline is an app that allows you to create and manage your own online menu.",
     repo: "https://github.com/facuperezm/cartaonline",
-    img: "/projects/cartaonline.png",
+    img: "/projects/cartaonline.avif",
   },
   {
     title: "CSV Challenge",
@@ -46,7 +46,7 @@ export const PROJECTS = [
     description:
       "👨🏻‍🏫 Fullstack Challenge using Node.js and React to handle CSV file uploads and provide search functionality.",
     repo: "https://github.com/facuperezm/csv-challenge",
-    img: "/projects/csv.png",
+    img: "/projects/csv.avif",
   },
   {
     title: "Basement. Challenge",
@@ -55,7 +55,7 @@ export const PROJECTS = [
     link: "https://basement.facupm.dev",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Radix UI"],
     repo: "https://github.com/facuperezm/basement-challenge",
-    img: "/projects/basement.png",
+    img: "/projects/basement.avif",
   },
   {
     title: "PollyGlot Translator",
@@ -64,7 +64,7 @@ export const PROJECTS = [
     description:
       "🦜 PollyGlot is a simple web app that uses the OpenAI API to translate text into different languages.",
     repo: "https://github.com/facuperezm/pollyglot",
-    img: "/projects/pollyglot.png",
+    img: "/projects/pollyglot.avif",
   },
   {
     title: "Inmobiliaria App",
@@ -73,7 +73,7 @@ export const PROJECTS = [
     description:
       "🏠 Real estate app with a CMS for easy content managment. MVP built for a small company in my city.",
     repo: "https://github.com/facuperezm/inmobiliaria",
-    img: "/projects/inmobiliaria.png",
+    img: "/projects/inmobiliaria.avif",
   },
   {
     title: "URL Shortening",
@@ -82,7 +82,7 @@ export const PROJECTS = [
     description:
       "🔗 URL Shorting is a simple app that allows you to shorten URLs. Done following Figma design.",
     repo: "https://github.com/facuperezm/url-shortening",
-    img: "/projects/shortly.png",
+    img: "/projects/shortly.avif",
   },
   {
     title: "Uizard Challenge",
@@ -91,7 +91,7 @@ export const PROJECTS = [
     description:
       "📚 The application is a HackerNews clone that highlights the top 10 stories using an <iframe/> component.",
     repo: "https://github.com/facuperezm/uizard-challenge",
-    img: "/projects/uizard.png",
+    img: "/projects/uizard.avif",
   },
   {
     title: "e-Store",
@@ -100,6 +100,6 @@ export const PROJECTS = [
     description:
       "🛒 E-commerce store that uses the Fake Store API. One of the firsts projects I've ever built.",
     repo: "https://github.com/facuperezm/ecommerce-platform",
-    img: "/projects/e-store.png",
+    img: "/projects/e-store.avif",
   },
 ] as Project[];
