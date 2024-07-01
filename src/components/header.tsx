@@ -22,7 +22,7 @@ export default function Header() {
           className="relative block p-2 transition hover:text-secondary-foreground dark:hover:text-secondary-foreground"
           href="/#contact"
         >
-          Contact
+          Contact me
         </Link>
         <ModeToggle />
       </nav>
