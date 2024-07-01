@@ -11,7 +11,7 @@
 
 <br>
 
-![App Screenshot](./public/screenshot.png)
+![App Screenshot](./public/screenshots.png)
 
 ## 🛠️ Stack
 
