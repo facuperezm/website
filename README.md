@@ -32,7 +32,7 @@
 - [x] Dark/Light theme
 - [x] Improve contact form validation and error handling
 - [x] Add a toast message when sending the email
-- [ ] Separate works in new page
+- [x] Separate works in new page
 - [ ] Add a new page for the blog
 
 ## Author
