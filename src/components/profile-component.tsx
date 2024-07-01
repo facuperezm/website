@@ -50,7 +50,7 @@ export default function ProfilePage() {
         </h1>
         <span className="w-full gap-2 text-pretty font-serif text-lg italic tracking-[0.022em] text-muted-foreground">
           Frontend developer based in Argentina{" "}
-          <ArgSvg className="inline size-[1.3rem] translate-y-[-1px]" />
+          <ArgSvg className="inline size-[1.3rem] translate-y-[-2px]" />
         </span>
       </header>
     </Section>
