@@ -2,11 +2,10 @@ import { type SiteConfig } from "../types";
 
 export const siteConfig: SiteConfig = {
   name: "Facundo Perez Montalvo",
-  title:
-    "Frontend React Developer focused on building products with great attention to detail",
+  title: "Frontend Developer open to new opportunities",
   nickname: "Facu",
   description:
-    "Frontend React Developer with experience in React, Next.js, and Tailwind CSS. Seeking new opportunities",
+    "Frontend Developer with experience in React, Next.js, and Tailwind CSS. Seeking new opportunities",
   url: "https://facuperezm.com",
   ogImage: "https://i.imgur.com/fjL49nC.jpg",
   links: {
