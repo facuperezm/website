@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     title: siteConfig.name,
     card: "summary_large_image",
-    images: ["https://i.imgur.com/kuQHDfm.jpg"],
+    images: ["https://facuperezm.com/opengraph-image.png"],
     description: siteConfig.description,
     creator: "@facuperezm",
   },
