@@ -56,6 +56,30 @@ export default function HomePage() {
           </Button>
         </div>
       </Section>
+      <Section id="skills" delay={0.4}>
+        <h2 className="mb-2 scroll-m-20 text-2xl font-semibold tracking-tight">
+          Skills
+        </h2>
+        <div className="mb-4 max-w-[65ch] text-lg text-muted-foreground">
+          <p className="mb-4">
+            I&apos;m always learning new things and improving my skills. Here
+            are the technologies I work with:
+          </p>
+          <p className="mb-4">Frontend:</p>
+          <ul className="list-disc text-balance pl-6">
+            <li>
+              React, HTML, CSS, TypeScript, React, Next.js Zustand Tailwind CSS,
+              Styled Components Vitest, react-testing-library, Playwright
+            </li>
+          </ul>
+          <p className="my-4">Backend:</p>
+          <ul className="list-disc text-balance pl-6">
+            <li>
+              Node.js, Express MongoDB, Mongoose Prisma, DrizzleORM Git, GitHub
+            </li>
+          </ul>
+        </div>
+      </Section>
       <Section id="contact" delay={0.5}>
         <div className="mb-8">
           <h2 className="mb-2 scroll-m-20 text-2xl font-semibold tracking-tight">

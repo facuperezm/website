@@ -11,7 +11,9 @@ export default function NotFound() {
         <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
           Not found
         </h2>
-        <p className="mb-4 leading-7">Could not find requested resource</p>
+        <p className="mb-4 leading-7">
+          Sorry, I could not find the requested resource
+        </p>
         <Link className={buttonVariants({ variant: "outline" })} href="/">
           Return Home
         </Link>

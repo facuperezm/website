@@ -20,6 +20,12 @@ export default function Header() {
         </Link>
         <Link
           className="relative block p-2 transition hover:text-secondary-foreground dark:hover:text-secondary-foreground"
+          href="/#skills"
+        >
+          Skills
+        </Link>
+        <Link
+          className="relative block p-2 transition hover:text-secondary-foreground dark:hover:text-secondary-foreground"
           href="/#contact"
         >
           Contact me
