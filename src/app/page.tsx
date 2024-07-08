@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Github, Linkedin } from "lucide-react";
 
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/contact-form";
+import { Icons } from "@/components/icons";
 import Section from "@/components/section-animate";
 
 export default function HomePage() {
@@ -60,22 +62,125 @@ export default function HomePage() {
         <h2 className="mb-2 scroll-m-20 text-2xl font-semibold tracking-tight">
           Skills
         </h2>
-        <div className="mb-4 max-w-[65ch] text-lg text-muted-foreground">
+        <div className="mb-4 text-lg text-muted-foreground">
           <p className="mb-4">
             I&apos;m always learning new things and improving my skills. Here
             are the technologies I work with:
           </p>
           <p className="mb-4">Frontend:</p>
-          <ul className="list-disc text-balance pl-6">
+          <ul className="flex flex-row flex-wrap items-center gap-2">
             <li>
-              React, HTML, CSS, TypeScript, React, Next.js Zustand Tailwind CSS,
-              Styled Components Vitest, react-testing-library, Playwright
+              <span className="flex items-center gap-x-2 whitespace-nowrap rounded-full bg-[#003159] px-3 py-1 text-sm text-white ">
+                <Icons.react className="size-4" />
+                React
+              </span>
+            </li>
+            <li>
+              <span className="flex items-center gap-x-2 whitespace-nowrap rounded-full bg-black px-3 py-1 text-sm text-white ">
+                <Icons.nextjs className="size-4" />
+                Next.js
+              </span>
+            </li>
+            <li>
+              <span className="flex items-center gap-x-2 whitespace-nowrap rounded-full bg-sky-950 px-3 py-1 text-sm text-white ">
+                <Icons.typescript className="size-4" />
+                TypeScript
+              </span>
+            </li>
+            <li>
+              <span className="flex items-center gap-x-2 whitespace-nowrap rounded-full bg-sky-700 px-3 py-1 text-sm text-white">
+                <Icons.tailwind className="size-4" />
+                Tailwind CSS
+              </span>
+            </li>
+            <li>
+              <span className="flex items-center gap-x-2 whitespace-nowrap rounded-full bg-green-900 px-3 py-1 text-sm text-white">
+                🐻 Zustand
+              </span>
+            </li>
+            <li>
+              <span className="flex items-center gap-x-2 whitespace-nowrap rounded-full bg-[#1B1B1F] px-3 py-1 text-sm text-white">
+                <Icons.vitest className="size-4" /> Vitest
+              </span>
+            </li>
+            <li>
+              <span className="flex items-center gap-x-2 text-nowrap rounded-full bg-[#1B1B1D] px-3 py-1 text-sm text-white ">
+                <div className="size-4">
+                  {" "}
+                  <Image
+                    src="/reactesting.png"
+                    width={20}
+                    height={20}
+                    className="size-4"
+                    alt="react-testing-library"
+                  />
+                </div>
+                react-testing-library
+              </span>
+            </li>
+            <li>
+              <span className="flex items-center gap-x-2 text-wrap rounded-full bg-neutral-950 px-3 py-1 text-sm text-white">
+                <Icons.playwright className="size-4" />
+                Playwright
+              </span>
+            </li>
+            <li>
+              <span className="flex items-center gap-x-2 whitespace-nowrap rounded-full bg-teal-950 px-3 py-1 text-sm text-white">
+                💅🏾 Styled Components
+              </span>
             </li>
           </ul>
           <p className="my-4">Backend:</p>
-          <ul className="list-disc text-balance pl-6">
+          <ul className="flex flex-row flex-wrap items-center gap-2">
             <li>
-              Node.js, Express MongoDB, Mongoose Prisma, DrizzleORM Git, GitHub
+              <span className="flex items-center gap-x-2 whitespace-nowrap rounded-full bg-[#003159] px-3 py-1 text-sm text-white ">
+                <Icons.nodejs className="size-4" />
+                Node.js
+              </span>
+            </li>
+            <li>
+              <span className="flex items-center gap-x-2 whitespace-nowrap rounded-full bg-black px-3 py-1 text-sm text-white ">
+                <Icons.express className="size-4" />
+                Express
+              </span>
+            </li>
+            <li>
+              <span className="flex items-center gap-x-2 whitespace-nowrap rounded-full bg-sky-950 px-3 py-1 text-sm text-white ">
+                <Icons.mongodb className="size-4" />
+                MongoDB
+              </span>
+            </li>
+            <li>
+              <span className="flex items-center gap-x-2 whitespace-nowrap rounded-full bg-gray-600 px-3 py-1 text-sm text-white">
+                <Icons.prisma className="size-4" />
+                Prisma
+              </span>
+            </li>
+            <li>
+              <span className="flex items-center gap-x-2 whitespace-nowrap rounded-full bg-black px-3 py-1 text-sm text-white">
+                <div className="size-4">
+                  <Image
+                    src="/drizzle.png"
+                    alt="drizzle orm logo"
+                    height={20}
+                    width={20}
+                    className="size-4"
+                  />
+                </div>
+                DrizzleORM
+              </span>
+            </li>
+            <li>
+              <span className="flex items-center gap-x-2 whitespace-nowrap rounded-full bg-slate-950 px-3 py-1 text-sm text-white">
+                <Icons.git className="size-4" />
+                Git
+              </span>
+            </li>
+            <li>
+              <span className="flex items-center gap-x-2 whitespace-nowrap rounded-full bg-gray-900 px-3 py-1 text-sm text-white">
+                <Icons.gitHub className="size-4" />
+                GitHub
+              </span>
             </li>
           </ul>
         </div>
