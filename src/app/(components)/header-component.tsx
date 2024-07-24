@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { ModeToggle } from "./ui/theme-toggle";
+import { ModeToggle } from "../../components/ui/theme-toggle";
 
 export default function Header() {
   return (

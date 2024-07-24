@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 
-import ArgSvg from "./arg";
-import Section from "./section-animate";
+import ArgSvg from "../../components/arg-flag";
+import Section from "../../components/section-animate";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "./ui/tooltip";
+} from "../../components/ui/tooltip";
 
 export default function ProfilePage() {
   return (

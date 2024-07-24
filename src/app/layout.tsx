@@ -6,11 +6,12 @@ import { siteConfig } from "@/config/site";
 import { fontSans, fontSerif } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
-import Footer from "@/components/footer-component";
-import Header from "@/components/header";
 import Layout from "@/components/main-animate";
-import ProfilePage from "@/components/profile-component";
 import { ThemeProvider } from "@/components/theme-provider";
+
+import Footer from "./(components)/footer-component";
+import Header from "./(components)/header-component";
+import ProfilePage from "./(components)/profile-component";
 
 export const metadata: Metadata = {
   title: {

@@ -1,4 +1,3 @@
-/* eslint-disable tailwindcss/no-custom-classname */
 "use client";
 
 import React from "react";
@@ -6,8 +5,8 @@ import Link from "next/link";
 
 import { siteConfig } from "@/config/site";
 
-import { ModeToggle } from "./ui/heart-theme";
-import { Separator } from "./ui/separator";
+import { ModeToggle } from "../../components/ui/heart-theme";
+import { Separator } from "../../components/ui/separator";
 
 function Footer() {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
