@@ -1,9 +1,9 @@
-import { Github, Link, Linkedin } from "lucide-react";
+import Link from "next/link";
+import { Github, Linkedin } from "lucide-react";
 
 import { siteConfig } from "@/config/site";
-
-import Section from "../../components/section-animate";
-import { Button } from "../../components/ui/button";
+import { Button } from "@/components/ui/button";
+import Section from "@/components/section-animate";
 
 export default function AboutMeSection() {
   return (
