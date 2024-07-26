@@ -31,7 +31,7 @@ export default function Skill({ icon, name, bgColor, type }: SkillProps) {
             />
           </div>
         ) : typeof icon === "function" ? (
-          icon({})
+          icon({ className: "size-4" })
         ) : null}
         {name}
       </span>

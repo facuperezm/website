@@ -9,9 +9,9 @@ import { Separator } from "@/components/ui/separator";
 import Layout from "@/components/main-animate";
 import { ThemeProvider } from "@/components/theme-provider";
 
-import Footer from "./(components)/footer-component";
-import Header from "./(components)/header-component";
-import ProfilePage from "./(components)/profile-component";
+import Footer from "./_components/footer-component";
+import Header from "./_components/header-component";
+import ProfilePage from "./_components/profile-component";
 
 export const metadata: Metadata = {
   title: {
@@ -80,11 +80,11 @@ export default function RootLayout({
       id="top"
       lang="en"
       suppressHydrationWarning
-      className="scroll-smooth bg-background"
+      className="min-h-dvh scroll-smooth bg-background antialiased"
     >
       <body
         className={cn(
-          "min-h-dvh font-sans antialiased selection:bg-pink-400 selection:text-black",
+          "font-sans selection:bg-pink-400 selection:text-black",
           fontSerif.variable,
           fontSans.variable,
         )}

@@ -4,9 +4,8 @@ import React from "react";
 import Link from "next/link";
 
 import { siteConfig } from "@/config/site";
-
-import { ModeToggle } from "../../components/ui/heart-theme";
-import { Separator } from "../../components/ui/separator";
+import { ModeToggle } from "@/components/ui/heart-theme";
+import { Separator } from "@/components/ui/separator";
 
 function Footer() {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
@@ -32,7 +31,7 @@ function Footer() {
         </p>
       </footer>
       {isOpen && (
-        <>
+        <div>
           <Separator className="bg-muted/40" />
           <div className="relative mx-auto max-w-3xl px-4 py-8 font-serif italic tracking-[0.020em] text-muted-foreground">
             <p className="text-pretty">
@@ -41,7 +40,7 @@ function Footer() {
               what I love, I am making a positive impact in the world.
             </p>
           </div>
-        </>
+        </div>
       )}
     </>
   );
