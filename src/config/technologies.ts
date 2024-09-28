@@ -15,6 +15,18 @@ const frontendSkills = [
     bgColor: "bg-sky-700",
     type: "svg",
   },
+  {
+    name: "Vite.js",
+    icon: Icons.vite,
+    bgColor: "bg-slate-800",
+    type: "svg",
+  },
+  {
+    name: "React Query",
+    icon: Icons.reactQuery,
+    bgColor: "bg-slate-900",
+    type: "svg",
+  },
   { name: "🐻 Zustand", icon: null, bgColor: "bg-green-900", type: "img" },
   { name: "Vitest", icon: Icons.vitest, bgColor: "bg-[#1B1B1F]", type: "svg" },
   {
