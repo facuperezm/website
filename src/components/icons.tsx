@@ -423,8 +423,8 @@ export const Icons = {
           y2="78.411%"
           id="a"
         >
-          <stop stop-color="#41D1FF" offset="0%" />
-          <stop stop-color="#BD34FE" offset="100%" />
+          <stop stopColor="#41D1FF" offset="0%" />
+          <stop stopColor="#BD34FE" offset="100%" />
         </linearGradient>
         <linearGradient
           x1="43.376%"
@@ -433,9 +433,9 @@ export const Icons = {
           y2="89.03%"
           id="b"
         >
-          <stop stop-color="#FFEA83" offset="0%" />
-          <stop stop-color="#FFDD35" offset="8.333%" />
-          <stop stop-color="#FFA800" offset="100%" />
+          <stop stopColor="#FFEA83" offset="0%" />
+          <stop stopColor="#FFDD35" offset="8.333%" />
+          <stop stopColor="#FFA800" offset="100%" />
         </linearGradient>
       </defs>
       <path
