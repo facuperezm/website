@@ -96,7 +96,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <Layout className="mx-auto flex max-w-4xl flex-col justify-center px-4 pt-6">
+          <Layout className="mx-auto flex max-w-3xl flex-col justify-center px-4 pt-6">
             <ProfilePage />
             {children}
           </Layout>
