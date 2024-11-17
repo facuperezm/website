@@ -28,6 +28,15 @@ export const PROJECTS = [
     img: "/projects/cartaonline.avif",
   },
   {
+    title: "Barbershop",
+    link: "https://barbershop.facupm.dev",
+    tech: ["Next.js", "Tailwind CSS", "DrizzleORM", "ShadcnUI", "Clerk"],
+    description:
+      "💇‍♂️ Barbershop is a simple app that allows you to manage your barbershop appointments. It's a work in progress.",
+    repo: "https://github.com/facuperezm/barbershop",
+    img: "/projects/barbershop.avif",
+  },
+  {
     title: "CSV Challenge",
     link: "https://csv-challenge.vercel.app",
     tech: [
