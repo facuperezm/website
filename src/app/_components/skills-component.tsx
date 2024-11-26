@@ -13,8 +13,8 @@ export default function SkillsSection() {
           I&apos;m always learning new things and improving my skills. Here are
           the technologies I work with:
         </p>
-        <p className="mb-4">Frontend:</p>
-        <ul className="flex flex-row flex-wrap items-center gap-2">
+        <p className="mb-1 font-serif">Frontend:</p>
+        <ul className="mb-6 flex flex-row flex-wrap items-center gap-2">
           {frontendSkills.map((skill) => {
             return (
               <Skill
@@ -27,7 +27,7 @@ export default function SkillsSection() {
             );
           })}
         </ul>
-        <p className="my-4">Backend:</p>
+        <p className="my-1 font-serif">Backend:</p>
         <ul className="flex flex-row flex-wrap items-center gap-2">
           {backendSkills.map((skill) => {
             return (
