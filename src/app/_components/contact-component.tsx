@@ -5,7 +5,7 @@ export default function ContactFormSection() {
   return (
     <Section id="contact" delay={0.5}>
       <div className="mb-8">
-        <h2 className="mb-2 scroll-m-20 text-2xl font-semibold tracking-tight">
+        <h2 className="mb-3 scroll-m-20 text-2xl font-semibold tracking-tight">
           Contact me
         </h2>
         <p className="mb-4 text-lg text-muted-foreground">
