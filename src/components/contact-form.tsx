@@ -40,7 +40,9 @@ const contactFormSchema = z.object({
     .string()
     .min(5, { message: "Message has to be more than 5 characters." })
     .max(400, { message: "Message has to be less than 500 characters." }),
-  url: z.string().max(0, "Error submitting the form"),
+  website: z.string().refine((val) => val === "", {
+    message: "Error submitting form",
+  }),
 });
 
 type contactFormType = z.infer<typeof contactFormSchema>;
@@ -49,18 +51,19 @@ const defaultValues: contactFormType = {
   user_name: "",
   user_email: "",
   message: "",
-  url: "",
+  website: "",
 };
 
 function ContactForm() {
   const [isSubmitted, setIsSubmitted] = React.useState<boolean>(false);
   const [isPending, startTransition] = React.useTransition();
   const { toast } = useToast();
+  const formRef = React.useRef<HTMLFormElement>(null);
 
   const form = useForm<contactFormType>({
     resolver: zodResolver(contactFormSchema),
     defaultValues,
-    mode: "onChange",
+    mode: "onTouched",
   });
 
   const checkRateLimit = () => {
@@ -70,7 +73,6 @@ function ContactForm() {
     const now = Date.now();
     const twoHoursAgo = now - 60 * 60 * 1000 * 2; // 2 hours ago
 
-    // Filter out submissions older than 2 hours
     const recentSubmissions = submissions.filter(
       (timestamp) => timestamp > twoHoursAgo,
     );
@@ -84,15 +86,27 @@ function ContactForm() {
       );
     }
 
-    // Add current submission timestamp
     recentSubmissions.push(now);
     localStorage.setItem("form_submissions", JSON.stringify(recentSubmissions));
   };
 
-  function onSubmit() {
+  const onSubmit = async (data: contactFormType) => {
     startTransition(async () => {
       try {
-        // Check rate limit before sending
+        if (data.website !== "") {
+          console.debug("Honeypot triggered");
+          return;
+        }
+
+        const formStartTime = (window as any).__formStartTime;
+        const submissionTime = Date.now();
+        const timeDiff = submissionTime - formStartTime;
+
+        if (timeDiff < 3000) {
+          console.debug("Bot detection: Form filled too quickly");
+          return;
+        }
+
         checkRateLimit();
 
         await emailjs.sendForm(
@@ -119,6 +133,10 @@ function ContactForm() {
           ),
         });
       } catch (error) {
+        if ((error as Error).message.includes("Error submitting form")) {
+          return;
+        }
+
         toast({
           variant: "destructive",
           title: "Sorry, something went wrong",
@@ -126,8 +144,11 @@ function ContactForm() {
         });
       }
     });
-  }
-  const formRef = React.useRef<HTMLFormElement>(null);
+  };
+
+  React.useEffect(() => {
+    (window as any).__formStartTime = Date.now();
+  }, []);
 
   return (
     <>
@@ -136,6 +157,7 @@ function ContactForm() {
           ref={formRef}
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-3"
+          autoComplete="off"
         >
           <div className="flex flex-col justify-between gap-3 md:flex-row">
             <FormField
@@ -196,11 +218,23 @@ function ContactForm() {
 
           <FormField
             control={form.control}
-            name="url"
+            name="website"
             render={({ field }) => (
-              <FormItem style={{ display: "none" }}>
+              <FormItem
+                style={{
+                  opacity: 0,
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  height: 0,
+                  width: 0,
+                  zIndex: -1,
+                  overflow: "hidden",
+                }}
+              >
                 <FormControl>
                   <Input
+                    type="text"
                     tabIndex={-1}
                     autoComplete="off"
                     aria-hidden="true"
