@@ -63,9 +63,38 @@ function ContactForm() {
     mode: "onChange",
   });
 
+  const checkRateLimit = () => {
+    const submissions = JSON.parse(
+      localStorage.getItem("form_submissions") || "[]",
+    ) as number[];
+    const now = Date.now();
+    const twoHoursAgo = now - 60 * 60 * 1000 * 2; // 2 hours ago
+
+    // Filter out submissions older than 2 hours
+    const recentSubmissions = submissions.filter(
+      (timestamp) => timestamp > twoHoursAgo,
+    );
+
+    if (recentSubmissions.length >= 2) {
+      const nextSubmissionTime = new Date(
+        recentSubmissions[0] + 60 * 60 * 1000 * 2,
+      );
+      throw new Error(
+        `You've tried to submit the form too many times. Please try again after ${nextSubmissionTime.toLocaleTimeString()}`,
+      );
+    }
+
+    // Add current submission timestamp
+    recentSubmissions.push(now);
+    localStorage.setItem("form_submissions", JSON.stringify(recentSubmissions));
+  };
+
   function onSubmit() {
     startTransition(async () => {
       try {
+        // Check rate limit before sending
+        checkRateLimit();
+
         await emailjs.sendForm(
           process.env.NEXT_PUBLIC_YOUR_SERVICE_ID!,
           process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID!,
@@ -90,7 +119,11 @@ function ContactForm() {
           ),
         });
       } catch (error) {
-        throw new Error((error as any).text);
+        toast({
+          variant: "destructive",
+          title: "Sorry, something went wrong",
+          description: (error as Error).message,
+        });
       }
     });
   }
