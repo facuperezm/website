@@ -21,8 +21,8 @@ export default function ProfilePage() {
         width={144}
         height={144}
         quality={10}
-        priority
-        aria-hidden
+        placeholder="blur"
+        blurDataURL="/profile.avif"
       />
       <TooltipProvider>
         <Tooltip delayDuration={0}>
@@ -35,9 +35,11 @@ export default function ProfilePage() {
                 alt="Profile picture of Facundo Perez Montalvo"
                 src="/profile.avif"
                 className="relative z-10 w-20 rounded-full drop-shadow-2xl md:w-24"
-                width={192}
-                height={192}
-                priority
+                width={96}
+                height={96}
+                placeholder="blur"
+                blurDataURL="/profile.avif"
+                aria-hidden
               />
             </div>
           </TooltipTrigger>
