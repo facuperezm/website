@@ -40,14 +40,16 @@ const contactFormSchema = z.object({
     .string()
     .min(5, { message: "Message has to be more than 5 characters." })
     .max(400, { message: "Message has to be less than 500 characters." }),
+  url: z.string().max(0, "Error submitting the form"),
 });
 
 type contactFormType = z.infer<typeof contactFormSchema>;
 
-const defaultValues = {
+const defaultValues: contactFormType = {
   user_name: "",
   user_email: "",
   message: "",
+  url: "",
 };
 
 function ContactForm() {
@@ -155,6 +157,23 @@ function ContactForm() {
                   />
                 </FormControl>
                 <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="url"
+            render={({ field }) => (
+              <FormItem style={{ display: "none" }}>
+                <FormControl>
+                  <Input
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    {...field}
+                  />
+                </FormControl>
               </FormItem>
             )}
           />
