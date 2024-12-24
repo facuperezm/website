@@ -83,6 +83,7 @@ export default function RootLayout({
       className="min-h-dvh scroll-smooth bg-background antialiased"
     >
       <body
+        suppressHydrationWarning
         className={cn(
           "font-sans selection:bg-pink-400 selection:text-black",
           fontSerif.variable,
