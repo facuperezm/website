@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 type IconProps = React.HTMLAttributes<SVGElement>;
 
 interface SkillProps {
-  icon: string | ((props: IconProps) => JSX.Element) | null;
+  icon: string | ((props: IconProps) => React.ReactNode) | null;
   name: string;
   bgColor: string;
   type: string;
