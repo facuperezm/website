@@ -1,10 +1,8 @@
-"use client";
-
-import { motion, useReducedMotion, type HTMLMotionProps } from "framer-motion";
+import * as motion from "motion/react-client";
 
 import { cn } from "@/lib/utils";
 
-interface LayoutProps extends HTMLMotionProps<"main"> {
+interface LayoutProps {
   className?: string;
   children: React.ReactNode;
 }
@@ -15,29 +13,19 @@ const variants = {
   exit: { opacity: 0, y: 20 },
 };
 
-function Layout({ className, children, ...motionProps }: LayoutProps) {
-  const shouldReduceMotion = useReducedMotion();
-
-  const appliedVariants = shouldReduceMotion
-    ? { hidden: { opacity: 0 }, enter: { opacity: 1 }, exit: { opacity: 0 } }
-    : variants;
-
-  const appliedTransition = shouldReduceMotion
-    ? { duration: 0 }
-    : { duration: 0.3, type: "easeInOut" };
-
+function Layout({ className, children, ...props }: LayoutProps) {
   return (
-    <motion.main
+    <motion.div
       initial="false"
       animate="enter"
       exit="exit"
-      variants={appliedVariants}
-      transition={appliedTransition}
-      {...motionProps}
+      variants={variants}
+      transition={{ duration: 0.3, type: "easeInOut" }}
       className={cn("relative", className)}
+      {...props}
     >
       {children}
-    </motion.main>
+    </motion.div>
   );
 }
 
