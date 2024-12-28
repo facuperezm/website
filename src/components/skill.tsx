@@ -27,7 +27,7 @@ export default function Skill({ icon, name, bgColor, type }: SkillProps) {
               width={20}
               height={20}
               className="size-4"
-              alt={name}
+              alt={`An icon for technology: ${name}`}
             />
           </div>
         ) : typeof icon === "function" ? (
