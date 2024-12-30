@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 
 import { siteConfig } from "@/config/site";
 import { fontSans, fontSerif } from "@/lib/fonts";
@@ -108,6 +109,7 @@ export default function RootLayout({
             className="nice-gradient pointer-events-none fixed left-0 top-0 z-50 h-28 w-full"
           ></div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
