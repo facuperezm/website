@@ -8,7 +8,7 @@ export default function ContactFormSection() {
         <h2 className="mb-3 scroll-m-20 text-2xl font-semibold tracking-tight">
           Contact me
         </h2>
-        <p className="mb-4 text-lg text-muted-foreground">
+        <p className="mb-4 text-[1.1rem] text-muted-foreground">
           Do you have a job opportunity or idea you&apos;d like to discuss? Feel
           free to send me an email:
         </p>

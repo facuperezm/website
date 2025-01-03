@@ -41,7 +41,7 @@ function Project({ children, title, link, tech, repo, img }: ProjectProps) {
             <Github className="size-5 stroke-[1.5] text-gray-400 transition-colors hover:text-foreground" />
           </Link>
         </div>
-        <p className="text-pretty text-lg leading-relaxed text-muted-foreground">
+        <p className="text-pretty text-[1.1rem] leading-relaxed text-muted-foreground">
           {children}
         </p>
         <div className="mt-auto flex flex-wrap gap-2">

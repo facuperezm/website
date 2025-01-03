@@ -8,7 +8,7 @@ export default function SkillsSection() {
       <h2 className="mb-3 scroll-m-20 text-2xl font-semibold tracking-tight">
         Skills
       </h2>
-      <div className="mb-4 text-lg text-muted-foreground">
+      <div className="mb-4 text-[1.1rem] text-muted-foreground">
         <p className="mb-4">
           I&apos;m always learning new things and improving my skills. Here are
           the technologies I work with:

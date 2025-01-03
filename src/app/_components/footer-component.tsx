@@ -9,7 +9,7 @@ import { ClientQuote } from "./expandable-component";
 export default function FooterContent() {
   return (
     <>
-      <footer className="mx-auto flex max-w-3xl flex-col flex-wrap justify-between gap-1 px-4 py-3 text-center text-sm text-muted-foreground md:flex-row">
+      <footer className="mx-auto flex max-w-2xl flex-col flex-wrap justify-between gap-1 px-4 py-3 text-center text-sm text-muted-foreground md:flex-row">
         <p>
           <Link href={siteConfig.links.repo} className="hover:underline">
             Built

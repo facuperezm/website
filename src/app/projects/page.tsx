@@ -15,7 +15,7 @@ export default function ProjectPage() {
         <h2 className="mb-2 scroll-m-20 text-2xl font-semibold tracking-tight">
           Projects
         </h2>
-        <p className="mb-4 text-lg text-muted-foreground">
+        <p className="mb-4 text-[1.1rem] text-muted-foreground">
           Some of the projects that I am currently working on:
         </p>
       </div>
