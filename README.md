@@ -1,19 +1,28 @@
-<div align="center">
-<img src="public/favicon.svg" height="50px" width="auto" /> 
-<h3>
- My portfolio
-</h3>
-<p>This is my portfolio website made with Next.js and styled with Tailwind CSS</p>
-<span>&nbsp;✦&nbsp;</span>
-<a href="http://facuperezm.com">Live website</a>
-<span>&nbsp;✦&nbsp;</span>
-</div>
+# Portfolio Website
+
+My personal portfolio website built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
+
+## Feel Free to Use! 🚀
+
+Feel free to use this portfolio structure as inspiration for your own! If you do, I'd be super happy if you could give me a shoutout or mention [@facuperezm](https://github.com/facuperezm) in your README. 💙
+
+## Tech Stack
 
 <br>
 
 ![App Screenshot](./public/screenshots.png)
 
-## 🛠️ Stack
+## Features
+
+- Modern and clean design
+- Fully responsive
+- Dark/Light mode
+- Fast page loads
+- SEO optimized
+- Type-safe
+- Contact form with email integration
+
+## Tech Stack
 
 - [**React**](https://reactjs.org/) - A JavaScript library for building user interfaces.
 - [**Next.js 14**](https://nextjs.org/) - The React framework for building production-ready websites.
@@ -23,21 +32,20 @@
 - [**React-hook-form**](https://react-hook-form.com/) - Performant, flexible, and extensible forms with easy-to-use React hooks.
 - [**Zod**](https://github.com/colinhacks/zod) - A TypeScript-first schema declaration and validation library.
 
-**Deploy:** Vercel
+## Getting Started
 
-## Optimizations
+1. Clone this repository
+2. Install dependencies with `pnpm install`
+3. Create a `.env` file based on `.env.example`
+4. Run the development server with `pnpm run dev`
 
-- [x] Improve colors variables in Tailwind config file to use better conventions
-- [x] Add dark mode
-- [x] Dark/Light theme
-- [x] Improve contact form validation and error handling
-- [x] Add a toast message when sending the email
-- [x] Separate works in new page
-- [ ] Add a new page for the blog
+## License
 
-## Author
+MIT License - feel free to use this code for your own portfolio!
 
-- [Facundo Perez Montalvo](https://facuperezm.vercel.app)
+## Contact
+
+If you have any questions, feel free to reach out to me:
 
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://facuperezm.vercel.app/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/facuperezm/)

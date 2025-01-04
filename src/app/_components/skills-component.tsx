@@ -1,4 +1,8 @@
-import { backendSkills, frontendSkills } from "@/config/technologies";
+import {
+  backendSkills,
+  frontendSkills,
+  toolingSkills,
+} from "@/config/technologies";
 import Section from "@/components/section-animate";
 import Skill from "@/components/skill";
 
@@ -28,8 +32,22 @@ export default function SkillsSection() {
           })}
         </ul>
         <p className="my-1 font-serif text-foreground">Backend:</p>
-        <ul className="flex flex-row flex-wrap items-center gap-2">
+        <ul className="mb-6 flex flex-row flex-wrap items-center gap-2">
           {backendSkills.map((skill) => {
+            return (
+              <Skill
+                key={skill.name}
+                name={skill.name}
+                icon={skill.icon}
+                type={skill.type}
+                bgColor={skill.bgColor}
+              />
+            );
+          })}
+        </ul>
+        <p className="my-1 font-serif text-foreground">Tools & Testing:</p>
+        <ul className="flex flex-row flex-wrap items-center gap-2">
+          {toolingSkills.map((skill) => {
             return (
               <Skill
                 key={skill.name}
