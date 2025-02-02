@@ -20,7 +20,7 @@ export default function AboutMeSection() {
         <p className="leading-7 [&:not(:first-child)]:mt-3">
           I enjoy learning new things, solving problems, and paying attention to
           the details that make a difference. There&apos;s always room to grow,
-          and I&apos;m committed to improving my skills and delivering
+          and I&apos;m always looking for ways to improve my skills and deliver
           meaningful solutions.
         </p>
         <p className="leading-7  [&:not(:first-child)]:mt-3">

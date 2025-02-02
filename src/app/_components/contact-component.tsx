@@ -9,8 +9,8 @@ export default function ContactFormSection() {
           Contact me
         </h2>
         <p className="mb-4 text-[1.1rem] text-muted-foreground">
-          Do you have a job opportunity or idea you&apos;d like to discuss? Feel
-          free to send me an email:
+          Do you have an idea or project you&apos;d like to discuss? Feel free
+          to send me an email:
         </p>
       </div>
       <ContactForm />
