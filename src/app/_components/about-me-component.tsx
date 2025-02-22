@@ -12,18 +12,18 @@ export default function AboutMeSection() {
         About me
       </h2>
       <div className="mb-4 max-w-[66ch] text-pretty text-[1.1rem] text-muted-foreground">
-        <p className="leading-7 [&:not(:first-child)]:mt-3">
+        <p className="leading-7 not-first:mt-3">
           Hey! I&apos;m Facundo, a frontend developer with{" "}
           <span className="font-semibold">two years of experience</span>{" "}
           crafting web applications.
         </p>
-        <p className="leading-7 [&:not(:first-child)]:mt-3">
+        <p className="leading-7 not-first:mt-3">
           I enjoy learning new things, solving problems, and paying attention to
           the details that make a difference. There&apos;s always room to grow,
           and I&apos;m always looking for ways to improve my skills and deliver
           meaningful solutions.
         </p>
-        <p className="leading-7  [&:not(:first-child)]:mt-3">
+        <p className="leading-7  not-first:mt-3">
           I&apos;d love to connect and work on something great together!
         </p>
       </div>

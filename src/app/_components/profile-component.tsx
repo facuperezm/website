@@ -15,7 +15,7 @@ export default function ProfilePage() {
       <Image
         alt="Profile picture of Facundo Perez Montalvo"
         src="/profile.avif"
-        className="absolute w-36 scale-150 rounded-full blur-3xl brightness-[5] dark:brightness-75"
+        className="absolute w-36 scale-150 rounded-full blur-3xl brightness-5 dark:brightness-75"
         width={144}
         height={144}
         priority
