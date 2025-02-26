@@ -84,15 +84,15 @@ export const PROJECTS = [
     repo: "https://github.com/facuperezm/inmobiliaria",
     img: "/projects/inmobiliaria.avif",
   },
-  {
-    title: "URL Shortening",
-    link: "https://url.facupm.dev",
-    tech: ["Vite.js", "Tailwind CSS", "Vercel"],
-    description:
-      "🔗 URL Shorting is a simple app that allows you to shorten URLs. Done following Figma design.",
-    repo: "https://github.com/facuperezm/url-shortening",
-    img: "/projects/shortly.avif",
-  },
+  // {
+  //   title: "URL Shortening",
+  //   link: "https://url.facupm.dev",
+  //   tech: ["Vite.js", "Tailwind CSS", "Vercel"],
+  //   description:
+  //     "🔗 URL Shorting is a simple app that allows you to shorten URLs. Done following Figma design.",
+  //   repo: "https://github.com/facuperezm/url-shortening",
+  //   img: "/projects/shortly.avif",
+  // },
   // {
   //   title: "Uizard Challenge",
   //   link: "https://uizard.facupm.dev",
