@@ -36,27 +36,27 @@ export const PROJECTS = [
     repo: "https://github.com/facuperezm/barbershop",
     img: "/projects/barbershop.avif",
   },
-  {
-    title: "CSV Challenge",
-    link: "https://csv-challenge.vercel.app",
-    tech: [
-      "React",
-      "Vite.js",
-      "Node.js",
-      "Express.js",
-      "Playwright",
-      "Vitest",
-      "testing-library",
-      "Papaparse",
-      "TanStack Query",
-      "Tailwind CSS",
-      "Vercel",
-    ],
-    description:
-      "👨🏻‍🏫 Fullstack Challenge using Node.js and React to handle CSV file uploads and provide search functionality.",
-    repo: "https://github.com/facuperezm/csv-challenge",
-    img: "/projects/csv.avif",
-  },
+  // {
+  //   title: "CSV Challenge",
+  //   link: "https://csv-challenge.vercel.app",
+  //   tech: [
+  //     "React",
+  //     "Vite.js",
+  //     "Node.js",
+  //     "Express.js",
+  //     "Playwright",
+  //     "Vitest",
+  //     "testing-library",
+  //     "Papaparse",
+  //     "TanStack Query",
+  //     "Tailwind CSS",
+  //     "Vercel",
+  //   ],
+  //   description:
+  //     "👨🏻‍🏫 Fullstack Challenge using Node.js and React to handle CSV file uploads and provide search functionality.",
+  //   repo: "https://github.com/facuperezm/csv-challenge",
+  //   img: "/projects/csv.avif",
+  // },
   // {
   //   title: "Basement. Challenge",
   //   description:
