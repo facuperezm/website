@@ -15,7 +15,7 @@ export default function ProfilePage() {
       <Image
         alt="Profile picture of Facundo Perez Montalvo"
         src="/profile.avif"
-        className="absolute w-36 scale-150 rounded-full blur-3xl brightness-5 dark:brightness-75"
+        className="absolute w-36 scale-150 rounded-full blur-[100px] brightness-5 dark:brightness-75"
         width={144}
         height={144}
         priority
@@ -27,7 +27,7 @@ export default function ProfilePage() {
             <p className="text-base">🧑‍💻 Open to work!</p>
           </TooltipContent>
           <TooltipTrigger className="max-w-sm shrink cursor-default rounded-full text-left transition-all duration-200 hover:drop-shadow-2xl md:max-w-sm md:shadow-2xl">
-            <div className="rounded-full border border-foreground transition-all hover:border-foreground">
+            <div className="border-foreground hover:border-foreground rounded-full border transition-all">
               <Image
                 alt="Profile picture of Facundo Perez Montalvo"
                 src="/profile.avif"
@@ -45,7 +45,7 @@ export default function ProfilePage() {
         <h1 className="relative z-10 my-2 scroll-m-20 text-2xl font-extrabold tracking-tight md:text-4xl">
           Facundo Perez Montalvo
         </h1>
-        <span className="w-full gap-2 text-pretty font-serif text-lg italic tracking-[0.022em] text-muted-foreground">
+        <span className="text-muted-foreground w-full gap-2 font-serif text-lg tracking-[0.022em] text-pretty italic">
           Frontend developer based in Argentina{" "}
           <ArgSvg className="inline size-[1.3rem] translate-y-[-2px]" />
         </span>
