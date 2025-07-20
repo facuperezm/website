@@ -4,7 +4,7 @@ import Section from "@/components/section-animate";
 export default function ContactFormSection() {
   return (
     <Section id="contact" delay={0.5}>
-      <div className="mb-8">
+      <div className="mb-4">
         <h2 className="mb-3 scroll-m-20 text-2xl font-semibold tracking-tight">
           Contact me
         </h2>

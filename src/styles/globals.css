@@ -153,8 +153,8 @@
     --chart-5: 340 75% 55%;
   }
   .nice-gradient {
-    opacity: 0.99;
-    backdrop-filter: blur(5px);
+    opacity: 1;
+    backdrop-filter: blur(2px);
     mask-image: linear-gradient(to bottom, hsl(var(--background)), transparent);
   }
 
@@ -167,8 +167,8 @@
       hsl(var(--background)) 25%,
       transparent
     );
-    opacity: 0.95;
-    backdrop-filter: blur(5px);
+    opacity: 1;
+    backdrop-filter: blur(2px);
   }
 }
 
