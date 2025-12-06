@@ -46,7 +46,6 @@ const fetchContributions = async (
     next: { revalidate: 3600 },
   });
 
-
   if (!response.ok) {
     throw new Error(`Failed to fetch contributions for ${username}`);
   }
@@ -176,14 +175,14 @@ export default async function GitHubContributions({
           <h2 className="relative mb-3 scroll-m-20 text-2xl font-semibold tracking-tight">
             GitHub Contributions
           </h2>
-          <p className="mb-4 text-[1.1rem] text-muted-foreground">
-            {totalContributions} contributions in the last year between my personal
-            and work accounts
+          <p className="text-muted-foreground mb-4 text-[1.1rem]">
+            {totalContributions} contributions in the last year between my
+            personal and work accounts
           </p>
         </div>
 
-        <div className="flex items-start gap-2 overflow-x-auto max-w-3xl scrollbar-hide justify-end relative">
-          <div className="bg-gradient-to-r from-background from-5% to-100% to-transparent w-24 h-full absolute left-0 top-0"/>
+        <div className="scrollbar-hide relative flex max-w-3xl items-start justify-end gap-2 overflow-x-auto">
+          <div className="from-background absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-5% to-transparent to-100%" />
           <div className="flex flex-col">
             <div
               className="mb-2 grid grid-flow-col gap-[0.24rem]"
