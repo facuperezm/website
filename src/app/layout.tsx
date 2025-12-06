@@ -6,9 +6,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { siteConfig } from "@/config/site";
 import { fontSans, fontSerif } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import Layout from "@/components/main-animate";
-
 import Footer from "@/components/footer";
+import Layout from "@/components/main-animate";
 import Profile from "@/components/profile";
 
 export const metadata: Metadata = {
@@ -65,17 +64,13 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
-        <Layout className="mx-auto flex min-h-screen max-w-xl flex-col px-4">
+        <Layout className="mx-auto flex min-h-dvh max-w-xl flex-col px-4">
           <main className="flex-1">
             <Profile />
             {children}
           </main>
           <Footer />
         </Layout>
-        <div
-          aria-hidden
-          className="nice-gradient pointer-events-none fixed top-0 left-0 z-50 h-28 w-full"
-        />
         <Analytics />
       </body>
     </html>

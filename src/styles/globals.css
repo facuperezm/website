@@ -2,7 +2,6 @@
 
 @plugin 'tailwindcss-animate';
 
-
 @theme {
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
@@ -152,27 +151,5 @@
       --chart-4: 280 65% 60%;
       --chart-5: 340 75% 55%;
     }
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  .nice-gradient {
-    opacity: 1;
-    backdrop-filter: blur(2px);
-    mask-image: linear-gradient(to bottom, hsl(var(--background)), transparent);
-  }
-  .nice-gradient:after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, hsl(var(--background)) 25%, transparent);
-    opacity: 1;
-    backdrop-filter: blur(2px);
   }
 }
