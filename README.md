@@ -2,12 +2,6 @@
 
 My personal portfolio website built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 
-## Tech Stack
-
-<br>
-
-![App Screenshot](./public/screenshots.png)
-
 ## Features
 
 - Modern and clean design
