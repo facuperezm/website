@@ -2,16 +2,16 @@ import { type SiteConfig } from "../types";
 
 export const siteConfig: SiteConfig = {
   name: "Facundo Perez Montalvo",
-  title: "Frontend Developer open to new opportunities",
+  title: "Frontend Developer",
   nickname: "Facu",
-  description:
-    "Frontend Developer with experience in React, Next.js, and Tailwind CSS. Seeking new opportunities",
+  description: "Frontend Developer",
   url: "https://facuperezm.com",
-  ogImage: "https://i.imgur.com/fjL49nC.jpg",
+  ogImage: "https://facuperezm.com/opengraph-image",
   links: {
     twitter: "https://twitter.com/facuperezm",
     github: "https://github.com/facuperezm",
     linkedin: "https://linkedin.com/in/facuperezm/",
     repo: "https://github.com/facuperezm/website",
+    email: "mailto:facundoperezmontalvo@gmail.com",
   },
 };

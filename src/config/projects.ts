@@ -22,8 +22,7 @@ export const PROJECTS = [
       "Prisma",
       "Postgres",
     ],
-    description:
-      "🍕 Cartaonline is an app that allows you to create and manage your own online menu.",
+    description: "Create and manage online menus for restaurants.",
     repo: "https://github.com/facuperezm/cartaonline",
     img: "/projects/cartaonline.avif",
   },
@@ -31,8 +30,7 @@ export const PROJECTS = [
     title: "Barbershop",
     link: "https://barbershop.facupm.dev",
     tech: ["Next.js", "Tailwind CSS", "DrizzleORM", "ShadcnUI", "Clerk"],
-    description:
-      "💇‍♂️ Barbershop is a simple app that allows you to manage your barbershop appointments. It's a work in progress.",
+    description: "Appointment management for barbershops.",
     repo: "https://github.com/facuperezm/barbershop",
     img: "/projects/barbershop.avif",
   },
@@ -79,8 +77,7 @@ export const PROJECTS = [
     title: "Inmobiliaria App",
     link: "https://inmobiliaria.facupm.dev",
     tech: ["Astro", "Tailwind CSS", "ShadcnUI", "Contenful CMS"],
-    description:
-      "🏠 Real estate app with a CMS for easy content managment. MVP built for a small company in my city.",
+    description: "Real estate listings with CMS integration.",
     repo: "https://github.com/facuperezm/inmobiliaria",
     img: "/projects/inmobiliaria.avif",
   },

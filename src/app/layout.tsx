@@ -6,42 +6,22 @@ import { Analytics } from "@vercel/analytics/next";
 import { siteConfig } from "@/config/site";
 import { fontSans, fontSerif } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import { Separator } from "@/components/ui/separator";
 import Layout from "@/components/main-animate";
-import { ThemeProvider } from "@/components/theme-provider";
 
-import Footer from "./_components/footer-component";
-import Header from "./_components/header-component";
-import ProfilePage from "./_components/profile-component";
+import Footer from "@/components/footer";
+import Profile from "@/components/profile";
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name + " | " + siteConfig.title,
-    template: `${siteConfig.name} | %s `,
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
   },
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
-  keywords: [
-    "Frontend",
-    "Web Developer",
-    "React",
-    "Next.js",
-    "Tailwind CSS",
-    "Vercel",
-    "Next.js 14",
-  ],
-  authors: [
-    {
-      name: siteConfig.name,
-      url: siteConfig.name,
-    },
-  ],
-  creator: "facuperezm",
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
   twitter: {
-    title: siteConfig.name,
     card: "summary_large_image",
-    images: ["https://facuperezm.com/opengraph-image.png"],
-    description: siteConfig.description,
     creator: "@facuperezm",
   },
   openGraph: {
@@ -49,18 +29,13 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    locale: "es_AR",
+    locale: "en_US",
     type: "website",
   },
   icons: {
     icon: "/favicon.svg",
     apple: "/apple-touch-icon.png",
-    other: {
-      rel: "android-chrome-192x192",
-      url: "/android-chrome-192x192.png",
-    },
   },
-  manifest: "/site.webmanifest",
 };
 
 export const viewport: Viewport = {
@@ -81,34 +56,26 @@ export default function RootLayout({
       id="top"
       lang="en"
       suppressHydrationWarning
-      className="min-h-dvh scroll-smooth bg-background antialiased"
+      className="bg-background min-h-dvh scroll-smooth antialiased"
     >
       <body
-        suppressHydrationWarning
         className={cn(
           "font-sans selection:bg-pink-400 selection:text-black",
           fontSerif.variable,
           fontSans.variable,
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          <Layout className="mx-auto flex max-w-2xl flex-col justify-center px-4 pt-6">
-            <ProfilePage />
+        <Layout className="mx-auto flex min-h-screen max-w-xl flex-col px-4">
+          <main className="flex-1">
+            <Profile />
             {children}
-          </Layout>
-          <Separator className="mt-6 bg-muted/40" />
+          </main>
           <Footer />
-          <div
-            aria-hidden
-            className="nice-gradient pointer-events-none fixed left-0 top-0 z-50 h-28 w-full"
-          ></div>
-        </ThemeProvider>
+        </Layout>
+        <div
+          aria-hidden
+          className="nice-gradient pointer-events-none fixed top-0 left-0 z-50 h-28 w-full"
+        />
         <Analytics />
       </body>
     </html>

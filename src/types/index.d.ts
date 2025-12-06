@@ -10,5 +10,6 @@ export type SiteConfig = {
     github: string;
     linkedin: string;
     repo: string;
+    email: string;
   };
 };

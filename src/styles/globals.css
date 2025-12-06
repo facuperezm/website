@@ -2,7 +2,6 @@
 
 @plugin 'tailwindcss-animate';
 
-@custom-variant dark (&:is(.dark *));
 
 @theme {
   --color-border: hsl(var(--border));
@@ -126,49 +125,33 @@
     --chart-5: 27 87% 67%;
   }
 
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
-  .nice-gradient {
-    opacity: 1;
-    backdrop-filter: blur(2px);
-    mask-image: linear-gradient(to bottom, hsl(var(--background)), transparent);
-  }
-
-  .nice-gradient:after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to bottom,
-      hsl(var(--background)) 25%,
-      transparent
-    );
-    opacity: 1;
-    backdrop-filter: blur(2px);
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: 240 10% 3.9%;
+      --foreground: 0 0% 98%;
+      --card: 240 10% 3.9%;
+      --card-foreground: 0 0% 98%;
+      --popover: 240 10% 3.9%;
+      --popover-foreground: 0 0% 98%;
+      --primary: 0 0% 98%;
+      --primary-foreground: 240 5.9% 10%;
+      --secondary: 240 3.7% 15.9%;
+      --secondary-foreground: 0 0% 98%;
+      --muted: 240 3.7% 15.9%;
+      --muted-foreground: 240 5% 64.9%;
+      --accent: 240 3.7% 15.9%;
+      --accent-foreground: 0 0% 98%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 240 3.7% 15.9%;
+      --input: 240 3.7% 15.9%;
+      --ring: 240 4.9% 83.9%;
+      --chart-1: 220 70% 50%;
+      --chart-2: 160 60% 45%;
+      --chart-3: 30 80% 55%;
+      --chart-4: 280 65% 60%;
+      --chart-5: 340 75% 55%;
+    }
   }
 }
 
@@ -179,20 +162,17 @@
   body {
     @apply bg-background text-foreground;
   }
-}
-nav {
-  animation: navigation 1s linear both;
-  animation-timeline: scroll();
-  animation-range: 0 200px;
-}
-
-@theme {
-  @keyframes navigation {
-    to {
-      background-color: hsl(var(--background) / 0.4);
-      box-shadow: var(--shadow-sm);
-      backdrop-filter: blur(8px);
-      border: 1px solid hsl(var(--muted-foreground) / 0.05);
-    }
+  .nice-gradient {
+    opacity: 1;
+    backdrop-filter: blur(2px);
+    mask-image: linear-gradient(to bottom, hsl(var(--background)), transparent);
+  }
+  .nice-gradient:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, hsl(var(--background)) 25%, transparent);
+    opacity: 1;
+    backdrop-filter: blur(2px);
   }
 }
