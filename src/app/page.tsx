@@ -11,14 +11,7 @@ export default function HomePage() {
       </header>
       <div className="space-y-7">
         {PROJECTS.map((project, index) => (
-          <Project
-            key={index}
-            title={project.title}
-            link={project.link}
-            tech={project.tech}
-            repo={project.repo}
-            img={project.img}
-          >
+          <Project key={index} title={project.title} link={project.link}>
             {project.description}
           </Project>
         ))}
