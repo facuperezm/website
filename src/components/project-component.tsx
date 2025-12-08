@@ -1,15 +1,26 @@
 import Link from "next/link";
+import * as motion from "motion/react-client";
 import { ArrowUpRight } from "lucide-react";
 
 type ProjectProps = {
   children: string;
   title: string;
   link: string;
+  index?: number;
 };
 
-function Project({ children, title, link }: ProjectProps) {
+function Project({ children, title, link, index = 0 }: ProjectProps) {
   return (
-    <article className="group">
+    <motion.article
+      className="group"
+      initial={{ opacity: 0, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.5,
+        delay: 0.4 + index * 0.1,
+        ease: [0.25, 0.1, 0.25, 1],
+      }}
+    >
       <Link
         href={link}
         className="inline-flex items-center gap-1 font-medium transition-colors"
@@ -22,7 +33,7 @@ function Project({ children, title, link }: ProjectProps) {
       <p className="mt-1.5 text-[15px] leading-relaxed text-muted-foreground">
         {children}
       </p>
-    </article>
+    </motion.article>
   );
 }
 
