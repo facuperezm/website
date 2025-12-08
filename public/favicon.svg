@@ -1,9 +1,9 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    text { fill: #0a0a0a; }
+    text { fill: #1a1917; }
     @media (prefers-color-scheme: dark) {
-      text { fill: #fafafa; }
+      text { fill: #edeceb; }
     }
   </style>
-  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="600">f.</text>
+  <text x="50%" y="52%" dominant-baseline="central" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-style="italic">f</text>
 </svg>

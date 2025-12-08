@@ -21,7 +21,8 @@ function Section({ id, className, children, delay = 0 }: Props) {
         delay,
         ease: [0.25, 0.1, 0.25, 1],
       }}
-      className={cn("mb-16", className)}
+      style={{ willChange: "opacity, transform" }}
+      className={cn("mb-16 motion-reduce:transition-none", className)}
     >
       {children}
     </motion.section>
