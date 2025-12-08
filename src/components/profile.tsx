@@ -16,20 +16,32 @@ export default function ProfilePage() {
           height={64}
           priority
         />
-        <div className="space-y-0.5">
+        <div className="space-y-1">
           <h1 className="font-display text-2xl tracking-tight">
             Facundo Perez Montalvo
           </h1>
-          <p className="text-muted-foreground text-sm tracking-wide">
+          <p className="text-muted-foreground flex items-center gap-2 text-sm tracking-wide">
             Frontend Developer
+            <span className="text-muted-foreground/60 flex items-center gap-1.5">
+              <span className="text-border">·</span>
+              <span className="relative flex size-1.5">
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-500/50" />
+                <span className="relative inline-flex size-1.5 rounded-full bg-emerald-500" />
+              </span>
+              Available
+            </span>
           </p>
         </div>
       </div>
 
-      <p className="text-muted-foreground mb-8 max-w-[52ch] text-[15px] leading-[1.7]">
+      <p className="mb-3 max-w-[52ch] text-[15px] leading-[1.7] text-muted-foreground">
         Crafting interfaces at Storied, a family history platform. I care about
-        clean architecture and smooth user experiences. Always exploring
-        what&apos;s next.
+        clean architecture and smooth user experiences.
+      </p>
+
+      <p className="mb-8 text-sm text-muted-foreground/60">
+        <span className="text-muted-foreground/40">Now:</span> Exploring Vercel
+        AI SDK and design systems
       </p>
 
       <nav className="flex items-center gap-6 text-sm">
