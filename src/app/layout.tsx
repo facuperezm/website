@@ -4,7 +4,7 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 
 import { siteConfig } from "@/config/site";
-import { fontSans, fontSerif } from "@/lib/fonts";
+import { fontDisplay, fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/footer";
 import Layout from "@/components/main-animate";
@@ -59,12 +59,12 @@ export default function RootLayout({
     >
       <body
         className={cn(
-          "font-sans selection:bg-pink-400 selection:text-black",
-          fontSerif.variable,
+          "font-sans selection:bg-stone-300 selection:text-stone-900 dark:selection:bg-stone-600 dark:selection:text-stone-100",
+          fontDisplay.variable,
           fontSans.variable,
         )}
       >
-        <Layout className="mx-auto flex min-h-dvh max-w-xl flex-col px-4">
+        <Layout className="mx-auto flex min-h-dvh max-w-lg flex-col px-6 md:px-8">
           <main className="flex-1">
             <Profile />
             {children}

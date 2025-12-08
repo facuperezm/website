@@ -1,55 +1,59 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 
 import { siteConfig } from "@/config/site";
 import Section from "@/components/section-animate";
 
 export default function ProfilePage() {
   return (
-    <Section className="mt-12 md:mt-16">
-      <div className="mb-6 flex items-center gap-4">
+    <Section className="mt-16 md:mt-24">
+      <div className="mb-8 flex items-center gap-5">
         <Image
           alt="Profile picture of Facundo Perez Montalvo"
           src="/profile.avif"
-          className="size-14 rounded-full"
-          width={56}
-          height={56}
+          className="ring-border/50 size-16 rounded-full ring-1"
+          width={64}
+          height={64}
           priority
         />
-        <div>
-          <h1 className="text-lg font-medium">Facundo Perez Montalvo</h1>
-          <p className="text-sm text-muted-foreground">Frontend Developer</p>
+        <div className="space-y-0.5">
+          <h1 className="font-display text-2xl tracking-tight">
+            Facundo Perez Montalvo
+          </h1>
+          <p className="text-muted-foreground text-sm tracking-wide">
+            Frontend Developer
+          </p>
         </div>
       </div>
-      <p className="mb-4 max-w-[55ch] leading-relaxed text-muted-foreground">
+
+      <p className="text-muted-foreground mb-8 max-w-[52ch] text-[15px] leading-[1.7]">
         Crafting interfaces at Storied, a family history platform. I care about
         clean architecture and smooth user experiences. Always exploring
         what&apos;s next.
       </p>
-      <div className="flex gap-4 text-sm">
+
+      <nav className="flex items-center gap-6 text-sm">
         <Link
           href={siteConfig.links.github}
-          className="text-muted-foreground transition-colors hover:text-foreground"
+          className="text-muted-foreground hover:text-foreground transition-colors duration-200"
         >
           GitHub
-          <ArrowUpRight className="mb-0.5 ml-0.5 inline size-3" />
         </Link>
+        <span className="text-border">/</span>
         <Link
           href={siteConfig.links.linkedin}
-          className="text-muted-foreground transition-colors hover:text-foreground"
+          className="text-muted-foreground hover:text-foreground transition-colors duration-200"
         >
           LinkedIn
-          <ArrowUpRight className="mb-0.5 ml-0.5 inline size-3" />
         </Link>
+        <span className="text-border">/</span>
         <Link
           href={siteConfig.links.email}
-          className="text-muted-foreground transition-colors hover:text-foreground"
+          className="text-muted-foreground hover:text-foreground transition-colors duration-200"
         >
           Email
-          <ArrowUpRight className="mb-0.5 ml-0.5 inline size-3" />
         </Link>
-      </div>
+      </nav>
     </Section>
   );
 }

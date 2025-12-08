@@ -8,19 +8,22 @@ interface LayoutProps {
 }
 
 const variants = {
-  hidden: { opacity: 0, y: 2 },
-  enter: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: 20 },
+  hidden: { opacity: 0 },
+  enter: { opacity: 1 },
+  exit: { opacity: 0 },
 };
 
 function Layout({ className, children, ...props }: LayoutProps) {
   return (
     <motion.div
-      initial="false"
+      initial="hidden"
       animate="enter"
       exit="exit"
       variants={variants}
-      transition={{ duration: 0.3, type: "easeInOut" }}
+      transition={{
+        duration: 0.4,
+        ease: [0.25, 0.1, 0.25, 1],
+      }}
       className={cn("relative", className)}
       {...props}
     >
