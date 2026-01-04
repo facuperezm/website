@@ -35,8 +35,8 @@ export default function ProfilePage() {
       </div>
 
       <p className="text-muted-foreground mb-3 max-w-[52ch] text-[15px] leading-[1.7] text-pretty">
-        Crafting user interfaces at Storied, a family history platform. I care
-        about clean architecture and smooth user experiences.
+        Crafting user interfaces at Storied, a family history platform. Focused
+        on building products people actually enjoy using.
       </p>
 
       <p className="text-muted-foreground/60 mb-8 text-sm">
