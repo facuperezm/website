@@ -14,9 +14,12 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "Resume",
   description:
-    "One-page resume for Facundo Perez Montalvo, Senior Frontend Developer specializing in React, Next.js, and TypeScript.",
+    "One-page resume for Facundo Perez Montalvo, Senior Frontend Developer. Covers React, Next.js, TypeScript expertise and product UI work at Storied.",
   alternates: {
     canonical: `${siteConfig.url}/resume`,
+  },
+  openGraph: {
+    url: `${siteConfig.url}/resume`,
   },
 };
 

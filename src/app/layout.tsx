@@ -121,8 +121,14 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-background focus:px-4 focus:py-2 focus:text-foreground focus:shadow-lg focus:ring-2 focus:ring-ring"
+        >
+          Skip to main content
+        </a>
         <Layout className="mx-auto flex min-h-dvh w-full max-w-6xl flex-col px-4 sm:px-6 lg:px-8">
-          <main className="flex-1">{children}</main>
+          <main id="main-content" className="flex-1">{children}</main>
         </Layout>
         <Analytics />
         <ConsoleMessage />

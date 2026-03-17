@@ -44,7 +44,7 @@ export const featuredProjects: FeaturedProject[] = [
     liveUrl: "https://cartaonline.facupm.dev",
     repoUrl: "https://github.com/facuperezm/cartaonline",
     image: "/work/cartaonline.png",
-    imageAlt: "Screenshot of the Cartaonline dashboard and landing page",
+    imageAlt: "Cartaonline dashboard showing digital menu management and QR storefront features",
     stack: [
       "Next.js",
       "TypeScript",
@@ -69,7 +69,7 @@ export const featuredProjects: FeaturedProject[] = [
     liveUrl: "https://barbershop.facupm.dev",
     repoUrl: "https://github.com/facuperezm/barberia",
     image: "/work/barbershop.jpg",
-    imageAlt: "Screenshot of the Barbershop landing page and booking experience",
+    imageAlt: "Barbershop management app with scheduling interface and booking flow",
     stack: [
       "Next.js",
       "TypeScript",
@@ -92,7 +92,7 @@ export const featuredProjects: FeaturedProject[] = [
     liveUrl: "https://inmobiliaria.facupm.dev",
     repoUrl: "https://github.com/facuperezm/real-state",
     image: "/work/inmobiliaria.png",
-    imageAlt: "Screenshot of the real estate listing interface",
+    imageAlt: "Real estate platform displaying property listings with CMS-powered content",
     stack: ["Astro", "TypeScript", "Tailwind CSS", "Contentful", "SEO"],
     bullets: [
       "Built a CMS-backed property site that stays fast while allowing non-technical content updates.",

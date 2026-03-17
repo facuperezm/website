@@ -5,7 +5,7 @@ export const siteConfig: SiteConfig = {
   title: "Senior Frontend Developer",
   nickname: "Facu",
   description:
-    "Senior Frontend Developer specializing in React, Next.js, and TypeScript. Currently building product UI at Storied with a focus on design systems, performance, and polished user experience.",
+    "Senior Frontend Developer specializing in React, Next.js, and TypeScript. Building product UI at Storied — design systems, performance, and polished interfaces.",
   url: "https://www.facuperezm.com",
   ogImage: "https://www.facuperezm.com/opengraph-image",
   links: {

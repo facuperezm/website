@@ -29,6 +29,7 @@ function Project({ project, index = 0 }: ProjectProps) {
           fill
           sizes="(min-width: 1024px) 33vw, 100vw"
           className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.015]"
+          priority={index < 2}
         />
         <div className="absolute inset-0 bg-linear-to-t from-background/60 via-transparent to-transparent" />
       </div>
@@ -79,6 +80,7 @@ function Project({ project, index = 0 }: ProjectProps) {
         <div className="flex flex-wrap gap-3 pt-1">
           <Link
             href={project.liveUrl}
+            aria-label={`Live demo of ${project.title}`}
             className="inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-transform duration-200 hover:-translate-y-0.5"
           >
             Live Demo
@@ -86,6 +88,7 @@ function Project({ project, index = 0 }: ProjectProps) {
           </Link>
           <Link
             href={project.repoUrl}
+            aria-label={`Source code for ${project.title}`}
             className="inline-flex items-center gap-2 rounded-full border border-border/80 px-4 py-2 text-sm font-medium text-foreground transition-colors duration-200 hover:bg-secondary"
           >
             Source
