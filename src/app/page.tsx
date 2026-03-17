@@ -38,7 +38,7 @@ export default function HomePage() {
             <div className="mb-6 space-y-2">
               <div className="space-y-2">
                 <p className="text-xs font-semibold tracking-[0.22em] text-muted-foreground uppercase">
-                  August 2024 - Present
+                  January 2025 - Present
                 </p>
                 <h3 className="font-display text-3xl tracking-tight sm:text-4xl">
                   Svitla Systems (for Storied)

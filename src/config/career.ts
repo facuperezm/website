@@ -107,12 +107,13 @@ export const experienceEntries: ExperienceEntry[] = [
     company: "Svitla Systems (for Storied)",
     role: "Senior Frontend Developer",
     timeframe: "August 2024 - Present",
-    note: "Promoted from Middle Frontend Developer in January 2025.",
+    note: "Transitioned into cross-team leadership — code reviews, frontend standards, and architecture guidance.",
     summary:
       "Build product UI for Storied, a family history platform, with work spanning migration support, design implementation, performance, and team-facing frontend patterns.",
     bullets: [
       "Contributed to modernizing frontend architecture with Next.js while protecting product quality and delivery pace.",
       "Implemented polished product interfaces and collaborated across product, QA, and backend to keep release quality high.",
+      "Grew into cross-team leadership — driving code reviews, establishing frontend standards, and guiding architecture decisions.",
       "Improved developer experience with internal tooling and reusable frontend patterns.",
     ],
   },
