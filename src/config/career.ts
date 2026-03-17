@@ -43,7 +43,7 @@ export const featuredProjects: FeaturedProject[] = [
       "End-to-end build across UX, frontend architecture, forms, auth, and backend integrations.",
     liveUrl: "https://cartaonline.facupm.dev",
     repoUrl: "https://github.com/facuperezm/cartaonline",
-    image: "/work/cartaonline.png",
+    image: "/work/cartaonline.webp",
     imageAlt: "Cartaonline dashboard showing digital menu management and QR storefront features",
     stack: [
       "Next.js",
@@ -91,7 +91,7 @@ export const featuredProjects: FeaturedProject[] = [
       "Frontend architecture and CMS integration focused on fast browsing and clear information hierarchy.",
     liveUrl: "https://inmobiliaria.facupm.dev",
     repoUrl: "https://github.com/facuperezm/real-state",
-    image: "/work/inmobiliaria.png",
+    image: "/work/inmobiliaria.webp",
     imageAlt: "Real estate platform displaying property listings with CMS-powered content",
     stack: ["Astro", "TypeScript", "Tailwind CSS", "Contentful", "SEO"],
     bullets: [

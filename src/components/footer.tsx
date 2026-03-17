@@ -41,6 +41,12 @@ export default function Footer() {
           >
             Source
           </Link>
+          <Link
+            href="/privacy"
+            className="transition-colors duration-200 hover:text-foreground"
+          >
+            Privacy
+          </Link>
           <span>{new Date().getFullYear()}</span>
         </div>
       </div>
