@@ -6,12 +6,15 @@ export function ConsoleMessage() {
   useEffect(() => {
     console.log(
       `%c
-  Hey there, curious developer! 👋
+  Facundo Perez Montalvo
+  Senior Frontend Developer
 
-  Thanks for inspecting my site.
-  Built with Next.js, Tailwind CSS, and attention to detail.
+  React • Next.js • TypeScript
+  Product UI • Design Systems • Performance
+  Currently building at Storied
 
-  Let's connect: facundoperezmontalvo@gmail.com
+  Resume: https://www.facuperezm.com/resume
+  Contact: facundoperezmontalvo@gmail.com
       `,
       "color: #10b981; font-size: 14px; font-family: monospace;",
     );

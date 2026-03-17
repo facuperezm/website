@@ -8,30 +8,49 @@ import { siteConfig } from "@/config/site";
 import { fontDisplay, fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { ConsoleMessage } from "@/components/console-message";
-import Footer from "@/components/footer";
 import Layout from "@/components/main-animate";
-import Profile from "@/components/profile";
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
+    default: `${siteConfig.name} | ${siteConfig.title}`,
     template: `%s | ${siteConfig.name}`,
   },
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
+  alternates: {
+    canonical: siteConfig.url,
+  },
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
+  keywords: [
+    "Senior Frontend Developer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Design Systems",
+    "Product UI",
+    "Performance",
+    "Storied",
+  ],
   twitter: {
     card: "summary_large_image",
     creator: "@facuperezm",
+    title: `${siteConfig.name} | ${siteConfig.title}`,
+    description: siteConfig.description,
   },
   openGraph: {
-    title: siteConfig.name,
+    title: `${siteConfig.name} | ${siteConfig.title}`,
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: siteConfig.ogImage,
+        alt: `${siteConfig.name} - ${siteConfig.title}`,
+      },
+    ],
   },
   icons: {
     icon: "/favicon.svg",
@@ -44,7 +63,8 @@ const jsonLd = {
   "@type": "Person",
   name: "Facundo Perez Montalvo",
   url: siteConfig.url,
-  jobTitle: "Frontend Developer",
+  description: siteConfig.description,
+  jobTitle: "Senior Frontend Developer",
   worksFor: {
     "@type": "Organization",
     name: "Storied",
@@ -101,12 +121,8 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
-        <Layout className="mx-auto flex min-h-dvh max-w-lg flex-col px-4 sm:px-6 md:px-8">
-          <main className="flex-1">
-            <Profile />
-            {children}
-          </main>
-          <Footer />
+        <Layout className="mx-auto flex min-h-dvh w-full max-w-6xl flex-col px-4 sm:px-6 lg:px-8">
+          <main className="flex-1">{children}</main>
         </Layout>
         <Analytics />
         <ConsoleMessage />

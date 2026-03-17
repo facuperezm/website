@@ -40,10 +40,10 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
-  --font-family-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif,
+  --font-family-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-display: var(--font-display), ui-serif, Georgia, Cambria,
-    "Times New Roman", Times, serif;
+  --font-family-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
+    Georgia, serif;
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;

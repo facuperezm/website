@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "Facundo Perez Montalvo - Frontend Developer";
+export const alt = "Facundo Perez Montalvo - Senior Frontend Developer";
 export const size = {
   width: 1200,
   height: 630,
@@ -80,7 +80,16 @@ export default async function Image() {
                 letterSpacing: "0.02em",
               }}
             >
-              Frontend Developer
+              Senior Frontend Developer
+            </span>
+            <span
+              style={{
+                fontSize: 18,
+                color: colors.muted,
+                letterSpacing: "0.04em",
+              }}
+            >
+              React · Next.js · TypeScript · Storied
             </span>
           </div>
         </div>
