@@ -74,6 +74,9 @@ export default function ResumePage() {
               <h1 className="font-display text-4xl tracking-tight sm:text-5xl print:text-[28px]">
                 Facundo Perez Montalvo
               </h1>
+              <p className="text-xs text-muted-foreground">
+                By Facundo Perez Montalvo · Last updated August 2025
+              </p>
             </div>
 
             <p className="mt-3 max-w-[76ch] text-sm leading-6 text-muted-foreground print:text-[11px] print:leading-[1.35]">
@@ -121,6 +124,10 @@ export default function ResumePage() {
                           {entry.note}
                         </p>
                       ) : null}
+
+                      <p className="mt-2 text-sm leading-6 text-muted-foreground print:text-[10px] print:leading-[1.35]">
+                        {entry.summary}
+                      </p>
 
                       <ul className="mt-2 space-y-1.5 text-sm leading-6 text-muted-foreground print:text-[10px] print:leading-[1.35]">
                         {entry.bullets.map((bullet) => (

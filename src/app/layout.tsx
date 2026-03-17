@@ -60,29 +60,34 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Facundo Perez Montalvo",
-  url: siteConfig.url,
-  description: siteConfig.description,
-  jobTitle: "Senior Frontend Developer",
-  worksFor: {
-    "@type": "Organization",
-    name: "Storied",
+  "@type": "ProfilePage",
+  dateCreated: "2024-01-15",
+  dateModified: "2025-08-01",
+  mainEntity: {
+    "@type": "Person",
+    name: "Facundo Perez Montalvo",
+    url: siteConfig.url,
+    description: siteConfig.description,
+    jobTitle: "Senior Frontend Developer",
+    worksFor: {
+      "@type": "Organization",
+      name: "Storied",
+    },
+    sameAs: [
+      siteConfig.links.github,
+      siteConfig.links.linkedin,
+      siteConfig.links.twitter,
+    ],
+    knowsAbout: [
+      "JavaScript",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vercel AI SDK",
+      "Frontend Development",
+    ],
   },
-  sameAs: [
-    siteConfig.links.github,
-    siteConfig.links.linkedin,
-    siteConfig.links.twitter,
-  ],
-  knowsAbout: [
-    "JavaScript",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Tailwind CSS",
-    "Vercel AI SDK",
-    "Frontend Development",
-  ],
 };
 
 export const viewport: Viewport = {
