@@ -3,8 +3,8 @@ import Link from "next/link";
 import { ArrowLeft, Download, Mail } from "lucide-react";
 
 import {
-  experienceEntries,
   resumeEducation,
+  resumeExperienceEntries,
   resumeStack,
   resumeSummary,
 } from "@/config/career";
@@ -36,7 +36,10 @@ export default function ResumePage() {
       <style>{`
         @page {
           size: A4;
-          margin: 10mm;
+          margin: 15mm 16mm;
+        }
+        @media print {
+          body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
       `}</style>
 
@@ -65,7 +68,7 @@ export default function ResumePage() {
           </div>
         </div>
 
-        <article className="rounded-[2rem] border border-border/80 bg-card px-5 py-6 shadow-[0_28px_100px_-64px_rgba(30,22,12,0.55)] print:rounded-none print:border-0 print:bg-white print:px-0 print:py-0 print:shadow-none sm:px-8 sm:py-8">
+        <article className="rounded-[2rem] border border-border/80 bg-card px-5 py-6 shadow-[0_28px_100px_-64px_rgba(30,22,12,0.55)] print:rounded-none print:border-0 print:bg-white print:px-0 print:py-0 print:shadow-none print:text-stone-800 print:tracking-[0.008em] sm:px-8 sm:py-8">
           <header className="border-b border-border/70 pb-4">
             <div className="space-y-2">
               <p className="text-[11px] font-semibold tracking-[0.24em] text-muted-foreground uppercase">
@@ -75,15 +78,15 @@ export default function ResumePage() {
                 Facundo Perez Montalvo
               </h1>
               <p className="text-xs text-muted-foreground">
-                By Facundo Perez Montalvo · Last updated August 2025
+                By Facundo Perez Montalvo · Last updated March 2026
               </p>
             </div>
 
-            <p className="mt-3 max-w-[76ch] text-sm leading-6 text-muted-foreground print:text-[11px] print:leading-[1.35]">
+            <p className="mt-3 max-w-[76ch] text-sm leading-6 text-muted-foreground print:text-[11px] print:leading-[1.5]">
               {resumeSummary}
             </p>
 
-            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground print:text-[10px]">
+            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground print:text-[10.5px]">
               <Link href={siteConfig.links.email}>facundoperezmontalvo@gmail.com</Link>
               <span>www.facuperezm.com</span>
               <Link href={siteConfig.links.github}>github.com/facuperezm</Link>
@@ -92,51 +95,51 @@ export default function ResumePage() {
             </div>
           </header>
 
-          <div className="grid gap-8 pt-6 lg:grid-cols-[1.45fr_0.95fr] print:grid-cols-[1.45fr_0.95fr] print:gap-5 print:pt-4">
+          <div className="grid gap-8 pt-6 lg:grid-cols-[1.45fr_0.95fr] print:grid-cols-[1.45fr_0.95fr] print:gap-7 print:pt-5">
             <div className="space-y-6 print:space-y-4">
               <section>
                 <h2 className="text-[11px] font-semibold tracking-[0.22em] text-muted-foreground uppercase">
                   Experience
                 </h2>
 
-                <div className="mt-4 space-y-5 print:mt-3 print:space-y-3">
-                  {experienceEntries.map((entry) => (
+                <div className="mt-4 space-y-5 print:mt-3 print:space-y-4">
+                  {resumeExperienceEntries.map((entry) => (
                     <section
-                      key={`${entry.company}-${entry.role}`}
+                      key={entry.company}
                       style={{ breakInside: "avoid" }}
                     >
                       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                        <div>
-                          <h3 className="text-lg font-semibold tracking-tight text-foreground print:text-[15px]">
-                            {entry.company}
-                          </h3>
-                          <p className="text-sm font-medium text-foreground/85 print:text-[12px]">
-                            {entry.role}
-                          </p>
-                        </div>
+                        <h3 className="text-lg font-semibold tracking-tight text-foreground print:text-[15px]">
+                          {entry.company}
+                        </h3>
                         <p className="text-sm text-muted-foreground print:text-[11px]">
-                          {entry.timeframe}
+                          {entry.location}
                         </p>
                       </div>
 
-                      {entry.note ? (
-                        <p className="mt-1 text-sm text-muted-foreground print:text-[10px]">
-                          {entry.note}
-                        </p>
-                      ) : null}
+                      <div className="mt-2 space-y-4 print:space-y-3">
+                        {entry.roles.map((role) => (
+                          <div key={role.title}>
+                            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                              <p className="text-sm font-medium italic text-foreground/85 print:text-[12px]">
+                                {role.title}
+                              </p>
+                              <p className="text-sm text-muted-foreground print:text-[11px]">
+                                {role.timeframe}
+                              </p>
+                            </div>
 
-                      <p className="mt-2 text-sm leading-6 text-muted-foreground print:text-[10px] print:leading-[1.35]">
-                        {entry.summary}
-                      </p>
-
-                      <ul className="mt-2 space-y-1.5 text-sm leading-6 text-muted-foreground print:text-[10px] print:leading-[1.35]">
-                        {entry.bullets.map((bullet) => (
-                          <li key={bullet} className="flex gap-2">
-                            <span className="mt-1.5 size-1 shrink-0 rounded-full bg-foreground/75" />
-                            <span>{bullet}</span>
-                          </li>
+                            <ul className="mt-1.5 space-y-1.5 text-sm leading-6 text-muted-foreground print:text-[10.5px] print:leading-[1.55]">
+                              {role.bullets.map((bullet) => (
+                                <li key={bullet} className="flex gap-2">
+                                  <span className="mt-1.5 size-1 shrink-0 rounded-full bg-foreground/75" />
+                                  <span>{bullet}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                         ))}
-                      </ul>
+                      </div>
                     </section>
                   ))}
                 </div>
@@ -155,7 +158,7 @@ export default function ResumePage() {
                       <h3 className="text-sm font-semibold text-foreground print:text-[12px]">
                         {section.title}
                       </h3>
-                      <p className="mt-1 text-sm leading-6 text-muted-foreground print:text-[10px] print:leading-[1.35]">
+                      <p className="mt-1 text-sm leading-6 text-muted-foreground print:text-[10.5px] print:leading-[1.55]">
                         {section.items.join(" · ")}
                       </p>
                     </div>
@@ -167,7 +170,7 @@ export default function ResumePage() {
                 <h2 className="text-[11px] font-semibold tracking-[0.22em] text-muted-foreground uppercase">
                   Education and Languages
                 </h2>
-                <ul className="mt-4 space-y-1.5 text-sm leading-6 text-muted-foreground print:mt-3 print:text-[10px] print:leading-[1.35]">
+                <ul className="mt-4 space-y-1.5 text-sm leading-6 text-muted-foreground print:mt-3 print:text-[10.5px] print:leading-[1.55]">
                   {resumeEducation.map((item) => (
                     <li key={item}>{item}</li>
                   ))}

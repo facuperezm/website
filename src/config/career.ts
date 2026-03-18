@@ -2,6 +2,7 @@ import type {
   ExperienceEntry,
   FeaturedProject,
   ProofTheme,
+  ResumeExperienceEntry,
 } from "@/types";
 
 export const heroHighlights = [
@@ -119,7 +120,7 @@ export const experienceEntries: ExperienceEntry[] = [
   },
   {
     company: "SupportYourApp",
-    role: "Technical Support Consultant",
+    role: "Technical Support Consultant & Frontend Developer",
     timeframe: "August 2023 - August 2024",
     summary:
       "Solved technical product issues for end users while combining troubleshooting, communication, and frontend/backend context.",
@@ -137,6 +138,62 @@ export const experienceEntries: ExperienceEntry[] = [
     bullets: [
       "Delivered production sites and app experiences across hospitality, services, and real estate use cases.",
       "Handled the full loop from client requirements and UX decisions to implementation and iteration.",
+    ],
+  },
+];
+
+export const resumeExperienceEntries: ResumeExperienceEntry[] = [
+  {
+    company: "Svitla Systems Inc.",
+    location: "Working remotely",
+    roles: [
+      {
+        title: "Senior Frontend Developer",
+        timeframe: "January 2025 — Present",
+        bullets: [
+          "Building product UI for Storied. Drove a platform-wide Next.js migration, resolving critical architectural constraints and establishing reusable component patterns adopted across the team.",
+          "Translated Figma designs into accessible, production-ready React components with strong attention to design system consistency and performance.",
+          "Grew into cross-team leadership — conducting code reviews, setting frontend standards, and guiding architecture — while partnering with backend and QA to improve performance and end-user experience.",
+        ],
+      },
+      {
+        title: "Middle Frontend Developer",
+        timeframe: "August 2024 — January 2025",
+        bullets: [
+          "Led the migration of a legacy course platform to a modern React stack, ensuring seamless transition of content, functionality, and user experience.",
+          "Collaborated with QA to maintain high standards of design accuracy, functionality, and audio quality throughout the migration.",
+          "Built and enhanced internal developer tools, streamlining workflows and improving team productivity.",
+        ],
+      },
+    ],
+  },
+  {
+    company: "SupportYourApp",
+    location: "Working remotely",
+    roles: [
+      {
+        title: "Technical Support Consultant & Frontend Developer",
+        timeframe: "August 2023 — August 2024",
+        bullets: [
+          "Resolved complex technical issues for software products, achieving a 95% customer satisfaction score across email and phone support.",
+          "Applied HTML, CSS, and JavaScript expertise to debug customer-facing frontend and backend issues, reducing resolution times.",
+          "Identified recurring user pain points and communicated findings to product teams, contributing to improved product usability.",
+        ],
+      },
+    ],
+  },
+  {
+    company: "Freelance Activity",
+    location: "Argentina",
+    roles: [
+      {
+        title: "Frontend React Developer",
+        timeframe: "March 2022 — Present",
+        bullets: [
+          "Built responsive web applications for local businesses across hospitality, services, and real estate, from requirements through deployment.",
+          "Delivered production-ready interfaces using React, Next.js, TypeScript, and Tailwind CSS, prioritizing performance and accessibility.",
+        ],
+      },
     ],
   },
 ];

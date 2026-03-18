@@ -41,3 +41,15 @@ export type ExperienceEntry = {
   summary: string;
   bullets: string[];
 };
+
+export type ResumeRole = {
+  title: string;
+  timeframe: string;
+  bullets: string[];
+};
+
+export type ResumeExperienceEntry = {
+  company: string;
+  location: string;
+  roles: ResumeRole[];
+};
