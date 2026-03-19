@@ -124,6 +124,12 @@
     mix-blend-mode: overlay;
   }
 
+  @media print {
+    body::before {
+      display: none;
+    }
+  }
+
   /* Focus states for keyboard accessibility */
   a:focus-visible,
   button:focus-visible {
