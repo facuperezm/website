@@ -112,10 +112,9 @@ export const experienceEntries: ExperienceEntry[] = [
     summary:
       "Build product UI for Storied, a family history platform, with work spanning migration support, design implementation, performance, and team-facing frontend patterns.",
     bullets: [
-      "Contributed to modernizing frontend architecture with Next.js while protecting product quality and delivery pace.",
-      "Implemented polished product interfaces and collaborated across product, QA, and backend to keep release quality high.",
-      "Grew into cross-team leadership — driving code reviews, establishing frontend standards, and guiding architecture decisions.",
-      "Improved developer experience with internal tooling and reusable frontend patterns.",
+      "Owned end-to-end delivery of complex features including an AI-powered story creation pipeline — full architecture design, technical documentation, and ahead-of-deadline shipping.",
+      "Drove a platform-wide Next.js migration, resolving critical architectural constraints and translating Figma designs into accessible, production-ready React components.",
+      "Established team-wide coding standards and drove ~88K lines of legacy code removal. Grew into cross-team leadership — conducting code reviews, guiding architecture, and partnering with backend and QA on delivery quality.",
     ],
   },
   {
@@ -151,9 +150,9 @@ export const resumeExperienceEntries: ResumeExperienceEntry[] = [
         title: "Senior Frontend Developer",
         timeframe: "January 2025 — Present",
         bullets: [
-          "Building product UI for Storied. Drove a platform-wide Next.js migration, resolving critical architectural constraints and establishing reusable component patterns adopted across the team.",
-          "Translated Figma designs into accessible, production-ready React components with strong attention to design system consistency and performance.",
-          "Grew into cross-team leadership — conducting code reviews, setting frontend standards, and guiding architecture — while partnering with backend and QA to improve performance and end-user experience.",
+          "Owned end-to-end delivery of complex features including an AI-powered story creation pipeline — designed the full architecture (Zustand state machine, dual user flows, feature flags), wrote technical documentation before implementation, and shipped ahead of deadline.",
+          "Drove a platform-wide Next.js migration, resolving critical architectural constraints. Translated Figma designs into accessible, production-ready React components with strong attention to design system consistency and performance.",
+          "Established team-wide coding standards and drove ~88K lines of legacy code removal. Grew into cross-team leadership — conducting code reviews, guiding architecture, and partnering with backend and QA on delivery quality.",
         ],
       },
       {
@@ -211,8 +210,8 @@ export const resumeStack = {
     "shadcn/ui",
   ],
   product: ["Design implementation", "Accessibility", "Performance", "SEO"],
-  data: ["TanStack Query", "Zod", "React Hook Form", "Prisma", "Drizzle ORM"],
-  testing: ["Playwright", "Vitest", "Quality collaboration with QA"],
+  data: ["TanStack Query", "Zustand", "Zod", "React Hook Form", "Prisma", "Drizzle ORM"],
+  testing: ["Playwright", "Vitest", "React Testing Library", "Storybook"],
 };
 
 export const resumeEducation = [
