@@ -7,11 +7,11 @@ This file keeps the portfolio, resume, GitHub profile, and LinkedIn narrative al
 - Senior Frontend Developer
 - React, Next.js, TypeScript
 - Product UI, design systems, performance
-- Currently building at Storied
+- Currently building at Svitla Systems
 
 ## LinkedIn Headline
 
-`Senior Frontend Developer | React, Next.js, TypeScript | Product UI, design systems, performance | Building at Storied`
+`Senior Frontend Developer | React, Next.js, TypeScript | Product UI, design systems, performance | Building at Svitla Systems`
 
 ## LinkedIn About
 
@@ -19,18 +19,18 @@ Senior Frontend Developer focused on React, Next.js, and TypeScript.
 
 I build polished product interfaces, translate design direction into production-ready UI, and collaborate across backend, QA, and product to ship reliable user experiences. My recent work has centered on frontend modernization, design implementation, performance, and developer experience.
 
-I am currently building at Storied through Svitla Systems, and I am most effective on teams that care about product quality, thoughtful UI, and maintainable frontend architecture.
+I am currently building at Svitla Systems, and I am most effective on teams that care about product quality, thoughtful UI, and maintainable frontend architecture.
 
 ## LinkedIn Experience Draft
 
-### Svitla Systems (for Storied)
+### Svitla Systems
 
 Senior Frontend Developer  
 August 2024 - Present
 
 Promoted from Middle Frontend Developer in January 2025.
 
-- Help build product UI for Storied, a family history platform, across React, Next.js, and TypeScript.
+- Help build product UI for a family history platform across React, Next.js, and TypeScript.
 - Contribute to frontend modernization work, including Next.js migration support and architectural problem solving.
 - Turn product and design direction into accessible, production-ready interfaces that hold up in real product workflows.
 - Partner with the backend team and QA to improve performance, API communication, and release quality.
@@ -43,7 +43,7 @@ Promoted from Middle Frontend Developer in January 2025.
 
 **Senior Frontend Developer** specializing in React, Next.js, and TypeScript.
 
-I currently build product UI at **Storied** through **Svitla Systems**, with recent work across:
+I currently build product UI at **Svitla Systems**, with recent work across:
 
 - frontend modernization and Next.js migration support
 - design implementation quality
@@ -59,14 +59,14 @@ Senior Frontend Developer with a product-minded approach to React, Next.js, and 
 
 ## Resume Experience Draft
 
-### Svitla Systems (for Storied)
+### Svitla Systems
 
 Senior Frontend Developer  
 August 2024 - Present
 
 Promoted from Middle Frontend Developer in January 2025.
 
-- Build product UI for Storied, a family history platform, with work spanning migration support, design implementation, performance, and team-facing frontend patterns.
+- Build product UI for a family history platform, with work spanning migration support, design implementation, performance, and team-facing frontend patterns.
 - Contribute to modernizing frontend architecture with Next.js while protecting product quality and delivery pace.
 - Implement polished product interfaces and collaborate across product, QA, and backend to keep release quality high.
 - Improve developer experience with internal tooling and reusable frontend patterns.

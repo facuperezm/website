@@ -36,7 +36,7 @@ export default function Profile() {
                 Facundo Perez Montalvo
               </h1>
               <p className="text-muted-foreground text-sm sm:text-base">
-                Currently building product UI at Storied via Svitla Systems.
+                Currently building product UI at Svitla Systems.
               </p>
             </div>
           </div>

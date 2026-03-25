@@ -8,11 +8,11 @@ import type {
 export const heroHighlights = [
   "React, Next.js, TypeScript",
   "Product UI, design systems, performance",
-  "Currently building at Storied",
+  "Currently building at Svitla Systems",
   "Remote from Argentina",
 ];
 
-export const storiedProofThemes: ProofTheme[] = [
+export const proofThemes: ProofTheme[] = [
   {
     title: "Migration and architecture",
     description:
@@ -105,12 +105,12 @@ export const featuredProjects: FeaturedProject[] = [
 
 export const experienceEntries: ExperienceEntry[] = [
   {
-    company: "Svitla Systems (for Storied)",
+    company: "Svitla Systems",
     role: "Senior Frontend Developer",
     timeframe: "January 2025 - Present",
     note: "Transitioned into cross-team leadership — code reviews, frontend standards, and architecture guidance.",
     summary:
-      "Build product UI for Storied, a family history platform, with work spanning migration support, design implementation, performance, and team-facing frontend patterns.",
+      "Build product UI for a family history platform, with work spanning migration support, design implementation, performance, and team-facing frontend patterns.",
     bullets: [
       "Owned end-to-end delivery of complex features including an AI-powered story creation pipeline — full architecture design, technical documentation, and ahead-of-deadline shipping.",
       "Drove a platform-wide Next.js migration, resolving critical architectural constraints and translating Figma designs into accessible, production-ready React components.",
@@ -221,13 +221,13 @@ export const resumeEducation = [
 
 export const linkedinDraft = {
   headline:
-    "Senior Frontend Developer | React, Next.js, TypeScript | Product UI, design systems, performance | Building at Storied",
+    "Senior Frontend Developer | React, Next.js, TypeScript | Product UI, design systems, performance | Building at Svitla Systems",
   about:
-    "Senior Frontend Developer focused on React, Next.js, and TypeScript. I build polished product interfaces, translate design direction into production-ready UI, and partner with backend, QA, and product teams to ship reliable user experiences. Currently building at Storied through Svitla Systems, with recent work across frontend modernization, design implementation, performance, and developer experience.",
+    "Senior Frontend Developer focused on React, Next.js, and TypeScript. I build polished product interfaces, translate design direction into production-ready UI, and partner with backend, QA, and product teams to ship reliable user experiences. Currently building at Svitla Systems, with recent work across frontend modernization, design implementation, performance, and developer experience.",
 };
 
 export const githubProfileDraft = [
   "Senior Frontend Developer specializing in React, Next.js, and TypeScript.",
-  "Currently building product UI at Storied through Svitla Systems, with recent work across frontend migration, design implementation, performance, and developer experience.",
+  "Currently building product UI at Svitla Systems, with recent work across frontend migration, design implementation, performance, and developer experience.",
   "I care about product taste, maintainable code, and interfaces that feel intentional in production.",
 ];

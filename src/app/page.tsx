@@ -10,7 +10,7 @@ import {
 import {
   experienceEntries,
   featuredProjects,
-  storiedProofThemes,
+  proofThemes,
 } from "@/config/career";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
@@ -29,7 +29,7 @@ export default function HomePage() {
       <Section id="current-work" delay={0.08}>
         <SectionHeading
           eyebrow="Current Work"
-          title="Current work at Storied"
+          title="Current work at Svitla Systems"
           description="A quick look at the product work, frontend scope, and growth in my current role."
         />
 
@@ -41,7 +41,7 @@ export default function HomePage() {
                   January 2025 - Present
                 </p>
                 <h3 className="font-display text-3xl tracking-tight sm:text-4xl">
-                  Svitla Systems (for Storied)
+                  Svitla Systems
                 </h3>
                 <p className="text-foreground/90 text-base font-medium">
                   Senior Frontend Developer
@@ -50,7 +50,7 @@ export default function HomePage() {
             </div>
 
             <p className="text-muted-foreground max-w-[72ch] text-base leading-7 sm:text-lg">
-              At Storied, I help ship product UI for a family history platform.
+              At Svitla Systems, I help ship product UI for a family history platform.
               My work spans frontend modernization, design implementation, and
               performance.
             </p>
@@ -78,7 +78,7 @@ export default function HomePage() {
           </article>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-            {storiedProofThemes.map((theme) => (
+            {proofThemes.map((theme) => (
               <article
                 key={theme.title}
                 className="border-border/80 bg-card/70 rounded-[1.75rem] border p-5"
@@ -148,7 +148,7 @@ export default function HomePage() {
               Grab the latest resume
             </h3>
             <p className="text-muted-foreground mt-3 max-w-[60ch] text-base leading-7">
-              A one-page snapshot of my recent work, focused on Storied, product
+              A one-page snapshot of my recent work, focused on recent product
               UI, and frontend delivery.
             </p>
 

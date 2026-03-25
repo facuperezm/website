@@ -11,7 +11,7 @@ export function ConsoleMessage() {
 
   React • Next.js • TypeScript
   Product UI • Design Systems • Performance
-  Currently building at Storied
+  Currently building at Svitla Systems
 
   Resume: https://www.facuperezm.com/resume
   Contact: facundoperezmontalvo@gmail.com
