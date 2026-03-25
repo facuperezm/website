@@ -114,7 +114,7 @@ export const experienceEntries: ExperienceEntry[] = [
     bullets: [
       "Owned end-to-end delivery of complex features including an AI-powered story creation pipeline — full architecture design, technical documentation, and ahead-of-deadline shipping.",
       "Drove a platform-wide Next.js migration, resolving critical architectural constraints and translating Figma designs into accessible, production-ready React components.",
-      "Established team-wide coding standards and drove ~88K lines of legacy code removal. Grew into cross-team leadership — conducting code reviews, guiding architecture, and partnering with backend and QA on delivery quality.",
+      "Established team-wide coding standards and drove a large-scale legacy code reduction. Grew into cross-team leadership — conducting code reviews, guiding architecture, and partnering with backend and QA on delivery quality.",
     ],
   },
   {
@@ -152,7 +152,7 @@ export const resumeExperienceEntries: ResumeExperienceEntry[] = [
         bullets: [
           "Owned end-to-end delivery of complex features including an AI-powered story creation pipeline — designed the full architecture (Zustand state machine, dual user flows, feature flags), wrote technical documentation before implementation, and shipped ahead of deadline.",
           "Drove a platform-wide Next.js migration, resolving critical architectural constraints. Translated Figma designs into accessible, production-ready React components with strong attention to design system consistency and performance.",
-          "Established team-wide coding standards and drove ~88K lines of legacy code removal. Grew into cross-team leadership — conducting code reviews, guiding architecture, and partnering with backend and QA on delivery quality.",
+          "Established team-wide coding standards and drove a large-scale legacy code reduction. Grew into cross-team leadership — conducting code reviews, guiding architecture, and partnering with backend and QA on delivery quality.",
         ],
       },
       {
