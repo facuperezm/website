@@ -22,6 +22,26 @@ My personal portfolio website built with Next.js, TypeScript, Tailwind CSS, and 
 - [**React-hook-form**](https://react-hook-form.com/) - Performant, flexible, and extensible forms with easy-to-use React hooks.
 - [**Zod**](https://github.com/colinhacks/zod) - A TypeScript-first schema declaration and validation library.
 
+## Projects
+
+### cartaonline.
+
+Create and manage online menus for restaurants.
+
+![cartaonline](public/work/cartaonline.webp)
+
+### Barbershop
+
+Appointment management for barbershops.
+
+![barbershop](public/work/barbershop.webp)
+
+### Inmobiliaria App
+
+Real estate listings with CMS integration.
+
+![inmobiliaria](public/work/inmobiliaria.webp)
+
 ## Getting Started
 
 1. Clone this repository

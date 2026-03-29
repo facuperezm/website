@@ -69,7 +69,7 @@ export const featuredProjects: FeaturedProject[] = [
       "Full-stack implementation focused on branded UI, booking flows, and predictable scheduling.",
     liveUrl: "https://barbershop.facupm.dev",
     repoUrl: "https://github.com/facuperezm/barberia",
-    image: "/work/barbershop.jpg",
+    image: "/work/barbershop.webp",
     imageAlt: "Barbershop management app with scheduling interface and booking flow",
     stack: [
       "Next.js",
