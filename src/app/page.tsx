@@ -10,7 +10,6 @@ import {
 import {
   experienceEntries,
   featuredProjects,
-  proofThemes,
 } from "@/config/career";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
@@ -25,75 +24,6 @@ export default function HomePage() {
   return (
     <>
       <Profile />
-
-      <Section id="current-work" delay={0.08}>
-        <SectionHeading
-          eyebrow="Current Work"
-          title="Current work at Svitla Systems"
-          description="A quick look at the product work, frontend scope, and growth in my current role."
-        />
-
-        <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-          <article className="border-border/80 bg-card/80 rounded-[2rem] border p-6 shadow-[0_24px_90px_-56px_rgba(30,22,12,0.55)]">
-            <div className="mb-6 space-y-2">
-              <div className="space-y-2">
-                <p className="text-muted-foreground text-xs font-semibold tracking-[0.22em] uppercase">
-                  January 2025 - Present
-                </p>
-                <h3 className="font-display text-3xl tracking-tight sm:text-4xl">
-                  Svitla Systems
-                </h3>
-                <p className="text-foreground/90 text-base font-medium">
-                  Senior Frontend Developer
-                </p>
-              </div>
-            </div>
-
-            <p className="text-muted-foreground max-w-[72ch] text-base leading-7 sm:text-lg">
-              At Svitla Systems, I help ship product UI for a family history platform.
-              My work spans frontend modernization, design implementation, and
-              performance.
-            </p>
-
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <div className="border-border/70 bg-background/80 rounded-[1.5rem] border p-4">
-                <p className="text-muted-foreground text-xs font-semibold tracking-[0.18em] uppercase">
-                  Core stack
-                </p>
-                <p className="text-muted-foreground mt-2 text-sm leading-6">
-                  React, Next.js, TypeScript, design systems, UI performance,
-                  and cross-functional delivery.
-                </p>
-              </div>
-              <div className="border-border/70 bg-background/80 rounded-[1.5rem] border p-4">
-                <p className="text-muted-foreground text-xs font-semibold tracking-[0.18em] uppercase">
-                  Collaboration
-                </p>
-                <p className="text-muted-foreground mt-2 text-sm leading-6">
-                  Product, design, QA, and backend partnership with a strong
-                  bias toward clean execution and reliable releases.
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-            {proofThemes.map((theme) => (
-              <article
-                key={theme.title}
-                className="border-border/80 bg-card/70 rounded-[1.75rem] border p-5"
-              >
-                <p className="text-foreground text-sm font-semibold tracking-tight">
-                  {theme.title}
-                </p>
-                <p className="text-muted-foreground mt-2 text-sm leading-6">
-                  {theme.description}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </Section>
 
       <Section id="selected-projects" delay={0.14}>
         <SectionHeading

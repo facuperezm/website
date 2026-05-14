@@ -30,7 +30,6 @@ export const metadata: Metadata = {
     "Design Systems",
     "Product UI",
     "Performance",
-    "Svitla Systems",
   ],
   twitter: {
     card: "summary_large_image",
@@ -69,10 +68,6 @@ const jsonLd = {
     url: siteConfig.url,
     description: siteConfig.description,
     jobTitle: "Senior Frontend Developer",
-    worksFor: {
-      "@type": "Organization",
-      name: "Svitla Systems",
-    },
     sameAs: [
       siteConfig.links.github,
       siteConfig.links.linkedin,

@@ -35,9 +35,6 @@ export default function Profile() {
               <h1 className="font-display text-3xl tracking-tight sm:text-4xl">
                 Facundo Perez Montalvo
               </h1>
-              <p className="text-muted-foreground text-sm sm:text-base">
-                Currently building product UI at Svitla Systems.
-              </p>
             </div>
           </div>
 

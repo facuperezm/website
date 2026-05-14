@@ -89,7 +89,7 @@ export default async function Image() {
                 letterSpacing: "0.04em",
               }}
             >
-              React · Next.js · TypeScript · Svitla Systems
+              React · Next.js · TypeScript
             </span>
           </div>
         </div>

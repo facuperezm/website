@@ -8,7 +8,6 @@ import type {
 export const heroHighlights = [
   "React, Next.js, TypeScript",
   "Product UI, design systems, performance",
-  "Currently building at Svitla Systems",
   "Remote from Argentina",
 ];
 
@@ -221,13 +220,12 @@ export const resumeEducation = [
 
 export const linkedinDraft = {
   headline:
-    "Senior Frontend Developer | React, Next.js, TypeScript | Product UI, design systems, performance | Building at Svitla Systems",
+    "Senior Frontend Developer | React, Next.js, TypeScript | Product UI, design systems, performance",
   about:
-    "Senior Frontend Developer focused on React, Next.js, and TypeScript. I build polished product interfaces, translate design direction into production-ready UI, and partner with backend, QA, and product teams to ship reliable user experiences. Currently building at Svitla Systems, with recent work across frontend modernization, design implementation, performance, and developer experience.",
+    "Senior Frontend Developer focused on React, Next.js, and TypeScript. I build polished product interfaces, translate design direction into production-ready UI, and partner with backend, QA, and product teams to ship reliable user experiences.",
 };
 
 export const githubProfileDraft = [
   "Senior Frontend Developer specializing in React, Next.js, and TypeScript.",
-  "Currently building product UI at Svitla Systems, with recent work across frontend migration, design implementation, performance, and developer experience.",
   "I care about product taste, maintainable code, and interfaces that feel intentional in production.",
 ];

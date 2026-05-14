@@ -54,7 +54,7 @@ function ExperienceBlock({ entry }: { entry: ResumeExperienceEntry }) {
 export const metadata: Metadata = {
   title: "Resume",
   description:
-    "One-page resume for Facundo Perez Montalvo, Senior Frontend Developer. Covers React, Next.js, TypeScript expertise and product UI work at Svitla Systems.",
+    "One-page resume for Facundo Perez Montalvo, Senior Frontend Developer. Covers React, Next.js, TypeScript expertise and product UI work.",
   alternates: {
     canonical: `${siteConfig.url}/resume`,
   },
@@ -117,9 +117,6 @@ export default function ResumePage() {
               <h1 className="font-display text-4xl tracking-tight sm:text-5xl print:text-[28px]">
                 Facundo Perez Montalvo
               </h1>
-              <p className="text-xs text-muted-foreground print:hidden">
-                By Facundo Perez Montalvo · Last updated March 2026
-              </p>
             </div>
 
             <p className="mt-3 max-w-[76ch] text-sm leading-6 text-muted-foreground print:mt-2 print:text-[10.5px] print:leading-[1.5]">
